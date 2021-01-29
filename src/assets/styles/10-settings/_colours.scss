@@ -1,0 +1,68 @@
+// ----------------------------------
+// UI Settings
+// Colours
+// ----------------------------------
+// Design System 1.0 Alpha
+// 2019-11-11
+// ----------------------------------
+
+:root {
+  --colour-black: #000;
+  --colour-white: #fff;
+
+  --colour-amber-30: #fec200;
+  --colour-amber-05: #fffbf0;
+
+  --colour-blue-90: #002e45;
+  --colour-blue-80: #003170;
+  --colour-blue-70: #004099;
+  --colour-blue-60: #05c;
+  --colour-blue-50: #1672f3;
+  --colour-blue-40: #4d97ff;
+  --colour-blue-30: #80b5ff;
+  --colour-blue-20: #b3d2ff;
+  --colour-blue-10: #dbeaff;
+  --colour-blue-05: #f0f6ff;
+
+  --colour-cyan-20: #beebf4;
+  --colour-cyan-05: #f1fcfd;
+
+  --colour-grey-90: #000;
+  --colour-grey-80: #292929;
+  --colour-grey-70: #5c5c5c;
+  --colour-grey-60: #767676;
+  --colour-grey-50: #878787;
+  --colour-grey-40: #999;
+  --colour-grey-30: #b3b3b3;
+  --colour-grey-20: #ccc;
+  --colour-grey-10: #e6e6e6;
+  --colour-grey-05: #f2f2f2;
+
+  --colour-red-60: #e10f2d;
+
+  --link-colour: var(--colour-blue-60);
+  --link-colour-hover: var(--colour-blue-70);
+  --link-colour-focus-outline: var(--colour-blue-40);
+  --link-colour-active: var(--colour-blue-50);
+  --link-colour-disabled: var(--colour-grey-50);
+
+  --text-colour: var(--colour-grey-60);
+
+  /**
+   * Use X- prefix to indicate deprecation. Try to avoid using any
+   * of these properties.
+   */
+  --X-colour-error-red: #d2373f;
+  --X-colour-error-pink: #ffebeb;
+  --X-colour-dark-blue: #003667;
+
+  /**
+   * In safari background linear gradients which fade to transparent display badly.
+   * An rgba value of almost transparent white fixes this.
+   *
+   * @see {@link https://stackoverflow.com/questions/11829410/css3-gradient-rendering-issues-from-transparent-to-white}
+   */
+  --hack-safari-transparent-white: rgba(255, 255, 255, 0.01);
+}
+
+$colour-grey-60: #767676;

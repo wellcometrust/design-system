@@ -1,0 +1,144 @@
+{
+  "name": "@wellcometrust/design-system",
+  "version": "0.0.0",
+  "description": "Design system for Wellcome Trust digital products",
+  "main": "index.js",
+  "style": "dist/styles.css",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": ">=6.4.1"
+  },
+  "files": [
+    "package.json",
+    "dist"
+  ],
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build:clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "npm run build:clean && rollup -c ./config/rollup.config.js --environment NODE_ENV:production && npm run build:types",
+    "dev": "npm run build:types && rollup -c ./config/rollup.config.js -w",
+    "lint": "npm run lint:style && npm run lint:js",
+    "lint:js": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx && echo 'JS linting complete'",
+    "lint:style": "stylelint --fix '**/*.scss' && echo 'Style linting complete'",
+    "prepublishOnly": "npm run type-check & npm run lint && npm run test && npm run build",
+    "storybook": "start-storybook -c ./config/storybook -p 6006",
+    "storybook:build": "build-storybook -c ./config/storybook",
+    "storybook:deploy": "storybook-to-ghpages --ci --existing-output-dir=./storybook-static",
+    "test": "jest",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellcometrust/design-system.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/wellcometrust/design-system#readme",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.4",
+    "@babel/runtime-corejs3": "^7.8.4",
+    "@types/domhandler": "^2.4.1",
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "@storybook/addon-a11y": "^6.1.0-rc.0",
+    "@storybook/addon-actions": "^6.1.0-rc.0",
+    "@storybook/addon-knobs": "^6.1.0-rc.0",
+    "@storybook/addon-storyshots": "^6.1.0-rc.0",
+    "@storybook/addon-viewport": "^6.1.0-rc.0",
+    "@storybook/addons": "^6.1.0-rc.0",
+    "@storybook/react": "^6.1.0-rc.0",
+    "@storybook/storybook-deployer": "^2.8.7",
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme": "^3.10.4",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.22",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "autoprefixer": "^9.7.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "browserslist": "^4.8.2",
+    "create-react-component-folder": "^0.1.30",
+    "css-loader": "^3.4.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "html-webpack-plugin": "^5.0.0-alpha.9",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "markdown-loader-jest": "^0.1.1",
+    "postcss": "^8.0.9",
+    "postcss-calc": "^7.0.4",
+    "prettier": "^1.18.2",
+    "react": "16.12.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-dom": "16.12.0",
+    "rollup": "^2.28.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-url": "^2.2.4",
+    "sass": "^1.29.0",
+    "sass-loader": "^8.0.0",
+    "sass-mq": "^5.0.1",
+    "storybook": "^6.1.0-rc.0",
+    "storybook-readme": "^5.0.8",
+    "style-loader": "^1.1.2",
+    "stylelint": "^12.0.1",
+    "stylelint-config-sass-guidelines": "^6.2.0",
+    "typescript": "^3.7.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:js",
+      "git add"
+    ],
+    "src/**/*.{scss,css}": [
+      "npm run lint:style",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run type-check && lint-staged && jest --onlyChanged"
+    }
+  },
+  "storybook-deployer": {
+    "commitMessage": "Deploy Storybook [ci skip]"
+  }
+}
