@@ -2,8 +2,9 @@
   "name": "@wellcometrust/design-system",
   "version": "0.0.0",
   "description": "Design system for Wellcome Trust digital products",
-  "main": "index.js",
-  "style": "dist/styles.css",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "style": "styles.css",
   "types": "dist/index.d.ts",
   "engines": {
     "node": ">=10.15.0",
@@ -19,7 +20,7 @@
   "scripts": {
     "build:clean": "rm -rf dist",
     "build:types": "tsc --emitDeclarationOnly",
-    "build": "npm run build:clean && rollup -c ./config/rollup.config.js --environment NODE_ENV:production && npm run build:types",
+    "build": "npm run build:clean && rollup -c ./config/rollup.config.js && npm run build:types",
     "dev": "npm run build:types && rollup -c ./config/rollup.config.js -w",
     "lint": "npm run lint:style && npm run lint:js",
     "lint:js": "eslint --fix ./src --ext .js,.jsx,.ts,.tsx && echo 'JS linting complete'",
@@ -111,6 +112,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-url": "^2.2.4",
     "sass": "^1.29.0",

@@ -7,6 +7,10 @@ import url from 'rollup-plugin-url';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
 import calc from 'postcss-calc';
+import sass from 'rollup-plugin-sass';
+// import copy from 'rollup-plugin-copy';
+
+const packageJson = require('../package.json');
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -20,10 +24,19 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default (async () => ({
   external: Object.keys(globals),
   input: 'src/index.ts',
-  output: {
-    file: 'dist/index.js',
-    format: 'cjs'
-  },
+  output: [
+    {
+      dir: 'dist',
+      format: "cjs",
+      sourcemap: !isProduction
+    },
+    {
+      dir: 'dist',
+      format: "esm",
+      sourcemap: !isProduction
+    }
+  ],
+  preserveModules: true, // Important if we want to code split
   plugins: [
     resolve({
       extensions,
@@ -61,9 +74,27 @@ export default (async () => ({
     }),
     json(),
     postcss({
-      extract: 'style.css',
+      extract: packageJson.style,
       minimize: isProduction,
       plugins: [autoprefixer(), calc()]
-    })
+    }),
+    sass({
+      insert: true
+    }),
+    // can use copy to make sass files available for consuming apps
+    // copy({
+    //   targets: [
+    //     {
+    //       src: "src/variables.scss",
+    //       dest: "dist",
+    //       rename: "variables.scss"
+    //     },
+    //     {
+    //       src: "src/typography.scss",
+    //       dest: "dist",
+    //       rename: "typography.scss"
+    //     }
+    //   ]
+    // })
   ]
 }))();

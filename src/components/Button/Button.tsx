@@ -6,8 +6,10 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 
-import Icon from 'Icon/Icon';
-import Link from 'Link';
+// import Icon from 'Icon/Icon';
+// import Link from 'Link';
+
+import './_button.scss';
 
 type ButtonProps = {
   autoFocus?: boolean;
@@ -49,8 +51,9 @@ export const Button = forwardRef(
     }: ButtonProps,
     ref: Ref<HTMLButtonElement>
   ) => {
+    // const Element: any = href ? 'Link' : 'button';
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const Element: any = href ? Link : 'button';
+    const Element: any = href ? 'a' : 'button';
     const isUnstyled = variant !== 'unstyled';
     const classNames = cx({
       btn: isUnstyled,
@@ -84,13 +87,13 @@ export const Button = forwardRef(
         type={!href ? type : null}
         {...props}
       >
-        {icon && !iconPlacementSwitch && (
+        {/* {icon && !iconPlacementSwitch && (
           <Icon name={icon} className={iconClassNames} />
-        )}
+        )} */}
         <span className={textClassNames}>{children}</span>
-        {icon && iconPlacementSwitch && (
+        {/* {icon && iconPlacementSwitch && (
           <Icon name={icon} className={iconClassNames} />
-        )}
+        )} */}
       </Element>
     );
   }
