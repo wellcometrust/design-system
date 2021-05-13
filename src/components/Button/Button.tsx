@@ -9,7 +9,7 @@ import cx from 'classnames';
 // import Icon from 'Icon/Icon';
 // import Link from 'Link';
 
-import './_button.scss';
+import './button.scss';
 
 type ButtonProps = {
   autoFocus?: boolean;
