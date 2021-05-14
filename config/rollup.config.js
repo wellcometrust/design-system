@@ -1,13 +1,10 @@
 import autoprefixer from 'autoprefixer';
 import babel from 'rollup-plugin-babel';
 import calc from 'postcss-calc';
-// import copy from 'rollup-plugin-copy';
 import json from 'rollup-plugin-json';
-import postcss from 'rollup-plugin-postcss';
+import styles from 'rollup-plugin-styles';
 import resolve from 'rollup-plugin-node-resolve'; // resolves all the node dependencies
 import url from 'rollup-plugin-url';
-
-// const packageJson = require('../package.json');
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -18,52 +15,39 @@ const globals = {
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const utils = {
-  input: 'src/styles/utils.ts',
-  output: {
-    dir: 'dist',
-    format: 'esm',
-    // sourcemap: !isProduction,
-    // assetFileNames: 'utils.css'
-  },
-  plugins: [
-    postcss({
-      extract: 'utils.css',
-      minimize: isProduction,
-      plugins: [autoprefixer(), calc()],
-    }),
-  ]
-};
-
 export default (async () => ([
-  // core.css
+  // core variables and styles and utility classes
   {
-    input: 'src/styles/core.ts',
+    input: [
+      'src/styles/core.ts',
+      'src/styles/utils.ts'
+    ],
     output: {
       dir: 'dist',
-      format: 'esm',
-      // sourcemap: !isProduction,
-      // assetFileNames: 'components/[name][extname]'
+      format: 'es',
+      sourcemap: !isProduction,
+      assetFileNames: '[name][extname]'
     },
     plugins: [
-      postcss({
-        extract: 'core.css',
+      styles({
+        mode: 'extract',
         minimize: isProduction,
-        plugins: [autoprefixer(), calc()],
-      }),
+        plugins: [autoprefixer(), calc()]
+      })
     ]
   },
-  // utils.css
-  utils,
+
   // components
   {
     external: Object.keys(globals),
-    input: 'src/index.ts',
+    input: [
+      'Button/Button.tsx',
+    ],
     output: {
-      dir: 'dist',
-      format: 'esm',
-      // sourcemap: !isProduction,
-      assetFileNames: 'components/[name]/[name][extname]'
+      dir: 'dist/components',
+      format: 'es',
+      sourcemap: !isProduction,
+      assetFileNames: '[name][extname]'
     },
     preserveModules: true, // Important if we want to code split
     plugins: [
@@ -84,18 +68,20 @@ export default (async () => ([
       url({
         // by default, rollup-plugin-url will not handle font files
         include: ['**/*.woff', '**/*.woff2'],
+
         // setting infinite limit will ensure that the files
         // are always bundled with the code, not copied to /dist
         limit: Infinity
       }),
       json(),
-      postcss({
-        // extract: 'test.css',
-        extract: true,
+
+      // rollup-plugin-postcss does not extract to multiple bundles
+      // so use rollup-plugin-styles instead which does
+      styles({
+        mode: 'extract',
         minimize: isProduction,
-        // minimize: true,
-        plugins: [autoprefixer(), calc()],
-      }),
+        plugins: [autoprefixer(), calc()]
+      })
     ]
   }
 ]))();
