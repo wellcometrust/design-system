@@ -1,10 +1,10 @@
 import autoprefixer from 'autoprefixer';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import calc from 'postcss-calc';
-import json from 'rollup-plugin-json';
+import json from '@rollup/plugin-json';
 import styles from 'rollup-plugin-styles';
-import resolve from 'rollup-plugin-node-resolve'; // resolves all the node dependencies
-import url from 'rollup-plugin-url';
+import resolve from '@rollup/plugin-node-resolve'; // resolves all the node dependencies
+import url from '@rollup/plugin-url';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -53,16 +53,16 @@ export default (async () => ([
     plugins: [
       resolve({
         extensions,
-        customResolveOptions: {
-          // Allows us to import modules absolutely from these directories
-          moduleDirectory: ['./src', './src/components']
-        }
+
+        // Allows us to import modules absolutely from these directories
+        moduleDirectories: ['./src', './src/components']
       }),
       babel({
+        babelHelpers: 'runtime',
         exclude: 'node_modules/**',
         extensions,
-        runtimeHelpers: true
       }),
+
       // Minifies JS if production
       isProduction && (await import('rollup-plugin-terser')).terser(),
       url({
@@ -81,7 +81,31 @@ export default (async () => ([
         mode: 'extract',
         minimize: isProduction,
         plugins: [autoprefixer(), calc()]
-      })
+      }),
     ]
-  }
+  },
+
+  // library component index
+  {
+    input: 'entry',
+    output: {
+      dir: 'dist',
+      format: 'es',
+      entryFileNames: 'index.js'
+    },
+    plugins: [
+      virtual({
+        entry: `
+        export { Button } from '/components/Button/Button';
+        export { Test } from '/components/Test/Test';
+        `
+      }),
+      // typescript(),
+      // styles({
+      //   mode: 'extract',
+      //   minimize: isProduction,
+      //   plugins: [autoprefixer(), calc()]
+      // }),
+    ]
+  },
 ]))();
