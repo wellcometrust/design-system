@@ -5,6 +5,7 @@ import json from '@rollup/plugin-json';
 import styles from 'rollup-plugin-styles';
 import resolve from '@rollup/plugin-node-resolve'; // resolves all the node dependencies
 import url from '@rollup/plugin-url';
+import virtual from '@rollup/plugin-virtual';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -16,7 +17,11 @@ const globals = {
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default (async () => ([
-  // core variables and styles and utility classes
+  /**
+   * 1. Core CSS
+   *
+   * Output core variables, styles and utility classes.
+   */
   {
     input: [
       'src/styles/core.ts',
@@ -26,6 +31,8 @@ export default (async () => ([
       dir: 'dist',
       format: 'es',
       sourcemap: !isProduction,
+
+      // this determines the naming of output CSS files based on input entries
       assetFileNames: '[name][extname]'
     },
     plugins: [
@@ -37,7 +44,13 @@ export default (async () => ([
     ]
   },
 
-  // components
+  /**
+   * 2. React components and associated CSS
+   *
+   * By default Rollout creates the same number of output bundles as input
+   * entries. To ensure individual CSS files are created, components also have
+   * to be input individually.
+   */
   {
     external: Object.keys(globals),
     input: [
@@ -47,6 +60,8 @@ export default (async () => ([
       dir: 'dist/components',
       format: 'es',
       sourcemap: !isProduction,
+
+      // this determines the naming of output CSS files based on input entries
       assetFileNames: '[name][extname]'
     },
     preserveModules: true, // Important if we want to code split
@@ -85,7 +100,12 @@ export default (async () => ([
     ]
   },
 
-  // library component index
+  /**
+   * 3. Component index
+   *
+   * To enable consuming apps to use the React components a virtual index
+   * file is created to provide named exports.
+   */
   {
     input: 'entry',
     output: {
@@ -94,18 +114,13 @@ export default (async () => ([
       entryFileNames: 'index.js'
     },
     plugins: [
+      // write the index file content
       virtual({
         entry: `
         export { Button } from '/components/Button/Button';
         export { Test } from '/components/Test/Test';
         `
-      }),
-      // typescript(),
-      // styles({
-      //   mode: 'extract',
-      //   minimize: isProduction,
-      //   plugins: [autoprefixer(), calc()]
-      // }),
+      })
     ]
   },
 ]))();
