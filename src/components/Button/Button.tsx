@@ -11,7 +11,7 @@ import cx from 'classnames';
 
 import './button.scss';
 
-type ButtonProps = {
+export type ButtonProps = {
   autoFocus?: boolean;
   className?: string;
   children: React.ReactNode;
@@ -54,18 +54,18 @@ export const Button = forwardRef(
     // const Element: any = href ? 'Link' : 'button';
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const Element: any = href ? 'a' : 'button';
-    const isUnstyled = variant !== 'unstyled';
+    const hasStyles = variant !== 'unstyled';
     const classNames = cx({
-      btn: isUnstyled,
-      [`btn--${variant}`]: isUnstyled,
+      'ds-btn': hasStyles,
+      [`ds-btn--${variant}`]: hasStyles,
       [`${className}`]: className
     });
-    const iconClassNames = cx('btn__icon', {
-      'btn__icon--left': !iconPlacementSwitch,
-      'btn__icon--right': iconPlacementSwitch,
+    const iconClassNames = cx('ds-btn__icon', {
+      'ds-btn__icon--left': !iconPlacementSwitch,
+      'ds-btn__icon--right': iconPlacementSwitch,
       [iconClassName]: iconClassName
     });
-    const textClassNames = cx('btn__text', {
+    const textClassNames = cx('ds-btn__text', {
       [textClassName]: textClassName
     });
 

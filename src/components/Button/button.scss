@@ -1,6 +1,6 @@
 @import '../../styles/common';
 
-.btn {
+.ds-btn {
   @extend %btn-base;
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
@@ -15,7 +15,7 @@
   }
 }
 
-.btn[disabled] {
+.ds-btn[disabled] {
   color: var(--link-colour-disabled);
   cursor: not-allowed;
 
@@ -24,14 +24,14 @@
   }
 }
 
-.btn--primary,
-.btn--secondary,
-.btn--ghost {
+.ds-btn--primary,
+.ds-btn--secondary,
+.ds-btn--ghost {
   @extend %btn-size-standard;
   padding: 0 calc(2.5 * var(--space-unit));
 }
 
-.btn--primary {
+.ds-btn--primary {
   background-color: var(--link-colour);
   color: var(--colour-white);
 
@@ -55,9 +55,9 @@
   }
 }
 
-.btn--secondary,
-.btn--ghost,
-.btn--link {
+.ds-btn--secondary,
+.ds-btn--ghost,
+.ds-btn--link {
   color: var(--link-colour);
 
   &:hover {
@@ -69,8 +69,8 @@
   }
 }
 
-.btn--secondary,
-.btn--ghost {
+.ds-btn--secondary,
+.ds-btn--ghost {
   border: 1px solid var(--link-colour-active);
 
   &:hover {
@@ -86,7 +86,7 @@
   }
 }
 
-.btn--secondary {
+.ds-btn--secondary {
   background-color: var(--colour-white);
 
   &:active {
@@ -98,22 +98,22 @@
   }
 }
 
-.btn__icon--left {
+.ds-btn__icon--left {
   margin-left: calc(-0.5 * var(--space-unit));
   margin-right: var(--space-unit);
 }
 
-.btn__icon--right {
+.ds-btn__icon--right {
   margin-left: var(--space-unit);
   margin-right: calc(-0.5 * var(--space-unit));
 }
 
-.btn--link {
-  .btn__icon--left {
+.ds-btn--link {
+  .ds-btn__icon--left {
     margin-right: calc(1.5 * var(--space-unit));
   }
 
-  .btn__icon--right {
+  .ds-btn__icon--right {
     margin-left: calc(1.5 * var(--space-unit));
   }
 }
