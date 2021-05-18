@@ -8,9 +8,6 @@ module.exports = async ({ config, mode }) => {
 
   // Make whatever fine-grained changes you need
 
-  // TypeScript
-  config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.json', '.css');
-
   // configure storybook to use absolute paths
   config.resolve.modules = [
     ...(config.resolve.modules || []),
@@ -19,7 +16,7 @@ module.exports = async ({ config, mode }) => {
   ];
 
   config.module.rules.push({
-    test: /\.(js|ts)x?$/,
+    test: /\.(js|md|ts)x?$/,
     exclude: /node_modules/,
     use: [
       require.resolve('babel-loader'),

@@ -1,20 +1,30 @@
-import { addDecorator, addParameters } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
-import { withKnobs } from '@storybook/addon-knobs';
-import { addReadme } from 'storybook-readme';
+import { addParameters } from '@storybook/react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 
 import './styles/storybook-app.scss';
 
-addDecorator(withKnobs);
-addDecorator(withA11y);
-addDecorator(addReadme);
-
 addParameters({
-  options: {
-    theme: {
-      brandTitle: 'Wellcome Design System'
-    },
-    panelPosition: 'right',
-    sortStoriesByKind: true
+  backgrounds: {
+    values: [
+      {
+        name: 'page header',
+        value: 'var(--colour-amber-05)',
+      },
+      {
+        name: 'infobox',
+        value: 'var(--colour-cyan-05)',
+      },
+      {
+        name: 'grey',
+        value: 'var(--colour-grey-20)',
+      },
+    ],
+  },
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+    source: {
+      state: 'open',
+    }
   }
 });

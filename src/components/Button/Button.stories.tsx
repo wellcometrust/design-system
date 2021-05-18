@@ -1,61 +1,29 @@
-// import React from 'react';
-// import { storiesOf } from '@storybook/react';
-// import { boolean, text, select } from '@storybook/addon-knobs';
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
 
-// // import Button from './Button';
-// // import Readme from './Button.md';
+import { Button, ButtonProps } from './Button';
 
-// const ButtonExample = () => {
-//   const buttonText = text('button text', 'Click me');
-//   const disabled = boolean('disabled', false);
-//   const href = text('href', '');
-//   const icon = select(
-//     'icon',
-//     [
-//       '',
-//       'arrow',
-//       'chevron',
-//       'chevronRight',
-//       'close',
-//       'closeBold',
-//       'closeCircle',
-//       'cookie',
-//       'download',
-//       'email',
-//       'externalLink',
-//       'facebook',
-//       'info',
-//       'linkedin',
-//       'message',
-//       'phone',
-//       'search',
-//       'shareLink',
-//       'tag',
-//       'twitter',
-//       'youTube'
-//     ],
-//     ''
-//   );
-//   const iconPlacementSwitch = boolean('iconPlacementSwitch', false);
-//   const variant = select(
-//     'variant',
-//     ['primary', 'secondary', 'ghost', 'link', 'unstyled'],
-//     'primary'
-//   );
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-//   return (
-//     <Button
-//       disabled={disabled}
-//       href={href}
-//       icon={icon}
-//       iconPlacementSwitch={iconPlacementSwitch}
-//       variant={variant}
-//     >
-//       {buttonText}
-//     </Button>
-//   );
-// };
+export const Primary = Template.bind({});
+Primary.args = { children: 'Button', variant: 'primary' };
 
-// const stories = storiesOf('Components|Button', module);
+export const Secondary = Template.bind({});
+Secondary.args = { children: 'Button', variant: 'secondary' };
+Secondary.parameters = { backgrounds: { default: 'infobox' } };
 
-// stories.add('Button', ButtonExample, { readme: { sidebar: Readme } });
+export const Ghost = Template.bind({});
+Ghost.args = { children: 'Button', variant: 'ghost' };
+Ghost.parameters = { backgrounds: { default: 'infobox' } };
+
+export const Link = Template.bind({});
+Link.args = { children: 'Button', variant: 'link' };
+
+export const Unstyled = Template.bind({});
+Unstyled.args = { children: 'Button', variant: 'unstyled' };
+
+export default {
+  title: 'Button',
+  component: Button,
+  argTypes: { onClick: { action: 'clicked' } }
+} as Meta;

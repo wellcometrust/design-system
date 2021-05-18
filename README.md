@@ -2,10 +2,12 @@
 
 ## Table of contents
 
-- [Overview](#overview)
-- [Usage](#usage)
-  1. [Clone this repo](#clone-this-repo)
-  2. 
+- [Wellcome Design System](#wellcome-design-system)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Usage](#usage)
+    - [1. Clone this repo](#1-clone-this-repo)
+    - [2. ...](#2-)
 
 ## Overview
 

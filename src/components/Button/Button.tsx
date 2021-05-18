@@ -29,6 +29,9 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'ghost' | 'link' | 'unstyled';
 };
 
+/**
+ * Functional call to action
+ */
 export const Button = forwardRef(
   (
     {
