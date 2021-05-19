@@ -1,9 +1,11 @@
 import autoprefixer from 'autoprefixer';
 import babel from '@rollup/plugin-babel';
 import calc from 'postcss-calc';
+import commonjs from '@rollup/plugin-commonjs';
+import ignoreImport from 'rollup-plugin-ignore-import';
 import json from '@rollup/plugin-json';
+import nodeResolve from '@rollup/plugin-node-resolve'; // resolves all the node dependencies
 import styles from 'rollup-plugin-styles';
-import resolve from '@rollup/plugin-node-resolve'; // resolves all the node dependencies
 import url from '@rollup/plugin-url';
 import virtual from '@rollup/plugin-virtual';
 
@@ -66,7 +68,7 @@ export default (async () => ([
     },
     preserveModules: true, // Important if we want to code split
     plugins: [
-      resolve({
+      nodeResolve({
         extensions,
 
         // Allows us to import modules absolutely from these directories
@@ -123,4 +125,38 @@ export default (async () => ([
       })
     ]
   },
+
+  /**
+   * 4. Server side rendering to output component HTML
+   *
+   * This process relies on ssr-config being kept up to date. Long-term this
+   * could be labour intensive.
+   */
+   {
+    external: ['stream'],
+    input: 'ssr/html.js',
+    output: {
+      file: 'ssr/html.js',
+      format: 'cjs',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        
+        // Allows us to import modules absolutely from these directories
+        moduleDirectories: ['./src', './src/components'],
+        preferBuiltins: true,
+      }),
+      babel({
+        babelHelpers: 'runtime',
+        exclude: 'node_modules/**',
+        extensions,
+      }),
+      commonjs(),
+      ignoreImport({
+        extensions: ['.scss', '.css']
+      })
+    ]
+  },
+
 ]))();
