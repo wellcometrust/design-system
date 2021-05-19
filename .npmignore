@@ -1,7 +1,8 @@
 .idea
-src
-coverage
-config
+/src
+/ssr
+/coverage
+/config
 
 rollup.config.js
 jest.config.js
