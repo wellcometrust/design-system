@@ -1,6 +1,7 @@
 import { addons } from '@storybook/addons';
-import yourTheme from './YourTheme';
+import theme from './theme';
 
 addons.setConfig({
+  panelPosition: 'bottom',
   theme: yourTheme,
 });
