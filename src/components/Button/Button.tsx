@@ -77,7 +77,7 @@ export const Button = forwardRef(
         autoFocus={autoFocus}
         className={classNames}
         disabled={disabled}
-        to={href}
+        href={href}
         id={id}
         onClick={(e: ReactMouseEvent) => {
           if (onClick && !disabled) {
