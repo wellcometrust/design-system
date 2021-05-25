@@ -1,13 +1,15 @@
 // ----------------------------------
-// UI
+// UI core
 // ----------------------------------
 // Design System 1.0 Alpha
-// 2019-11-11
+// 2021-05-01
 // ----------------------------------
 
 /**
- * This file serves as the main entry point for the library's
- * styles (written in .scss).
+ * This file serves as the main entry point for the design system's
+ * core variables (written in .scss).
+ *
+ * Unused @imports have been commented out to give a reference point.
  */
 
 /* stylelint-disable scss/at-import-no-partial-leading-underscore */
@@ -31,14 +33,12 @@
 
 /**
  * Whilst we initially adopted a fully-fledged version of the ITCSS
- * framework, we decided to strip back to a slimmed down version which
- * emits no CSS anywhere other than from `components`.
+ * framework, we decided to strip back to a slimmed down version to
+ * emit as little CSS as possible.
  *
- * This may not be the final decision, and we may choose to incorporate
- * things like `object` and `utility` styles as the project grows -
- * this is why the original @import declarations are left intact below.
+ * @see {@link https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731}
  *
- * This gives us reference of how we can expand the styles in future.
+ * The following is an example of how we can expand the styles in future.
  */
 
 // Core variables e.g. base sizes and colors
