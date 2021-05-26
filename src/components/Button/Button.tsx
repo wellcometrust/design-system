@@ -66,10 +66,10 @@ export const Button = forwardRef(
     const iconClassNames = cx('ds-btn__icon', {
       'ds-btn__icon--left': !iconPlacementSwitch,
       'ds-btn__icon--right': iconPlacementSwitch,
-      [iconClassName]: iconClassName
+      [iconClassName as string]: iconClassName
     });
     const textClassNames = cx('ds-btn__text', {
-      [textClassName]: textClassName
+      [textClassName as string]: textClassName
     });
 
     return (
