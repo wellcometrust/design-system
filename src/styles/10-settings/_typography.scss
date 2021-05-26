@@ -1,7 +1,7 @@
 // ----------------------------------
 // UI Settings
 // Typography
-// https://zpl.io/aRGJN8v
+// https://www.sketch.com/s/0e43fb67-e700-4c05-a0db-a7dad402bcc3/a/v8QlPq3#Inspector
 // ----------------------------------
 // Design System 1.0 Alpha
 // 2021-05-01
@@ -17,43 +17,43 @@
   --font-tertiary: 'Courier New', Courier, monospace;
 
   // body font size (1rem = 16px browser default)
-  --text-base-size: 1rem;
-  --text-base-size-px: 16;
+  --font-size-base: 1rem;
+  --font-size-base-px: 16; // required for sass calculations
 
   // font size - non-responsive body text
-  --body-xl: calc(24/16 * var(--text-base-size));     // Extra Large
-  --body-lg: calc(20/16 * var(--text-base-size));     // Large
-  --body-md: var(--text-base-size);                   // Regular
-  --body-sm: calc(14/16 * var(--text-base-size));     // Small
-  --body-xs: calc(12/16 * var(--text-base-size));     // Smaller
+  --font-size-body-xl: calc(24/16 * var(--font-size-base));
+  --font-size-body-lg: calc(20/16 * var(--font-size-base));
+  --font-size-body-md: var(--font-size-base);
+  --font-size-body-sm: calc(14/16 * var(--font-size-base));
+  --font-size-body-xs: calc(12/16 * var(--font-size-base));
 
   // font size responsive headings
-  --heading-xxl: calc(32/16 * var(--text-base-size)); // Super
-  --heading-xl: calc(24/16 * var(--text-base-size));  // Hero
-  --heading-lg: calc(22/16 * var(--text-base-size));  // Display
-  --heading-md: calc(18/16 * var(--text-base-size));  // Large
-  --heading-sm: calc(16/16 * var(--text-base-size));  // Regular
-  --heading-xs: calc(14/16 * var(--text-base-size));  // Small
-
-  // line height
-  --body-line-height: 1.6;
-  --heading-line-height: var(--body-line-height);
-
-  // letter spacing
-  --body-letter-spacing: 0.4px;
-  --heading-major-letter-spacing: -0.5px;
-  --heading-minor-letter-spacing: 0.2px;
+  --font-size-heading-xxl: calc(32/16 * var(--font-size-base));
+  --font-size-heading-xl: calc(24/16 * var(--font-size-base));
+  --font-size-heading-lg: calc(22/16 * var(--font-size-base));
+  --font-size-heading-md: calc(18/16 * var(--font-size-base));
+  --font-size-heading-sm: var(--font-size-base);
+  --font-size-heading-xs: calc(14/16 * var(--font-size-base));
 
   // font weight
-  --heading-font-weight: 500;
+  --font-weight-heading: 500;
+
+  // letter spacing
+  --letter-spacing-body: 0.4px;
+  --letter-spacing-heading-major: -0.5px;
+  --letter-spacing-heading-minor: 0.2px;
+
+  // line height
+  --line-height-body: 1.6;
+  --line-height-heading: var(--line-height-body);
 
   @include mq(sm) {
-    --heading-xl: calc(32/16 * var(--text-base-size));
-    --heading-lg: calc(24/16 * var(--text-base-size));
-    --heading-md: calc(20/16 * var(--text-base-size));
+    --font-size-heading-xl: calc(32/16 * var(--font-size-base));
+    --font-size-heading-lg: calc(24/16 * var(--font-size-base));
+    --font-size-heading-md: calc(20/16 * var(--font-size-base));
   }
 
   @include mq(md) {
-    --heading-xxl: calc(40/16 * var(--text-base-size));
+    --font-size-heading-xxl: calc(40/16 * var(--font-size-base));
   }
 }

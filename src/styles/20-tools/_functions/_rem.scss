@@ -27,7 +27,7 @@
  */
 
 @function rem($size) {
-  $rems: calc(#{$size}rem / var(--text-base-size-px));
+  $rems: calc(#{$size}rem / var(--font-size-base-px));
 
   @return #{$rems};
 }

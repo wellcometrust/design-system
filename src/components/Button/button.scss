@@ -5,7 +5,7 @@
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
   font-family: var(--font-primary);
-  font-size: var(--text-base-size);
+  font-size: var(--font-size-base);
   transition: ease var(--transition-duration);
   transition-property: background-color, border, color;
 
@@ -121,14 +121,14 @@
 
 // Call To Action wrapper styles
 
-.cc-cta {
+.ds-cta {
   text-align: center;
 }
 
-.cc-info-box .cc-cta {
-  margin: calc(4 * var(--space-unit)) 0;
+// .ds-info-box .ds-cta {
+//   margin: calc(4 * var(--space-unit)) 0;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
