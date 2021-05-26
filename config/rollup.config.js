@@ -9,6 +9,8 @@ import styles from 'rollup-plugin-styles';
 import url from '@rollup/plugin-url';
 import virtual from '@rollup/plugin-virtual';
 
+import componentArray from '../src/index.ts';
+
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const globals = {
@@ -55,18 +57,17 @@ export default (async () => ([
    */
   {
     external: Object.keys(globals),
-    input: [
-      'Button/Button.tsx',
-    ],
+
+    input: componentArray,
     output: {
       dir: 'dist/components',
       format: 'es',
+      preserveModules: true, // Important if we want to code split
       sourcemap: !isProduction,
 
       // this determines the naming of output CSS files based on input entries
       assetFileNames: '[name][extname]'
     },
-    preserveModules: true, // Important if we want to code split
     plugins: [
       nodeResolve({
         extensions,
@@ -118,10 +119,16 @@ export default (async () => ([
     plugins: [
       // write the index file content
       virtual({
-        entry: `
-        export { Button } from '/components/Button/Button';
-        export { Test } from '/components/Test/Test';
-        `
+        entry: componentArray.map(entry => {
+          // captures a file name minus the file extension from a given path
+          // e.g. Button/Button.tsx will return a full match of `Button.`
+          // and `Button` from the first capturing group
+          const regex = /(\w+)\./;
+          const entryName = entry.match(regex)[1];
+
+          // outputs each component as a named export, one per line
+          return `export { ${entryName} } from '/components/${entryName}/${entryName}';`
+        }).join('\n')
       })
     ]
   },

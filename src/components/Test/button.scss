@@ -1,0 +1,134 @@
+@import '../../styles/common';
+
+.test-btn {
+  @extend %btn-base;
+  border-radius: calc(0.25 * var(--space-unit));
+  display: inline-flex;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-md);
+  transition: ease var(--transition-duration);
+  transition-property: background-color, border, color;
+
+  &:focus {
+    outline-color: var(--link-colour-focus-outline);
+    outline-offset: calc(0.75 * var(--space-unit));
+  }
+}
+
+.test-btn[disabled] {
+  color: var(--link-colour-disabled);
+  cursor: not-allowed;
+
+  @include hocus {
+    color: var(--link-colour-disabled);
+  }
+}
+
+.test-btn--primary,
+.test-btn--secondary,
+.test-btn--ghost {
+  @extend %btn-size-standard;
+  padding: 0 calc(2.5 * var(--space-unit));
+}
+
+.test-btn--primary {
+  background-color: var(--colour-green-60);
+  color: var(--colour-white);
+
+  &:hover {
+    background-color: var(--link-colour-hover);
+    color: var(--colour-white);
+  }
+
+  &:focus {
+    background-color: var(--link-colour);
+    color: var(--colour-white);
+  }
+
+  &:active {
+    background-color: var(--link-colour-active);
+    color: var(--colour-white);
+  }
+
+  &[disabled] {
+    background-color: var(--colour-grey-20);
+  }
+}
+
+.test-btn--secondary,
+.test-btn--ghost,
+.test-btn--link {
+  color: var(--link-colour);
+
+  &:hover {
+    color: var(--link-colour-hover);
+  }
+
+  &:active {
+    color: var(--link-colour-active);
+  }
+}
+
+.test-btn--secondary,
+.test-btn--ghost {
+  border: 1px solid var(--link-colour-active);
+
+  &:hover {
+    border-color: var(--link-colour);
+  }
+
+  &:active {
+    border-color: var(--link-colour-active);
+  }
+
+  &[disabled] {
+    border-color: var(--link-colour-disabled);
+  }
+}
+
+.test-btn--secondary {
+  background-color: var(--colour-white);
+
+  &:active {
+    background-color: var(--colour-blue-10);
+  }
+
+  &[disabled] {
+    background-color: var(--colour-grey-20);
+  }
+}
+
+.test-btn__icon--left {
+  margin-left: calc(-0.5 * var(--space-unit));
+  margin-right: var(--space-unit);
+}
+
+.test-btn__icon--right {
+  margin-left: var(--space-unit);
+  margin-right: calc(-0.5 * var(--space-unit));
+}
+
+.test-btn--link {
+  .test-btn__icon--left {
+    margin-right: calc(1.5 * var(--space-unit));
+  }
+
+  .test-btn__icon--right {
+    margin-left: calc(1.5 * var(--space-unit));
+  }
+}
+
+
+// Call To Action wrapper styles
+
+.cc-cta {
+  text-align: center;
+}
+
+.cc-info-box .cc-cta {
+  margin: calc(4 * var(--space-unit)) 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

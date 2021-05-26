@@ -1,3 +1,5 @@
-// standard components
-// eslint-disable-next-line import/prefer-default-export
-export { default as Button } from 'Button';
+/**
+ * @file An array listing paths to the standard components
+ * which are to be exported by the design system
+ */
+export default ['Button/Button.tsx', 'Test/Test.tsx'];
