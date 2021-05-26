@@ -3,5 +3,5 @@ import theme from './theme';
 
 addons.setConfig({
   panelPosition: 'bottom',
-  theme: yourTheme,
+  theme,
 });
