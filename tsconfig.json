@@ -27,6 +27,7 @@
         "typeRoots": [
             "node_modules/@types",
             "./typings.d.ts",
+            "./src/types"
         ],
         "esModuleInterop": true,
         "sourceMap": true,
