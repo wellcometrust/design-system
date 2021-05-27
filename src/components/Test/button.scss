@@ -1,7 +1,7 @@
 @import '../../styles/common';
 
 .test-btn {
-  @extend %btn-base;
+  @include btn-base;
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
   font-family: var(--font-primary);
@@ -27,7 +27,7 @@
 .test-btn--primary,
 .test-btn--secondary,
 .test-btn--ghost {
-  @extend %btn-size-standard;
+  @include btn-size-standard;
   padding: 0 calc(2.5 * var(--space-unit));
 }
 
@@ -115,20 +115,5 @@
 
   .test-btn__icon--right {
     margin-left: calc(1.5 * var(--space-unit));
-  }
-}
-
-
-// Call To Action wrapper styles
-
-.cc-cta {
-  text-align: center;
-}
-
-.cc-info-box .cc-cta {
-  margin: calc(4 * var(--space-unit)) 0;
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }

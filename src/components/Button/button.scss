@@ -1,7 +1,7 @@
 @import '../../styles/common';
 
 .ds-btn {
-  @extend %btn-base;
+  @include btn-base;
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
   font-family: var(--font-primary);
@@ -27,7 +27,7 @@
 .ds-btn--primary,
 .ds-btn--secondary,
 .ds-btn--ghost {
-  @extend %btn-size-standard;
+  @include btn-size-standard;
   padding: 0 calc(2.5 * var(--space-unit));
 }
 

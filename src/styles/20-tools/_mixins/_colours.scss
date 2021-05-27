@@ -1,7 +1,7 @@
 // ----------------------------------
 // UI Tools
-// Extends
-// Colors
+// Mixins
+// Colours
 // ----------------------------------
 // Design System 1.0 Alpha
 // 2021-05-01
@@ -13,12 +13,12 @@
  * Usage:
  *
  * .selector (an <a> tag, probably) {
- *   @extend %color-inherit;
+ *   @include %color-inherit;
  * }
  *
  */
 
-%color-inherit {
+@mixin color-inherit {
   color: inherit;
 
   @include hocus {

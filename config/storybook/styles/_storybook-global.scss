@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  @extend %anchor-base;
+  @include anchor-base;
 }
 
 button {
@@ -27,30 +27,26 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %heading-base;
+  @include heading-base;
 }
 
 h1 {
-  @extend %heading-super;
+  @include heading-xl;
 }
 
 h2 {
-  @extend %heading-hero;
+  @include heading-lg;
 }
 
 h3 {
-  @extend %heading-display;
+  @include heading-md;
 }
 
 h4 {
-  @extend %heading-large;
+  @include heading-sm;
 }
 
-h5 {
-  @extend %heading-regular;
-}
-
+h5,
 h6 {
-  @extend %heading-small;
+  @include heading-xs;
 }
-

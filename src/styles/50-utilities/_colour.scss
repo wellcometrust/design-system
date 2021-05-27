@@ -7,5 +7,5 @@
 // ----------------------------------
 
 .u-color-inherit {
-  @extend %color-inherit;
+  @include color-inherit;
 }
