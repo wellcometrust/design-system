@@ -24,8 +24,8 @@ jobs:
             name: Build
             command: npm run storybook:build
         - run:
-          name: Copy
-          command: npm run storybook:copy-settings
+            name: Copy
+            command: npm run storybook:copy-settings
         - run:
             name: Deploy
             command: npm run storybook:deploy
