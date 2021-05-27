@@ -1,9 +1,4 @@
-import React, {
-  forwardRef,
-  MouseEvent as ReactMouseEvent,
-  MouseEventHandler,
-  Ref
-} from 'react';
+import React, { forwardRef, MouseEvent as ReactMouseEvent, Ref } from 'react';
 import cx from 'classnames';
 
 // import Icon from 'Icon/Icon';
@@ -36,14 +31,12 @@ export const Button = forwardRef(
     }: ButtonProps,
     ref: Ref<HTMLButtonElement>
   ) => {
-    // const Element: any = href ? 'Link' : 'button';
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const Element: any = href ? 'a' : 'button';
+    const Element = href ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({
       'ds-btn': hasStyles,
       [`ds-btn--${variant}`]: hasStyles,
-      [`${className}`]: className
+      [className as string]: className
     });
     const iconClassNames = cx('ds-btn__icon', {
       'ds-btn__icon--left': !iconPlacementSwitch,

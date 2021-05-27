@@ -1,9 +1,12 @@
-type ButtonProps = {
+type ButtonProps = (
+  | HTMLAttributes<HTMLButtonElement>
+  | HTMLAttributes<HTMLAnchorElement>
+) & {
   autoFocus?: boolean;
   className?: string;
   children: React.ReactNode;
   disabled?: boolean;
-  href?: string | null;
+  href?: string;
   icon?: string;
   iconClassName?: string;
   iconPlacementSwitch?: boolean;

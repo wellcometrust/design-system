@@ -33,14 +33,12 @@ export const Test = forwardRef(
     }: ButtonProps,
     ref: Ref<HTMLButtonElement>
   ) => {
-    // const Element: any = href ? 'Link' : 'button';
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const Element: any = href ? 'a' : 'button';
+    const Element = href ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({
       'test-btn': hasStyles,
       [`test-btn--${variant}`]: hasStyles,
-      [`${className}`]: className
+      [className as string]: className
     });
     const iconClassNames = cx('test-btn__icon', {
       'test-btn__icon--left': !iconPlacementSwitch,
