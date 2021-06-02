@@ -1,4 +1,10 @@
-import React, { forwardRef, MouseEvent as ReactMouseEvent, Ref } from 'react';
+import React, {
+  forwardRef,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+  Ref
+} from 'react';
 import cx from 'classnames';
 
 // import Icon from 'Icon/Icon';
@@ -47,7 +53,8 @@ export const Button = forwardRef(
       variant = 'primary',
       ...props
     }: ButtonProps,
-    ref: Ref<HTMLButtonElement>
+    // explicitly provide the possible element types
+    ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
     const Element = href ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
@@ -56,11 +63,11 @@ export const Button = forwardRef(
       [`ds-btn--${variant}`]: hasStyles,
       [className as string]: className
     });
-    const iconClassNames = cx('ds-btn__icon', {
-      'ds-btn__icon--left': !iconPlacementSwitch,
-      'ds-btn__icon--right': iconPlacementSwitch,
-      [iconClassName as string]: iconClassName
-    });
+    // const iconClassNames = cx('ds-btn__icon', {
+    //   'ds-btn__icon--left': !iconPlacementSwitch,
+    //   'ds-btn__icon--right': iconPlacementSwitch,
+    //   [iconClassName as string]: iconClassName
+    // });
     const textClassNames = cx('ds-btn__text', {
       [textClassName as string]: textClassName
     });
@@ -72,7 +79,7 @@ export const Button = forwardRef(
         disabled={disabled}
         href={href}
         id={id}
-        onClick={(e: ReactMouseEvent) => {
+        onClick={(e: MouseEvent) => {
           if (onClick && !disabled) {
             onClick(e);
           }

@@ -1,9 +1,4 @@
-import React, {
-  forwardRef,
-  MouseEvent as ReactMouseEvent,
-  MouseEventHandler,
-  Ref
-} from 'react';
+import React, { forwardRef, MouseEvent, Ref } from 'react';
 import cx from 'classnames';
 
 import { ButtonProps } from 'Button/Button';
@@ -32,7 +27,7 @@ export const Test = forwardRef(
       variant = 'primary',
       ...props
     }: ButtonProps,
-    ref: Ref<HTMLButtonElement>
+    ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
     const Element = href ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
@@ -55,9 +50,9 @@ export const Test = forwardRef(
         autoFocus={autoFocus}
         className={classNames}
         disabled={disabled}
-        to={href}
+        href={href}
         id={id}
-        onClick={(e: ReactMouseEvent) => {
+        onClick={(e: MouseEvent) => {
           if (onClick && !disabled) {
             onClick(e);
           }
