@@ -6,6 +6,24 @@ import cx from 'classnames';
 
 import './button.scss';
 
+export type ButtonProps = JSX.Element & {
+  autoFocus?: boolean;
+  className?: string;
+  children: ReactNode;
+  disabled?: boolean;
+  href?: string;
+  icon?: string;
+  iconClassName?: string;
+  iconPlacementSwitch?: boolean;
+  id?: string;
+  onClick?: MouseEventHandler;
+  role?: string;
+  tabIndex?: number;
+  textClassName?: string;
+  type?: 'button' | 'reset' | 'submit';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'link' | 'unstyled';
+};
+
 /**
  * Functional call to action
  */

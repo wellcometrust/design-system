@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 
+import { ButtonProps } from 'Button/Button';
 // import Icon from 'Icon/Icon';
 // import Link from 'Link';
 
