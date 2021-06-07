@@ -1,79 +1,19 @@
-import React, { forwardRef, MouseEvent, Ref } from 'react';
+import React, { ReactNode } from 'react';
 import cx from 'classnames';
-
-import { ButtonProps } from 'Button/Button';
-// import Icon from 'Icon/Icon';
-// import Link from 'Link';
 
 import './test.scss';
 
-export const Test = forwardRef(
-  (
-    {
-      autoFocus = false,
-      children,
-      className,
-      disabled,
-      href,
-      icon,
-      iconClassName,
-      iconPlacementSwitch,
-      id,
-      onClick,
-      role,
-      tabIndex,
-      textClassName,
-      type = 'button',
-      variant = 'primary',
-      ...props
-    }: ButtonProps,
-    ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
-  ) => {
-    const isAnchor = !!href;
-    const Element = isAnchor ? 'a' : 'button';
-    const hasStyles = variant !== 'unstyled';
-    const classNames = cx({
-      'test-btn': hasStyles,
-      [`test-btn--${variant}`]: hasStyles,
-      [className as string]: className
-    });
-    const iconClassNames = cx('test-btn__icon', {
-      'test-btn__icon--left': !iconPlacementSwitch,
-      'test-btn__icon--right': iconPlacementSwitch,
-      [iconClassName as string]: iconClassName
-    });
-    const textClassNames = cx('test-btn__text', {
-      [textClassName as string]: textClassName
-    });
+type TestProps = {
+  children?: ReactNode;
+  className?: string;
+};
 
-    return (
-      <Element
-        autoFocus={autoFocus}
-        className={classNames}
-        disabled={disabled}
-        href={href}
-        id={id}
-        onClick={(e: MouseEvent) => {
-          if (onClick && !disabled) {
-            onClick(e);
-          }
-        }}
-        ref={ref}
-        role={role}
-        tabIndex={tabIndex}
-        type={!isAnchor ? type : undefined}
-        {...props}
-      >
-        {/* {icon && !iconPlacementSwitch && (
-          <Icon name={icon} className={iconClassNames} />
-        )} */}
-        <span className={textClassNames}>{children}</span>
-        {/* {icon && iconPlacementSwitch && (
-          <Icon name={icon} className={iconClassNames} />
-        )} */}
-      </Element>
-    );
-  }
-);
+export const Test = ({ children, className }: TestProps) => {
+  const classNames = cx('ds-test', {
+    [className as string]: className
+  });
+
+  return <div className={classNames}>{children}</div>;
+};
 
 export default Test;
