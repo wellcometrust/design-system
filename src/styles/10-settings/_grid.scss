@@ -1,0 +1,39 @@
+// ----------------------------------
+// UI Settings
+// Grid
+// https://www.sketch.com/s/024ffb6c-3319-42a5-ad52-8389d978a474/a/8ywnZ5R
+// ----------------------------------
+// Design System 1.0 Alpha
+// 2021-05-01
+// ----------------------------------
+
+/**
+ * Usage
+ *
+ * .component {
+ * }
+ */
+
+:root {
+  --grid-columns: 6;
+  --grid-gutter: calc(1.5 * var(--space-unit)); // 12px
+  --grid-margin: 5%;
+  --grid-max-width: rem(1344);
+
+  @include mq(sm) {
+    --grid-gutter: calc(2.5 * var(--space-unit)); // 20px
+    --grid-columns: 12;
+  }
+
+  @include mq(md) {
+    --grid-gutter: calc(5 * var(--space-unit)); // 40px
+  }
+
+  @include mq(xl) {
+    --grid-gutter: calc(6 * var(--space-unit)); // 48px
+  }
+
+  @include mq(xxl) {
+    --grid-margin: auto;
+  }
+}
