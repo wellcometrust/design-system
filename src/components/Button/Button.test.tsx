@@ -1,11 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
+
 import Button from './Button';
 
-describe('<Button />', () => {
-  const output = shallow(<Button>Button text</Button>);
-
-  it('renders the component', () => {
-    expect(output);
-  });
+test('Button has correct text', () => {
+  const { getByText } = render(<Button>My button</Button>);
+  expect(getByText('My button')).toBeInTheDocument();
 });

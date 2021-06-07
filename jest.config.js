@@ -6,7 +6,8 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/src/test/mocks/file.mock.js',
     '\\.(css|scss)$': '<rootDir>/src/test/mocks/style.mock.js'
   },
-  setupFilesAfterEnv: ['<rootDir>/config/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/config/setup-tests.js'],
+  testEnvironment: 'jsdom',
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/?(*.)(test).{js,jsx,ts,tsx}'

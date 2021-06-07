@@ -29,7 +29,7 @@ export const Test = forwardRef(
     }: ButtonProps,
     ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
-    const isAnchor = href ? true : false;
+    const isAnchor = !!href;
     const Element = isAnchor ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({

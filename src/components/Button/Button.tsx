@@ -1,4 +1,10 @@
-import React, { forwardRef, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react';
+import React, {
+  forwardRef,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+  Ref
+} from 'react';
 import cx from 'classnames';
 
 // import Icon from 'Icon/Icon';
@@ -55,7 +61,7 @@ export const Button = forwardRef(
     // TODO - use type generics to dynamically set the ref type
     ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
-    const isAnchor = href ? true : false;
+    const isAnchor = !!href;
     const Element: React.ElementType = isAnchor ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({
