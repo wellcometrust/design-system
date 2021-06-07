@@ -29,7 +29,8 @@ export const Test = forwardRef(
     }: ButtonProps,
     ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
-    const Element = href ? 'a' : 'button';
+    const isAnchor = href ? true : false;
+    const Element = isAnchor ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({
       'test-btn': hasStyles,
@@ -60,7 +61,7 @@ export const Test = forwardRef(
         ref={ref}
         role={role}
         tabIndex={tabIndex}
-        type={!href ? type : null}
+        type={!isAnchor ? type : undefined}
         {...props}
       >
         {/* {icon && !iconPlacementSwitch && (

@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  MouseEvent,
-  MouseEventHandler,
-  ReactNode,
-  Ref
-} from 'react';
+import React, { forwardRef, MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react';
 import cx from 'classnames';
 
 // import Icon from 'Icon/Icon';
@@ -12,7 +6,12 @@ import cx from 'classnames';
 
 import './button.scss';
 
-export type ButtonProps = JSX.Element & {
+/**
+ * TODO 8629: Polymorphic props - Use type generics to dynamically set the component props
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8629}
+ */
+export type ButtonProps = {
   autoFocus?: boolean;
   className?: string;
   children: ReactNode;
@@ -26,7 +25,7 @@ export type ButtonProps = JSX.Element & {
   role?: string;
   tabIndex?: number;
   textClassName?: string;
-  type?: 'button' | 'reset' | 'submit';
+  type?: 'button' | 'submit' | 'reset' | undefined;
   variant?: 'primary' | 'secondary' | 'ghost' | 'link' | 'unstyled';
 };
 
@@ -53,10 +52,11 @@ export const Button = forwardRef(
       variant = 'primary',
       ...props
     }: ButtonProps,
-    // explicitly provide the possible element types
+    // TODO - use type generics to dynamically set the ref type
     ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
   ) => {
-    const Element = href ? 'a' : 'button';
+    const isAnchor = href ? true : false;
+    const Element: React.ElementType = isAnchor ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
     const classNames = cx({
       'ds-btn': hasStyles,
@@ -87,7 +87,7 @@ export const Button = forwardRef(
         ref={ref}
         role={role}
         tabIndex={tabIndex}
-        type={!href ? type : null}
+        type={!isAnchor ? type : undefined}
         {...props}
       >
         {/* {icon && !iconPlacementSwitch && (
