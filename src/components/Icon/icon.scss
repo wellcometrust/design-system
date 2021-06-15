@@ -1,0 +1,13 @@
+.ds-icon {
+  display: flex;
+  flex: 0 0 auto;
+  height: calc(3 * var(--space-unit));
+  justify-content: center;
+  width: calc(3 * var(--space-unit));
+
+  svg {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+  }
+}

@@ -49,7 +49,6 @@ module.exports = {
       depth: 3,
     }],
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': ['warn', { properties: 'never' }],
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
@@ -61,8 +60,9 @@ module.exports = {
     ],
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
+    'no-use-before-define': 'off',
     '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
