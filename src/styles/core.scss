@@ -26,19 +26,16 @@
 // Objects e/g grid or media object
 // @import '40-objects/__manifest';
 
-// Utility and helper classes
-// @import '50-utilities/__manifest';
-
 /* stylelint-enable scss/at-import-no-partial-leading-underscore */
 
 /**
+ * The following is an example of how the styles could be expanded in future.
+ *
  * Whilst we initially adopted a fully-fledged version of the ITCSS
  * framework, we decided to strip back to a slimmed down version to
  * emit as little CSS as possible.
  *
  * @see {@link https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731}
- *
- * The following is an example of how we can expand the styles in future.
  */
 
 // Core variables e.g. base sizes and colors
@@ -65,5 +62,7 @@
 // Scopes
 // @import '80-scopes/__manifest';
 
-// Utility and helper classes
+// Utility and helper classes - it is unlikely that the design system would feature these
+// since there are a wide number of well supported utility class libraries available and
+// the ideal place for including one such library would be in a consuming app.
 // @import '90-utilities/__manifest';
