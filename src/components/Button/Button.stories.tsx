@@ -33,8 +33,13 @@ export default {
       control: { type: 'radio' }
     },
     icon: {
-      options: Object.keys(iconMapping),
-      control: { type: 'select' }
+      options: [null, ...Object.keys(iconMapping)],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'No icon'
+        }
+      }
     }
   }
 } as Meta;
