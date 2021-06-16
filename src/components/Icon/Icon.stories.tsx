@@ -1,8 +1,8 @@
 import React from 'react';
-import { Meta, Story, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 
 import { Icon } from './Icon';
-import { map, object } from './iconMapping';
+import iconMapping from './iconMapping';
 
 /**
  * The legacy storiesOf module is used to render components dynamically as there
@@ -39,7 +39,7 @@ const categories = [
 ];
 
 storiesOf('Icons', module).add('Icons', () => {
-  const iconNames: string[] = Object.keys(object);
+  const iconNames = Object.keys(iconMapping) as Array<keyof typeof iconMapping>;
   const iconGroups = categories.map(({ label, regex }) => ({
     groupTitle: label,
     groupLabels: iconNames.filter(name => regex.test(name))

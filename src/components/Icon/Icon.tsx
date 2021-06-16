@@ -14,7 +14,7 @@ export type IconSVGProps = {
 type IconProps = {
   className?: string;
   height?: string;
-  name: string;
+  name: keyof typeof iconMapping;
   role?: string;
   title?: string;
   width?: string;
@@ -27,21 +27,15 @@ export const Icon = ({
   width,
   ...props
 }: IconProps) => {
-  const isIcon = iconMapping.has(name);
+  const isIcon = Object.prototype.hasOwnProperty.call(iconMapping, name);
 
   if (!isIcon) return null;
 
-  // const IconElement: React.ComponentType<React.ReactSVGElement> = iconMapping.get(name);
-  const IconElement = iconMapping.get(name);
+  const IconElement = iconMapping[name];
   const classNames = cx('ds-icon', { [className as string]: className });
 
   return (
     <span className={classNames} style={{ height, width }} aria-hidden="true">
-      {/*
-        TODO - fix type error
-        JSX element type 'IconElement' does not have any construct or call signatures.
-
-        // @ts-ignore */}
       <IconElement {...props} />
     </span>
   );
