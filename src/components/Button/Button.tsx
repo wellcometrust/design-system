@@ -7,7 +7,8 @@ import React, {
 } from 'react';
 import cx from 'classnames';
 
-// import Icon from 'Icon/Icon';
+import Icon from 'Icon/Icon';
+import iconMapping from 'Icon/iconMapping';
 // import Link from 'Link';
 
 import './button.scss';
@@ -23,7 +24,7 @@ export type ButtonProps = {
   children: ReactNode;
   disabled?: boolean;
   href?: string;
-  icon?: string;
+  icon?: keyof typeof iconMapping;
   iconClassName?: string;
   iconPlacementSwitch?: boolean;
   id?: string;
@@ -69,11 +70,11 @@ export const Button = forwardRef(
       [`ds-btn--${variant}`]: hasStyles,
       [className as string]: className
     });
-    // const iconClassNames = cx('ds-btn__icon', {
-    //   'ds-btn__icon--left': !iconPlacementSwitch,
-    //   'ds-btn__icon--right': iconPlacementSwitch,
-    //   [iconClassName as string]: iconClassName
-    // });
+    const iconClassNames = cx('ds-btn__icon', {
+      'ds-btn__icon--left': !iconPlacementSwitch,
+      'ds-btn__icon--right': iconPlacementSwitch,
+      [iconClassName as string]: iconClassName
+    });
     const textClassNames = cx('ds-btn__text', {
       [textClassName as string]: textClassName
     });
@@ -96,13 +97,13 @@ export const Button = forwardRef(
         type={!isAnchor ? type : undefined}
         {...props}
       >
-        {/* {icon && !iconPlacementSwitch && (
+        {icon && !iconPlacementSwitch && (
           <Icon name={icon} className={iconClassNames} />
-        )} */}
+        )}
         <span className={textClassNames}>{children}</span>
-        {/* {icon && iconPlacementSwitch && (
+        {icon && iconPlacementSwitch && (
           <Icon name={icon} className={iconClassNames} />
-        )} */}
+        )}
       </Element>
     );
   }

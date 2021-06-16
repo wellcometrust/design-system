@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import { Button, ButtonProps } from './Button';
+import iconMapping from '../Icon/iconMapping';
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
@@ -25,5 +26,15 @@ Unstyled.args = { children: 'Button', variant: 'unstyled' };
 export default {
   title: 'Button',
   component: Button,
-  argTypes: { onClick: { action: 'clicked' } }
+  argTypes: {
+    onClick: { action: 'clicked' },
+    variant: {
+      options: ['primary', 'secondary', 'ghost', 'link', 'unstyled'],
+      control: { type: 'radio' }
+    },
+    icon: {
+      options: Object.keys(iconMapping),
+      control: { type: 'select' }
+    }
+  }
 } as Meta;
