@@ -2,21 +2,13 @@ import React from 'react';
 import cx from 'classnames';
 
 import iconMapping from './iconMapping';
-
 import './icon.scss';
 
-export type IconSVGProps = {
-  role?: string;
-  title?: string;
-};
-
-// type IconProps = React.SVGAttributes<HTMLOrSVGElement> & {
 type IconProps = {
   className?: string;
   height?: string;
   name: keyof typeof iconMapping;
   role?: string;
-  title?: string;
   width?: string;
 };
 
@@ -32,7 +24,13 @@ export const Icon = ({
   if (!isIcon) return null;
 
   const IconElement = iconMapping[name];
-  const classNames = cx('ds-icon', { [className as string]: className });
+
+  // small icons need additional styles to be displayed at the correct size
+  const isSmall = /icon16px/i.test(name);
+  const classNames = cx('ds-icon', {
+    [className as string]: className,
+    'ds-icon--sm': isSmall
+  });
 
   return (
     <span className={classNames} style={{ height, width }} aria-hidden="true">

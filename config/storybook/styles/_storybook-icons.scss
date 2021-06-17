@@ -1,0 +1,67 @@
+.sb-grid {
+  display: flex;
+  flex-flow: wrap row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sb-grid__item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: var(--font-size-body-sm);
+  width: 100%;
+  
+  @include mq(400) {
+    width: 50%;
+  }
+
+  @include mq(xs) {
+    width: 33.33%;
+  }
+
+  @include mq(sm) {
+    width: 25%;
+  }
+
+  @include mq(md) {
+    width: 20%;
+  }
+}
+
+
+.sb-icon-figure {
+  margin: 0 0 var(--space-lg);
+}
+
+.sb-icon-container,
+.sb-icon-tap-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sb-icon-container {
+  border: 1px solid var(--colour-grey-20);
+  border-radius: var(--space-unit);
+  height: calc(12.5 * var(--space-unit));
+  margin-bottom: var(--space-unit);
+  width: calc(12.5 * var(--space-unit));
+}
+
+.sb-icon-tap-area {
+  border-radius: calc(0.5 * var(--space-unit));
+  height: calc(5.5 * var(--space-unit));
+  transition: background ease 0.2s;
+  width: calc(5.5 * var(--space-unit));
+
+  &:hover {
+    background: var(--colour-amber-20);
+  }
+}
+
+.sb-icon-name {
+  color: var(--colour-grey-60);
+  display: block;
+  font-size: var(--font-size-body-xs);
+}

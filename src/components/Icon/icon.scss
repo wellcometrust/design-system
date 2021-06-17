@@ -11,3 +11,8 @@
     max-width: 100%;
   }
 }
+
+.ds-icon--sm {
+  height: calc(2 * var(--space-unit));
+  width: calc(2 * var(--space-unit));
+}
