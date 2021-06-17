@@ -1,37 +1,24 @@
+.sb-section {
+  margin-bottom: var(--space-xl);
+}
+
 .sb-grid {
-  display: flex;
-  flex-flow: wrap row;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   list-style: none;
-  margin: 0;
+  margin: calc(-2 * var(--space-unit));
   padding: 0;
+
 }
 
 .sb-grid__item {
-  flex-grow: 0;
-  flex-shrink: 0;
   font-size: var(--font-size-body-sm);
-  width: 100%;
-  
-  @include mq(400) {
-    width: 50%;
-  }
-
-  @include mq(xs) {
-    width: 33.33%;
-  }
-
-  @include mq(sm) {
-    width: 25%;
-  }
-
-  @include mq(md) {
-    width: 20%;
-  }
+  padding: calc(2 * var(--space-unit));
 }
 
 
 .sb-icon-figure {
-  margin: 0 0 var(--space-lg);
+  margin: 0;
 }
 
 .sb-icon-container,
