@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Icon16PxDirectionalArrowDown = (
+const IconSmallDirectionalArrowDown = (
   props: React.SVGAttributes<SVGSVGElement>
 ) => (
   <svg viewBox="0 0 16 16" {...props}>
@@ -12,4 +12,4 @@ const Icon16PxDirectionalArrowDown = (
   </svg>
 );
 
-export default Icon16PxDirectionalArrowDown;
+export default IconSmallDirectionalArrowDown;

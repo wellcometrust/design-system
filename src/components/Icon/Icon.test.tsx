@@ -11,7 +11,7 @@ import Icon from './Icon';
 // });
 
 test.skip('Icon renders correctly', () => {
-  const { container } = render(<Icon name="icon16PxActionCross" />);
+  const { container } = render(<Icon name="iconSmallActionCross" />);
   const icon = container.querySelector('.icon');
 
   // expect(screen.getByRole('presentation')).toBeInTheDocument();

@@ -1,20 +1,5 @@
 import React from 'react';
 
-import Icon16PxActionCross from './components/Icon16PxActionCross';
-import Icon16PxActionDelete from './components/Icon16PxActionDelete';
-import Icon16PxActionDownload from './components/Icon16PxActionDownload';
-import Icon16PxActionEdit from './components/Icon16PxActionEdit';
-import Icon16PxActionMinus from './components/Icon16PxActionMinus';
-import Icon16PxActionPlus from './components/Icon16PxActionPlus';
-import Icon16PxActionSearch from './components/Icon16PxActionSearch';
-import Icon16PxActionUpdate from './components/Icon16PxActionUpdate';
-import Icon16PxActionUpload from './components/Icon16PxActionUpload';
-import Icon16PxDirectionalArrowDown from './components/Icon16PxDirectionalArrowDown';
-import Icon16PxDirectionalArrowLeft from './components/Icon16PxDirectionalArrowLeft';
-import Icon16PxDirectionalArrowRight from './components/Icon16PxDirectionalArrowRight';
-import Icon16PxDirectionalArrowUp from './components/Icon16PxDirectionalArrowUp';
-import Icon24PxSocialPhone from './components/Icon24PxSocialPhone';
-import IconActionAddCircleLine from './components/IconActionAddCircleLine';
 import IconActionCrossCircle from './components/IconActionCrossCircle';
 import IconActionCross from './components/IconActionCross';
 import IconActionDelete from './components/IconActionDelete';
@@ -30,6 +15,7 @@ import IconActionMore from './components/IconActionMore';
 import IconActionNav from './components/IconActionNav';
 import IconActionOpenExternal from './components/IconActionOpenExternal';
 import IconActionPlay from './components/IconActionPlay';
+import IconActionPlusCircle from './components/IconActionPlusCircle';
 import IconActionPlus from './components/IconActionPlus';
 import IconActionPower from './components/IconActionPower';
 import IconActionPreview from './components/IconActionPreview';
@@ -70,10 +56,10 @@ import IconDirectionalChevronDown from './components/IconDirectionalChevronDown'
 import IconDirectionalChevronLeft from './components/IconDirectionalChevronLeft';
 import IconDirectionalChevronRight from './components/IconDirectionalChevronRight';
 import IconDirectionalChevronUp from './components/IconDirectionalChevronUp';
-import IconDirectionalCirclearrowDown from './components/IconDirectionalCirclearrowDown';
-import IconDirectionalCirclearrowLeft from './components/IconDirectionalCirclearrowLeft';
-import IconDirectionalCirclearrowRight from './components/IconDirectionalCirclearrowRight';
-import IconDirectionalCirclearrowUp from './components/IconDirectionalCirclearrowUp';
+import IconDirectionalCircleArrowDown from './components/IconDirectionalCircleArrowDown';
+import IconDirectionalCircleArrowLeft from './components/IconDirectionalCircleArrowLeft';
+import IconDirectionalCircleArrowRight from './components/IconDirectionalCircleArrowRight';
+import IconDirectionalCircleArrowUp from './components/IconDirectionalCircleArrowUp';
 import IconDirectionalSortAscending from './components/IconDirectionalSortAscending';
 import IconDirectionalSortDefault from './components/IconDirectionalSortDefault';
 import IconDirectionalSortDescending from './components/IconDirectionalSortDescending';
@@ -82,6 +68,19 @@ import IconMiscCookies from './components/IconMiscCookies';
 import IconMiscJob from './components/IconMiscJob';
 import IconMiscTicket from './components/IconMiscTicket';
 import IconMiscVegetarian from './components/IconMiscVegetarian';
+import IconSmallActionCross from './components/IconSmallActionCross';
+import IconSmallActionDelete from './components/IconSmallActionDelete';
+import IconSmallActionDownload from './components/IconSmallActionDownload';
+import IconSmallActionEdit from './components/IconSmallActionEdit';
+import IconSmallActionMinus from './components/IconSmallActionMinus';
+import IconSmallActionPlus from './components/IconSmallActionPlus';
+import IconSmallActionSearch from './components/IconSmallActionSearch';
+import IconSmallActionUpdate from './components/IconSmallActionUpdate';
+import IconSmallActionUpload from './components/IconSmallActionUpload';
+import IconSmallDirectionalArrowDown from './components/IconSmallDirectionalArrowDown';
+import IconSmallDirectionalArrowLeft from './components/IconSmallDirectionalArrowLeft';
+import IconSmallDirectionalArrowRight from './components/IconSmallDirectionalArrowRight';
+import IconSmallDirectionalArrowUp from './components/IconSmallDirectionalArrowUp';
 import IconSocialBellActive from './components/IconSocialBellActive';
 import IconSocialBellDefault from './components/IconSocialBellDefault';
 import IconSocialCommentFill from './components/IconSocialCommentFill';
@@ -95,26 +94,12 @@ import IconSocialNetworkFacebook from './components/IconSocialNetworkFacebook';
 import IconSocialNetworkLinkedin from './components/IconSocialNetworkLinkedin';
 import IconSocialNetworkTwitter from './components/IconSocialNetworkTwitter';
 import IconSocialPerson from './components/IconSocialPerson';
+import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
 
 export default {
-  icon16PxActionCross: Icon16PxActionCross,
-  icon16PxActionDelete: Icon16PxActionDelete,
-  icon16PxActionDownload: Icon16PxActionDownload,
-  icon16PxActionEdit: Icon16PxActionEdit,
-  icon16PxActionMinus: Icon16PxActionMinus,
-  icon16PxActionPlus: Icon16PxActionPlus,
-  icon16PxActionSearch: Icon16PxActionSearch,
-  icon16PxActionUpdate: Icon16PxActionUpdate,
-  icon16PxActionUpload: Icon16PxActionUpload,
-  icon16PxDirectionalArrowDown: Icon16PxDirectionalArrowDown,
-  icon16PxDirectionalArrowLeft: Icon16PxDirectionalArrowLeft,
-  icon16PxDirectionalArrowRight: Icon16PxDirectionalArrowRight,
-  icon16PxDirectionalArrowUp: Icon16PxDirectionalArrowUp,
-  icon24PxSocialPhone: Icon24PxSocialPhone,
-  iconActionAddCircleLine: IconActionAddCircleLine,
   iconActionCrossCircle: IconActionCrossCircle,
   iconActionCross: IconActionCross,
   iconActionDelete: IconActionDelete,
@@ -130,6 +115,7 @@ export default {
   iconActionNav: IconActionNav,
   iconActionOpenExternal: IconActionOpenExternal,
   iconActionPlay: IconActionPlay,
+  iconActionPlusCircle: IconActionPlusCircle,
   iconActionPlus: IconActionPlus,
   iconActionPower: IconActionPower,
   iconActionPreview: IconActionPreview,
@@ -170,10 +156,10 @@ export default {
   iconDirectionalChevronLeft: IconDirectionalChevronLeft,
   iconDirectionalChevronRight: IconDirectionalChevronRight,
   iconDirectionalChevronUp: IconDirectionalChevronUp,
-  iconDirectionalCirclearrowDown: IconDirectionalCirclearrowDown,
-  iconDirectionalCirclearrowLeft: IconDirectionalCirclearrowLeft,
-  iconDirectionalCirclearrowRight: IconDirectionalCirclearrowRight,
-  iconDirectionalCirclearrowUp: IconDirectionalCirclearrowUp,
+  iconDirectionalCircleArrowDown: IconDirectionalCircleArrowDown,
+  iconDirectionalCircleArrowLeft: IconDirectionalCircleArrowLeft,
+  iconDirectionalCircleArrowRight: IconDirectionalCircleArrowRight,
+  iconDirectionalCircleArrowUp: IconDirectionalCircleArrowUp,
   iconDirectionalSortAscending: IconDirectionalSortAscending,
   iconDirectionalSortDefault: IconDirectionalSortDefault,
   iconDirectionalSortDescending: IconDirectionalSortDescending,
@@ -182,6 +168,19 @@ export default {
   iconMiscJob: IconMiscJob,
   iconMiscTicket: IconMiscTicket,
   iconMiscVegetarian: IconMiscVegetarian,
+  iconSmallActionCross: IconSmallActionCross,
+  iconSmallActionDelete: IconSmallActionDelete,
+  iconSmallActionDownload: IconSmallActionDownload,
+  iconSmallActionEdit: IconSmallActionEdit,
+  iconSmallActionMinus: IconSmallActionMinus,
+  iconSmallActionPlus: IconSmallActionPlus,
+  iconSmallActionSearch: IconSmallActionSearch,
+  iconSmallActionUpdate: IconSmallActionUpdate,
+  iconSmallActionUpload: IconSmallActionUpload,
+  iconSmallDirectionalArrowDown: IconSmallDirectionalArrowDown,
+  iconSmallDirectionalArrowLeft: IconSmallDirectionalArrowLeft,
+  iconSmallDirectionalArrowRight: IconSmallDirectionalArrowRight,
+  iconSmallDirectionalArrowUp: IconSmallDirectionalArrowUp,
   iconSocialBellActive: IconSocialBellActive,
   iconSocialBellDefault: IconSocialBellDefault,
   iconSocialCommentFill: IconSocialCommentFill,
@@ -195,6 +194,7 @@ export default {
   iconSocialNetworkLinkedin: IconSocialNetworkLinkedin,
   iconSocialNetworkTwitter: IconSocialNetworkTwitter,
   iconSocialPerson: IconSocialPerson,
+  iconSocialPhone: IconSocialPhone,
   iconSocialReply: IconSocialReply,
   iconSocialStarFill: IconSocialStarFill,
   iconSocialStarLine: IconSocialStarLine

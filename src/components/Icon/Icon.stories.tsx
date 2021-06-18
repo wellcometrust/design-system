@@ -14,27 +14,27 @@ import iconMapping from './iconMapping';
 const categories = [
   {
     label: 'Action icons',
-    regex: /icon(24Px)?Action/i
+    regex: /iconAction/i
   },
   {
     label: 'Directional icons',
-    regex: /icon(24Px)?Directional/i
+    regex: /iconDirectional/i
   },
   {
     label: 'Content icons',
-    regex: /icon(24Px)?Content/i
+    regex: /iconContent/i
   },
   {
     label: 'Social icons',
-    regex: /icon(24Px)?Social/i
+    regex: /iconSocial/i
   },
   {
     label: 'Miscellaneous icons',
-    regex: /icon(24Px)?Misc/i
+    regex: /iconMisc/i
   },
   {
-    label: '16px icons',
-    regex: /icon16Px/i
+    label: '16px (small) icons',
+    regex: /iconSmall/i
   }
 ];
 

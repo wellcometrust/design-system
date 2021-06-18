@@ -65,16 +65,19 @@ export const Button = forwardRef(
     const isAnchor = !!href;
     const Element: React.ElementType = isAnchor ? 'a' : 'button';
     const hasStyles = variant !== 'unstyled';
+
     const classNames = cx({
       'ds-btn': hasStyles,
       [`ds-btn--${variant}`]: hasStyles,
       [className as string]: className
     });
+
     const iconClassNames = cx('ds-btn__icon', {
       'ds-btn__icon--left': !iconPlacementSwitch,
       'ds-btn__icon--right': iconPlacementSwitch,
       [iconClassName as string]: iconClassName
     });
+
     const textClassNames = cx('ds-btn__text', {
       [textClassName as string]: textClassName
     });

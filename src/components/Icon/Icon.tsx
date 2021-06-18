@@ -26,7 +26,7 @@ export const Icon = ({
   const IconElement = iconMapping[name];
 
   // small icons need additional styles to be displayed at the correct size
-  const isSmall = /icon16px/i.test(name);
+  const isSmall = /iconSmall/i.test(name);
   const classNames = cx('ds-icon', {
     [className as string]: className,
     'ds-icon--sm': isSmall

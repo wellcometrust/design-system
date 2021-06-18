@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Icon16PxActionMinus = (props: React.SVGAttributes<SVGSVGElement>) => (
+const IconSmallActionMinus = (props: React.SVGAttributes<SVGSVGElement>) => (
   <svg viewBox="0 0 16 16" {...props}>
     <rect
       x="2"
@@ -14,4 +14,4 @@ const Icon16PxActionMinus = (props: React.SVGAttributes<SVGSVGElement>) => (
   </svg>
 );
 
-export default Icon16PxActionMinus;
+export default IconSmallActionMinus;

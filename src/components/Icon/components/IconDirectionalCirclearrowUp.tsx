@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconDirectionalCirclearrowUp = (
+const IconDirectionalCircleArrowUp = (
   props: React.SVGAttributes<SVGSVGElement>
 ) => (
   <svg viewBox="0 0 24 24" {...props}>
@@ -12,4 +12,4 @@ const IconDirectionalCirclearrowUp = (
   </svg>
 );
 
-export default IconDirectionalCirclearrowUp;
+export default IconDirectionalCircleArrowUp;
