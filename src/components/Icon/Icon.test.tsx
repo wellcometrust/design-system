@@ -1,20 +1,21 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, isInaccessible } from '@testing-library/react';
 import Icon from './Icon';
 
-// test('Icon renders correctly', () => {
-//   const { container } = render(<Icon name="icon16PxActionCross" />);
-//   const icon = container.querySelector('.icon');
-
-//   expect(icon).toBeInTheDocument();
-//   expect(icon).toBeVisible();
-// });
-
-test.skip('Icon renders correctly', () => {
+test('Icon renders correctly', () => {
   const { container } = render(<Icon name="iconSmallActionCross" />);
-  const icon = container.querySelector('.icon');
 
-  // expect(screen.getByRole('presentation')).toBeInTheDocument();
+  const icon = container.querySelector('.ds-icon');
+
+  // check it exists
   expect(icon).toBeInTheDocument();
-  // expect(icon).toBeVisible();
+});
+
+test('Icon is presentational only and therefore inaccessible', () => {
+  const { container } = render(<Icon name="iconSmallActionCross" />);
+
+  const icon = container.querySelector('.ds-icon');
+
+  // verify that it can't be accessed due to aria-hidden attribute
+  expect(isInaccessible(icon as Element)).toBeTruthy();
 });
