@@ -56,6 +56,10 @@ import IconDirectionalChevronDown from './components/IconDirectionalChevronDown'
 import IconDirectionalChevronLeft from './components/IconDirectionalChevronLeft';
 import IconDirectionalChevronRight from './components/IconDirectionalChevronRight';
 import IconDirectionalChevronUp from './components/IconDirectionalChevronUp';
+import IconDirectionalCircleArrowDown from './components/IconDirectionalCircleArrowDown';
+import IconDirectionalCircleArrowLeft from './components/IconDirectionalCircleArrowLeft';
+import IconDirectionalCircleArrowRight from './components/IconDirectionalCircleArrowRight';
+import IconDirectionalCircleArrowUp from './components/IconDirectionalCircleArrowUp';
 import IconDirectionalSortAscending from './components/IconDirectionalSortAscending';
 import IconDirectionalSortDefault from './components/IconDirectionalSortDefault';
 import IconDirectionalSortDescending from './components/IconDirectionalSortDescending';
@@ -152,6 +156,10 @@ export default {
   iconDirectionalChevronLeft: IconDirectionalChevronLeft,
   iconDirectionalChevronRight: IconDirectionalChevronRight,
   iconDirectionalChevronUp: IconDirectionalChevronUp,
+  iconDirectionalCircleArrowDown: IconDirectionalCircleArrowDown,
+  iconDirectionalCircleArrowLeft: IconDirectionalCircleArrowLeft,
+  iconDirectionalCircleArrowRight: IconDirectionalCircleArrowRight,
+  iconDirectionalCircleArrowUp: IconDirectionalCircleArrowUp,
   iconDirectionalSortAscending: IconDirectionalSortAscending,
   iconDirectionalSortDefault: IconDirectionalSortDefault,
   iconDirectionalSortDescending: IconDirectionalSortDescending,
