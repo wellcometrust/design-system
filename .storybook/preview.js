@@ -1,9 +1,15 @@
-import { addParameters } from '@storybook/react';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
-
 import './styles/storybook-app.scss';
 
-addParameters({
+export const parameters = {
+  options: {
+    name: 'Wellcome Design System',
+    url: 'https://designsystem.wellcome.org',
+    storySort: {
+      order: ['Global', 'Components']
+    }
+  },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     values: [
       {
@@ -20,6 +26,12 @@ addParameters({
       },
     ],
   },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
   docs: {
     container: DocsContainer,
     page: DocsPage,
@@ -27,4 +39,4 @@ addParameters({
       state: 'open',
     }
   }
-});
+}

@@ -1,18 +1,19 @@
 .sb-section {
-  margin-bottom: var(--space-xl);
+  max-width: none;
 }
 
 .sb-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   list-style: none;
-  margin: calc(-2 * var(--space-unit));
+  margin: 0 calc(-2 * var(--space-unit)) var(--space-lg);
   padding: 0;
 
 }
 
 .sb-grid__item {
   font-size: var(--font-size-body-sm);
+  margin: 0;
   padding: calc(2 * var(--space-unit));
 }
 

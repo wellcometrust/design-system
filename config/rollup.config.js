@@ -11,7 +11,7 @@ import virtual from '@rollup/plugin-virtual';
 
 import componentArray from '../src/index.ts';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.js', '.jsx', '.mdx', '.ts', '.tsx'];
 
 const globals = {
   react: 'React',

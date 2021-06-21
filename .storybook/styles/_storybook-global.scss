@@ -32,18 +32,22 @@ h6 {
 
 h1 {
   @include heading-xl;
+  margin-bottom: var(--space-lg);
 }
 
 h2 {
   @include heading-lg;
+  margin-bottom: var(--space-lg);
 }
 
 h3 {
   @include heading-md;
+  margin-bottom: var(--space-md);
 }
 
 h4 {
   @include heading-sm;
+  margin-bottom: var(--space-md);
 }
 
 h5,
