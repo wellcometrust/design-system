@@ -1,7 +1,6 @@
 /**
  * @file Manages server side rendering of React components as separate app instances
  */
-import React from 'react';
 import fs from 'fs';
 import { renderToString } from 'react-dom/server';
 

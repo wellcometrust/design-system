@@ -75,7 +75,7 @@ module.exports = {
       },
     ]
   },
-  'settings': {
+  settings: {
     'import/resolver': {
       'node': {
         'extensions': ['.js', '.jsx', '.ts', '.tsx'],
@@ -83,4 +83,22 @@ module.exports = {
       }
     }
   },
+  overrides: [
+    {
+      "files": [
+        "src/**/*.stories.@(js|tsx)"
+      ],
+      "rules": {
+        "import/prefer-default-export": "off"
+      }
+    },
+    {
+      "files": [
+        "src/ssr/*.*"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
 }

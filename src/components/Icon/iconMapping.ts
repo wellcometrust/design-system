@@ -1,5 +1,3 @@
-import React from 'react';
-
 import IconActionCrossCircle from './components/IconActionCrossCircle';
 import IconActionCross from './components/IconActionCross';
 import IconActionDelete from './components/IconActionDelete';
