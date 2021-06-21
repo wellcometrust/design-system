@@ -24,7 +24,7 @@ export const Unstyled = Template.bind({});
 Unstyled.args = { children: 'Button', variant: 'unstyled' };
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     onClick: { action: 'clicked' },
