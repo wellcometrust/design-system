@@ -1,0 +1,65 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+import { ColoursPaletteStatus } from 'stories/Colours.stories';
+import { Icon } from './Icon';
+import {
+  ActionIcons,
+  DirectionalIcons,
+  ContentIcons,
+  SocialIcons,
+  MiscellaneousIcons,
+  SmallIcons,
+} from './IconGroups.stories';
+
+<Meta title={`Global/Icons`} component={Icon} />
+
+# Iconography
+To meet accessibility requirements, icons used within a call to action need a minimum 44px by 44px tappable area.
+
+By default, icons are 24px by 24px (rendered using rems in CSS). The tappable area can be previewed by hovering over each icon in the preview below.
+
+Icons can of course be used for providing styling to non-interactive elements, in which case the 44px by 44px area is not required.
+
+## Icon colours
+You are free to use the icons in any colour from the Wellcome palette. The red and green shown below are to be used for error and success messaging.
+
+<ColoursPaletteStatus />
+
+### Development note
+Icon HTML is wrapped in a `<span>` element. The SVG contained within this span has a default **fill** of `currentColor` which means that it will automatically use the **color** of the containing HTML. No colour is specified for the span itself but this can be set very easily using CSS.
+
+```html
+<!-- sample HTML output -->
+<span class="ds-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 0c6.627 0 12 5.373 12 12s ... 1.415 0z" fill="currentColor" fill-rule="evenodd"></path>
+  </svg>
+</span>
+```
+
+## Action icons
+<ActionIcons />
+
+## Directional icons
+<DirectionalIcons/>
+
+## Content icons
+<ContentIcons/>
+
+## Social icons
+<SocialIcons/>
+
+## Miscellaneous icons
+<MiscellaneousIcons/>
+
+## Small icons
+The small icons detailed below have a simpler design than their standard size (24px by 24px) counterparts and have a default size of 16px by 16px.
+
+<SmallIcons/>
+
+## Icon props
+Height and width styles are automatically set in CSS depending on the icon name used e.g. `name="iconActionEdit"` will render at the standard size (24px by 24px), `name="iconSmallActionEdit"` will render at the smaller size (16px by 16px).
+
+Overrides can be made through CSS or may be provided as props. Props should include the unit type as they will be rendered in a **style** attribute.
+
+<ArgsTable of={Icon} />

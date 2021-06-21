@@ -8,7 +8,6 @@ type IconProps = {
   className?: string;
   height?: string;
   name: keyof typeof iconMapping;
-  role?: string;
   width?: string;
 };
 
