@@ -4,7 +4,7 @@ import cx from 'classnames';
 import iconMapping from './iconMapping';
 import './icon.scss';
 
-type IconProps = {
+export type IconProps = {
   className?: string;
   height?: string;
   name: keyof typeof iconMapping;

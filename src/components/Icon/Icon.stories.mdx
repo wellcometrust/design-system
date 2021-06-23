@@ -1,0 +1,39 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+import { Icon, IconProps } from './Icon';
+
+<Meta
+  title={`Components/Icon`}
+  component={Icon}
+  argTypes={{
+    height: {
+      name: 'height (e.g. 5rem)',
+    },
+    width: {
+      name: 'width (e.g. 5rem)',
+    }
+  }}
+/>
+
+# Icon
+
+<Canvas>
+  <Story name="Icon" args={{ 
+      name: 'iconDirectionalArrowDown'
+    }}>
+    {(args) => <Icon {...args} />}
+  </Story>
+</Canvas>
+
+## Colour
+Icon content is SVG wrapped in a `<span>` element.
+
+The SVG has a default **fill** of `currentColor` which means that it will automatically use the **color** of the containing HTML. No default colour is specified for the span itself but this can be set very easily using CSS.
+
+## Height and width
+The SVG has no explicit dimensions but it has a viewBox attribute so each icon will scale uniformly to whatever size the wrapping span is set to.
+
+Height and width styles are automatically set in CSS depending on the icon name used e.g. `name="iconActionEdit"` will render at the standard size (24px by 24px), `name="iconSmallActionEdit"` will render at the smaller size (16px by 16px).
+
+Overrides can be made through CSS or may be provided as props. Props should include the unit as they will be rendered in a **style** attribute.
+

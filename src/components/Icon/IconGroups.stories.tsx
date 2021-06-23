@@ -1,10 +1,17 @@
 import React from 'react';
 
+/*
+ * IconGallery and IconItem do not present the icons very well - code is not
+ * massively accessible and icon names overlap
+ */
+
+// import { IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+
 import { Icon } from './Icon';
 import iconMapping from './iconMapping';
 
 /**
- * Icon categories prefixes
+ * Icon categories and prefixes
  *
  * Action:          iconAction
  * Directional:     iconDirectional
@@ -15,7 +22,7 @@ import iconMapping from './iconMapping';
  */
 const iconNames = Object.keys(iconMapping) as Array<keyof typeof iconMapping>;
 
-export const IconTemplate = ({ regex }: { regex: RegExp }) => {
+export const IconGroupTemplate = ({ regex }: { regex: RegExp }) => {
   const groupNames = iconNames.filter(name => regex.test(name));
 
   return (
@@ -39,16 +46,18 @@ export const IconTemplate = ({ regex }: { regex: RegExp }) => {
   );
 };
 
-export const ActionIcons = () => <IconTemplate regex={/iconAction/i} />;
+export const ActionIcons = () => <IconGroupTemplate regex={/iconAction/i} />;
 
 export const DirectionalIcons = () => (
-  <IconTemplate regex={/iconDirectional/i} />
+  <IconGroupTemplate regex={/iconDirectional/i} />
 );
 
-export const ContentIcons = () => <IconTemplate regex={/iconContent/i} />;
+export const ContentIcons = () => <IconGroupTemplate regex={/iconContent/i} />;
 
-export const SocialIcons = () => <IconTemplate regex={/iconSocial/i} />;
+export const SocialIcons = () => <IconGroupTemplate regex={/iconSocial/i} />;
 
-export const MiscellaneousIcons = () => <IconTemplate regex={/iconMisc/i} />;
+export const MiscellaneousIcons = () => (
+  <IconGroupTemplate regex={/iconMisc/i} />
+);
 
-export const SmallIcons = () => <IconTemplate regex={/iconSmall/i} />;
+export const SmallIcons = () => <IconGroupTemplate regex={/iconSmall/i} />;
