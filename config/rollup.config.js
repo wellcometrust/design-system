@@ -2,6 +2,7 @@ import autoprefixer from 'autoprefixer';
 import babel from '@rollup/plugin-babel';
 import calc from 'postcss-calc';
 import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
 import ignoreImport from 'rollup-plugin-ignore-import';
 import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve'; // resolves all the node dependencies
@@ -161,6 +162,19 @@ export default (async () => ([
       commonjs(),
       ignoreImport({
         extensions: ['.scss', '.css']
+      }),
+
+      /**
+       * 5. Copy and rename dist/index to provide correct type defs
+       * for named exports
+       *
+       * This is included here to separate it from the previous process which
+       * runs the virtual index build, to ensure that process completes and
+       * the index file is generated before attempting to copy.
+       */
+      copy({
+        targets: [{ src: 'dist/index.js', dest: 'dist/', rename: 'index.d.ts' }],
+        verbose: true
       })
     ]
   },
