@@ -29,7 +29,8 @@ export default (async () => ([
    */
   {
     input: [
-      'src/styles/core.ts'
+      'src/styles/core.ts',
+      'src/styles/theme.ts'
     ],
     output: {
       dir: 'dist',

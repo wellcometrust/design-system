@@ -8,7 +8,9 @@
 
 :root {
   --colour-black: #000;
+  --colour-black-rgb: 0, 0, 0;
   --colour-white: #fff;
+  --colour-white-rgb: 255, 255, 255;
 
   --colour-amber-90: #382a00;
   --colour-amber-80: #4d3900;
@@ -58,6 +60,7 @@
   --colour-grey-80: #292929;
   --colour-grey-70: #5c5c5c;
   --colour-grey-60: #767676;
+  --colour-grey-60-rgb: 118, 118, 118;
   --colour-grey-50: #878787;
   --colour-grey-40: #999;
   --colour-grey-30: #b3b3b3;
@@ -97,13 +100,4 @@
   --colour-yellow-20: #fff9a6;
   --colour-yellow-10: #fffde2;
   --colour-yellow-05: #fffef0;
-
-  --link-colour: var(--colour-blue-60);
-  --link-colour-hover: var(--colour-blue-70);
-  --link-colour-focus-outline: var(--colour-blue-40);
-  --link-colour-active: var(--colour-blue-50);
-  --link-colour-disabled: var(--colour-grey-50);
-
-  --body-text-colour: var(--colour-grey-80);
-  --meta-text-colour: var(--colour-grey-60);
 }
