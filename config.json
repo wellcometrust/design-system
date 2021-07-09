@@ -16,6 +16,15 @@
               "category": "colour"
             }
           }
+        },
+        {
+          "destination": "colours.d.ts",
+          "format": "typescript/es6-declarations",
+          "filter": {
+            "attributes": {
+              "category": "colour"
+            }
+          }
         }
       ]
     },

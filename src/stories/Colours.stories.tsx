@@ -1,16 +1,17 @@
 import React from 'react';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
-import colourTokens from 'src/build/js/colours';
+import colourTokens from 'build/js/colours';
 import { toCssVariable } from 'utils/change-case';
 
 type TokensProps = {
   [key: string]: string;
 };
 
+// TODO: Ideally we would import tokens as a prop but type declarations
+// are not implicit at the node level i.e. `tokenKeys.map((key) =>`
 export const ColourVariables = ({ tokens }: TokensProps) => {
-  // const tokenKeys = Object.keys(colourTokens) as Array<keyof typeof colourTokens>;
-  const tokenKeys = Object.keys(tokens);
+  const tokenKeys = Object.keys(colourTokens) as Array<keyof typeof colourTokens>;
 
   return (
     <table className="sb-table sb-table--swatches">
@@ -22,7 +23,6 @@ export const ColourVariables = ({ tokens }: TokensProps) => {
         </tr>
       </thead>
       <tbody>
-        {/* {tokenKeys.map((key: keyof typeof colourTokens) => { */}
         {tokenKeys.map((key) => {
           const value = colourTokens[key];
           const cssValue = /rgb/i.test(key) ? `rgb(${value})` : value;
