@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build:clean": "rm -rf dist ssr",
+    "build:tokens": "style-dictionary build",
     "build:types": "tsc --emitDeclarationOnly",
     "build": "npm run build:clean && rollup -c ./config/rollup.config.js && node ./ssr/html.js && npm run build:types",
     "dev": "npm run build:types && rollup -c ./config/rollup.config.js -w",
@@ -118,6 +119,7 @@
     "sass": "^1.29.0",
     "sass-loader": "^8.0.0",
     "sass-mq": "^5.0.1",
+    "style-dictionary": "^3.0.1",
     "style-loader": "^1.1.2",
     "stylelint": "^12.0.1",
     "stylelint-config-sass-guidelines": "^6.2.0",

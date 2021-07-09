@@ -1,0 +1,13 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+import { ColoursPaletteStatus, ColourVariables } from './Colours.stories';
+import colourTokens from '../../build/js/colours';
+
+<Meta title={`Global/Colours`} />
+
+# Colour palette
+
+<ColourVariables tokens={colourTokens} />
+
+<ColoursPaletteStatus />
+

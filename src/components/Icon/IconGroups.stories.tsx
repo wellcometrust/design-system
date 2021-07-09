@@ -2,9 +2,8 @@ import React from 'react';
 
 /*
  * IconGallery and IconItem do not present the icons very well - code is not
- * massively accessible and icon names overlap
+ * massively accessible and icon names overlap, hence not using them
  */
-
 // import { IconGallery, IconItem } from '@storybook/addon-docs/blocks';
 
 import { Icon } from './Icon';
