@@ -1,13 +1,13 @@
 // ----------------------------------
-// UI common
+// UI theme
 // ----------------------------------
 // Design System 1.0 Alpha
 // 2021-05-01
 // ----------------------------------
 
 /**
- * This file serves as the main entry point for the design systems's
- * common style helpers (written in .scss).
+ * This file serves as the main entry point for the design system's
+ * standard theme variables (written in .scss).
  *
  * Unused @imports have been commented out to give a reference point.
  */
@@ -17,8 +17,11 @@
 // Core variables e.g. base sizes and colours
 // @import '10-settings/__manifest';
 
+// Theme variables e.g. specific colours and typography
+@import '15-theme/__manifest';
+
 // Core style functions and mixins
-@import '20-tools/__manifest';
+// @import '20-tools/__manifest';
 
 // More detailed components such as buttons, alerts etc.
 // @import '30-components/__manifest';

@@ -14,8 +14,11 @@
 
 /* stylelint-disable scss/at-import-no-partial-leading-underscore */
 
-// Core variables e.g. base sizes and colors
+// Core variables e.g. base sizes and colours
 @import '10-settings/__manifest';
+
+// Theme variables e.g. specific colours and typography
+// @import '15-theme/__manifest';
 
 // Core style functions and mixins
 // @import '20-tools/__manifest';
@@ -38,8 +41,11 @@
  * @see {@link https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731}
  */
 
-// Core variables e.g. base sizes and colors
+// Core variables e.g. base sizes and colours
 // @import '10-settings/__manifest';
+
+// Theme variables e.g. specific colours and typography
+// @import '15-theme/__manifest';
 
 // Core style functions and mixins
 // @import '20-tools/__manifest';
