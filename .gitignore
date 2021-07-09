@@ -5,6 +5,7 @@ node_modules/
 # Build/output files
 .dist/
 *.sass-cache*
+/build
 dist
 /ssr
 coverage

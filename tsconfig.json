@@ -8,12 +8,15 @@
                 "/",
                 "components/*",
             ],
+            "build/*": [
+                "build/*"
+            ],
             "data/*": [
                 "data/*"
             ],
             "utils/*": [
                 "utils/*"
-            ],
+            ]
         },
         "moduleResolution": "node",
         "noImplicitAny": true,

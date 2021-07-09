@@ -1,0 +1,39 @@
+{
+    "space": {
+        "unit": {
+            "value": "0.5"
+        },
+        "xs": {
+            "default": {
+                "value": "calc(0.5 * {space.unit.value})"
+            }
+        },
+        "sm": {
+            "default": {
+                "value": "calc(0.75 * {space.unit.value})"
+            },
+            "sm": {
+                "value": "calc(0.5 * {space.unit.value})"
+            }
+        },
+        "md": {
+            "value": "{space.unit.value}"
+        },
+        "lg": {
+            "value": "calc(0.5 * {space.unit.value})"
+        },
+        "xl": {
+            "value": "calc(0.5 * {space.unit.value})"
+        }
+    },
+    "media-query": {
+        "sm": {
+            "value": "48em",
+            "type": "media-query"
+        },
+        "md": {
+            "value": "64em",
+            "type": "media-query"
+        }
+    }
+}
