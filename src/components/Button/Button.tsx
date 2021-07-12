@@ -9,7 +9,6 @@ import cx from 'classnames';
 
 import Icon from 'Icon/Icon';
 import iconMapping from 'Icon/iconMapping';
-// import Link from 'Link';
 
 import './button.scss';
 
@@ -33,7 +32,7 @@ export type ButtonProps = {
   tabIndex?: number;
   textClassName?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'link' | 'unstyled';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'unstyled';
 };
 
 /**
