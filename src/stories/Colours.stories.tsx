@@ -2,7 +2,7 @@ import React from 'react';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
 import colourTokens from 'build/js/colours';
-import { toCssVariable } from 'utils/change-case';
+import kebabCase from 'lodash/fp/kebabCase';
 
 type TokensProps = {
   [key: string]: string;
@@ -11,7 +11,9 @@ type TokensProps = {
 // TODO: Ideally we would import tokens as a prop but type declarations
 // are not implicit at the node level i.e. `tokenKeys.map((key) =>`
 export const ColourVariables = ({ tokens }: TokensProps) => {
-  const tokenKeys = Object.keys(colourTokens) as Array<keyof typeof colourTokens>;
+  const tokenKeys = Object.keys(colourTokens) as Array<
+    keyof typeof colourTokens
+  >;
 
   return (
     <table className="sb-table sb-table--swatches">
@@ -23,27 +25,30 @@ export const ColourVariables = ({ tokens }: TokensProps) => {
         </tr>
       </thead>
       <tbody>
-        {tokenKeys.map((key) => {
+        {tokenKeys.map(key => {
           const value = colourTokens[key];
           const cssValue = /rgb/i.test(key) ? `rgb(${value})` : value;
-          const cssVariable = toCssVariable(key);
+          const cssVariable = `--${kebabCase(key)}`;
           return (
             <tr key={key}>
               <td>{key}</td>
               <td>{cssVariable}</td>
               <td>
                 <figure className="sb-swatch">
-                  <div className="sb-swatch__colour" style={{ 'backgroundColor': cssValue}}></div>
+                  <div
+                    className="sb-swatch__colour"
+                    style={{ backgroundColor: cssValue }}
+                  />
                   <figcaption className="sb-swatch__name">{value}</figcaption>
                 </figure>
               </td>
             </tr>
-          )
+          );
         })}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
 export const ColoursPaletteStatus = () => (
   <ColorPalette>
