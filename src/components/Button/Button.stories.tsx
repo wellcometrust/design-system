@@ -11,11 +11,9 @@ Primary.args = { children: 'Button', variant: 'primary' };
 
 export const Secondary = Template.bind({});
 Secondary.args = { children: 'Button', variant: 'secondary' };
-Secondary.parameters = { backgrounds: { default: 'infobox' } };
 
-export const Ghost = Template.bind({});
-Ghost.args = { children: 'Button', variant: 'ghost' };
-Ghost.parameters = { backgrounds: { default: 'infobox' } };
+export const Tertiary = Template.bind({});
+Tertiary.args = { children: 'Button', variant: 'tertiary' };
 
 export const Link = Template.bind({});
 Link.args = { children: 'Button', variant: 'link' };
@@ -29,7 +27,7 @@ export default {
   argTypes: {
     onClick: { action: 'clicked' },
     variant: {
-      options: ['primary', 'secondary', 'ghost', 'link', 'unstyled'],
+      options: ['primary', 'secondary', 'tertiary', 'link', 'unstyled'],
       control: { type: 'radio' }
     },
     icon: {

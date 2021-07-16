@@ -6,9 +6,9 @@
 body {
   color: var(--colour-grey-80);
   font-family: var(--font-primary);
-  font-size: var(--text-base-size);
-  letter-spacing: var(--body-letter-spacing);
-  line-height: var(--body-line-height-md);
+  font-size: var(--font-size-base);
+  letter-spacing: var(--letter-spacing-body);
+  line-height: var(--line-height-body);
 }
 
 a {

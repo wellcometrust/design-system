@@ -7,12 +7,14 @@
 // ----------------------------------
 
 :root {
-  --link-colour: var(--colour-grey-80);
-  --link-colour-hover: var(--colour-grey-80);
-  --link-colour-focus-outline: var(--colour-blue-50);
-  --link-colour-active: var(--colour-grey-80);
-  --link-colour-disabled: var(--colour-grey-40);
+  --colour-link: var(--colour-grey-80);
+  --colour-link-active: var(--colour-grey-80);
+  --colour-link-focus: var(--colour-grey-80);
+  --colour-link-hover: var(--colour-grey-80);
+  --colour-link-disabled: var(--colour-grey-40);
 
-  --body-text-colour: var(--colour-grey-80);
-  --meta-text-colour: var(--colour-grey-60);
+  --colour-link-focus-outline: var(--colour-blue-50);
+
+  --colour-text-body: var(--colour-grey-80);
+  --colour-text-meta: var(--colour-grey-60);
 }
