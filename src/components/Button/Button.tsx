@@ -9,9 +9,6 @@ import cx from 'classnames';
 
 import Icon from 'Icon/Icon';
 import iconMapping from 'Icon/iconMapping';
-// import Link from 'Link';
-
-import './button.scss';
 
 /**
  * TODO 8629: Polymorphic props - Use type generics to dynamically set the component props
@@ -33,7 +30,7 @@ export type ButtonProps = {
   tabIndex?: number;
   textClassName?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'link' | 'unstyled';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'unstyled';
 };
 
 /**
