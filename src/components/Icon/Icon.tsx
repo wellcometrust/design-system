@@ -2,7 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 
 import iconMapping from './iconMapping';
-import './icon.scss';
 
 export type IconProps = {
   className?: string;
