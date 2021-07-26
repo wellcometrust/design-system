@@ -1,45 +1,15 @@
 @import '../../styles/common';
 
+// Proof of concept for less CSS variable usage and greater flexibility
+// resulting in reduction of code
+
 .ds-btn {
-  // button scoped variables
-  --button-bgcolour-primary: var(--colour-amber-30);
-  --button-bgcolour-primary-active: var(--colour-amber-30);
-  --button-bgcolour-primary-focus: var(--colour-amber-30);
-  --button-bgcolour-primary-hover: var(--colour-amber-20);
-  --button-bgcolour-primary-disabled: var(--colour-grey-20);
-
-  --button-bgcolour-secondary: var(--colour-amber-20);
-  --button-bgcolour-secondary-active: var(--colour-amber-20);
-  --button-bgcolour-secondary-focus: var(--colour-amber-20);
-  --button-bgcolour-secondary-hover: var(--colour-amber-10);
-  --button-bgcolour-secondary-disabled: var(--colour-grey-10);
-
-  --button-bgcolour-tertiary: transparent;
-  --button-bgcolour-tertiary-active: var(--colour-amber-10);
-  --button-bgcolour-tertiary-focus: transparent;
-  --button-bgcolour-tertiary-hover: var(--colour-amber-05);
-  --button-bgcolour-tertiary-disabled: transparent;
-
-  --button-colour-primary: var(--colour-grey-80);
-  --button-colour-primary-active: var(--colour-grey-80);
-  --button-colour-primary-focus: var(--colour-grey-80);
-  --button-colour-primary-hover: var(--colour-grey-80);
-  --button-colour-primary-disabled: var(--colour-grey-40);
-
-  --button-colour-secondary: var(--colour-grey-80);
-  --button-colour-secondary-active: var(--colour-grey-80);
-  --button-colour-secondary-focus: var(--colour-grey-80);
-  --button-colour-secondary-hover: var(--colour-grey-80);
-  --button-colour-secondary-disabled: var(--colour-grey-40);
-
-  --button-colour-tertiary: var(--colour-grey-80);
-  --button-colour-tertiary-active: var(--colour-grey-80);
-  --button-colour-tertiary-focus: var(--colour-grey-80);
-  --button-colour-tertiary-hover: var(--colour-grey-80);
-  --button-colour-tertiary-disabled: var(--colour-grey-40);
+  --button-colour: var(--colour-grey-80);
 
   @include btn-base;
+  background-color: var(--button-bgcolour, transparent);
   border-radius: calc(0.25 * var(--space-unit));
+  color: var(--button-colour);
   display: inline-flex;
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
@@ -64,90 +34,67 @@
 }
 
 .ds-btn--primary {
-  background-color: var(--button-bgcolour-primary);
-  color: var(--button-colour-primary);
+  --button-bgcolour: var(--colour-amber-30);
 
   &:hover {
-    background-color: var(--button-bgcolour-primary-hover);
-    color: var(--button-colour-primary-hover);
-  }
-
-  &:focus {
-    background-color: var(--button-bgcolour-primary-focus);
-    color: var(--button-colour-primary-focus);
+    --button-bgcolour: var(--colour-amber-20);
   }
 
   &:active {
-    background-color: var(--button-bgcolour-primary-active);
-    color: var(--button-colour-primary-active);
+    --button-bgcolour: var(--colour-amber-30);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-primary-disabled);
-    color: var(--button-colour-primary-disabled);
+    --button-bgcolour: var(--colour-grey-20);
+    --button-colour: var(--colour-grey-40);
   }
 }
 
 .ds-btn--secondary {
-  background-color: var(--button-bgcolour-secondary);
-  color: var(--button-colour-secondary);
+  --button-bgcolour: var(--colour-amber-20);
 
   &:hover {
-    background-color: var(--button-bgcolour-secondary-hover);
-    color: var(--button-colour-secondary-hover);
-  }
-
-  &:focus {
-    background-color: var(--button-bgcolour-secondary-focus);
-    color: var(--button-colour-secondary-focus);
+    --button-bgcolour: var(--colour-amber-10);
+    --button-colour: var(--colour-grey-80);  
   }
 
   &:active {
-    background-color: var(--button-bgcolour-secondary-active);
-    color: var(--button-colour-secondary-active);
+    --button-bgcolour: var(--colour-amber-20);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-secondary-disabled);
-    color: var(--button-colour-secondary-disabled);
+    --button-bgcolour: var(--colour-grey-10);
+    --button-colour: var(--colour-grey-40);  
   }
 }
 
 .ds-btn--tertiary {
-  background-color: var(--button-bgcolour-tertiary);
-  color: var(--button-colour-tertiary);
+  --button-bgcolour: transparent;
+  --button-colour: var(--colour-grey-80);
 
   &:hover {
-    background-color: var(--button-bgcolour-tertiary-hover);
-    color: var(--button-colour-tertiary-hover);
-  }
-
-  &:focus {
-    background-color: var(--button-bgcolour-tertiary-focus);
-    color: var(--button-colour-tertiary-focus);
+    --button-bgcolour: var(--colour-amber-05);
   }
 
   &:active {
-    background-color: var(--button-bgcolour-tertiary-active);
-    color: var(--button-colour-tertiary-active);
+    --button-bgcolour: var(--colour-amber-10);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-tertiary-disabled);
-    color: var(--button-colour-tertiary-disabled);
+    --button-bgcolour: transparent;
+    --button-colour: var(--colour-grey-40);
   }
 }
 
 .ds-btn--tertiary .ds-btn__text {
-  border-bottom: 1px solid var(--button-colour-tertiary);
+  border-bottom: 1px solid var(--button-colour);
   transition: ease var(--transition-duration);
   transition-property: border-bottom-color;
 }
 
 .ds-btn--tertiary:hover .ds-btn__text,
-.ds-btn--tertiary:active .ds-btn__text,
 .ds-btn--tertiary[disabled] .ds-btn__text {
-  border-bottom-color: var(--button-bgcolour-tertiary-focus);
+  border-bottom-color: var(--button-bgcolour);
 }
 
 .ds-btn--link {
@@ -161,7 +108,6 @@
 .ds-btn__icon--right {
   margin-left: calc(1.5 * var(--space-unit));
 }
-
 
 // Call To Action wrapper styles
 
