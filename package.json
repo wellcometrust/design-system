@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build:clean": "rm -rf dist ssr",
-    "build:tokens": "style-dictionary build",
+    "build:tokens": "style-dictionary build --config ./sd.config.js",
     "build:types": "tsc --emitDeclarationOnly",
     "build": "npm run build:clean && npm run build:types && rollup -c ./config/rollup.config.js --environment NODE_ENV:production && node ./ssr/html.js",
     "dev": "npm run build:types && rollup -c ./config/rollup.config.js -w",

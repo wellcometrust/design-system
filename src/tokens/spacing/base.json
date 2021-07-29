@@ -1,29 +1,52 @@
 {
     "space": {
-        "unit": {
-            "value": "0.5"
-        },
-        "xs": {
-            "default": {
-                "value": "calc(0.5 * {space.unit.value})"
+        "base": {
+            "unit": {
+                "type": "base",
+                "value": "0.5rem"
+            },
+            "xs": {
+                "type": "base",
+                "value": "calc(0.5 * {space.base.unit.value})"
+            },
+            "sm": {
+                "type": "base",
+                "value": "calc(0.75 * {space.base.unit.value})"
+            },
+            "md": {
+                "value": "{space.base.unit.value}"
+            },
+            "lg": {
+                "value": "calc(2 * {space.base.unit.value})"
+            },
+            "xl": {
+                "value": "calc(4 * {space.base.unit.value})"
             }
         },
         "sm": {
-            "default": {
-                "value": "calc(0.75 * {space.unit.value})"
-            },
             "sm": {
-                "value": "calc(0.5 * {space.unit.value})"
+                "value": "{space.base.unit.value}"
+            },
+            "md": {
+                "value": "calc(1.5 * {space.base.unit.value})"
+            },
+            "lg": {
+                "value": "calc(3 * {space.base.unit.value})"
+            },
+            "xl": {
+                "value": "calc(6 * {space.base.unit.value})"
             }
         },
         "md": {
-            "value": "{space.unit.value}"
-        },
-        "lg": {
-            "value": "calc(0.5 * {space.unit.value})"
-        },
-        "xl": {
-            "value": "calc(0.5 * {space.unit.value})"
+            "md": {
+                "value": "calc(2 * {space.base.unit.value})"
+            },
+            "lg": {
+                "value": "calc(4 * {space.base.unit.value})"
+            },
+            "xl": {
+                "value": "calc(8 * {space.base.unit.value})"
+            }
         }
     },
     "media-query": {
