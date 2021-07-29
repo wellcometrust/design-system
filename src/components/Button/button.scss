@@ -1,7 +1,6 @@
 @import '../../styles/common';
 
-.ds-btn {
-  // button scoped variables
+:root {
   --button-bgcolour-primary: var(--colour-amber-30);
   --button-bgcolour-primary-active: var(--colour-amber-30);
   --button-bgcolour-primary-focus: var(--colour-amber-30);
@@ -37,7 +36,9 @@
   --button-colour-tertiary-focus: var(--colour-grey-80);
   --button-colour-tertiary-hover: var(--colour-grey-80);
   --button-colour-tertiary-disabled: var(--colour-grey-40);
+}
 
+.ds-btn {
   @include btn-base;
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
