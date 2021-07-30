@@ -1,0 +1,29 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+import { ColourVariables } from './Colours.stories';
+
+<Meta title={`Global/Colours`} />
+
+# Colour palette
+
+Swatches greater than 50 are accessible when overlayed with white text
+and when used as the text colour against a white background. 
+Swatches less than 50 are accessible when overlayed with black text
+
+<ColourVariables />
+
+
+## Usage
+
+Colour CSS variables are included in the core.css stylesheet.
+
+Import into SASS
+
+```scss
+import '@wellcometrust/design-system';
+
+// or 
+import '@wellcometrust/design-system/dist/core.css'
+```
+
+
