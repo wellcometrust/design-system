@@ -1,9 +1,7 @@
 {
   "colour": {    
-    "black":     { "value": "#000" },
-    "black-rgb": { "value": "0, 0, 0" },
-    "white":     { "value": "#fff" },
-    "white-rgb": { "value": "255, 255, 255" },
+    "black": { "value": "#000" },
+    "white": { "value": "#fff" },
     "amber": {
       "90": { "value": "#382a00" },
       "80": { "value": "#4d3900" },
@@ -57,7 +55,6 @@
       "80": { "value": "#292929" },
       "70": { "value": "#5c5c5c" },
       "60": { "value": "#767676" },
-      "60-rgb": { "value": "118, 118, 118" },
       "50": { "value": "#878787" },
       "40": { "value": "#999" },
       "30": { "value": "#b3b3b3" },
