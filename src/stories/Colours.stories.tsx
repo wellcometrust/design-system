@@ -2,23 +2,19 @@ import React from 'react';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
 import kebabCase from 'lodash/fp/kebabCase';
-import colourTokens from './colour-tokens';
 
-type TokensProps = {
+type MappedTokensProps = {
   [key: string]: string;
 };
 
-// TODO: Ideally we would import tokens as a prop but type declarations
-// are not implicit at the node level i.e. `tokenKeys.map((key) =>`
-export const ColourVariables = ({ tokens }: TokensProps) => {
-  const tokenKeys = Object.keys(colourTokens) as Array<
-    keyof typeof colourTokens
-  >;
+type ColourVarsProps = {
+  tokens?: MappedTokensProps;
+};
 
-  return (
+export const ColourVariables = ({ tokens }: ColourVarsProps) => {
+  return tokens ? (
     <ul className="sb-swatch-grid">
-      {tokenKeys.map(key => {
-        const value = colourTokens[key];
+      {Object.entries(tokens).map(([key, value]) => {
         const cssVariable = `--${kebabCase(key)}`;
         return (
           <li key={key}>
@@ -40,6 +36,8 @@ export const ColourVariables = ({ tokens }: TokensProps) => {
         );
       })}
     </ul>
+  ) : (
+    <>No tokens to render</>
   );
 };
 

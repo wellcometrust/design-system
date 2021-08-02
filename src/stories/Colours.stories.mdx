@@ -1,6 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 import { ColourVariables } from './Colours.stories';
+import colourTokens from './colour-tokens';
 
 <Meta title={`Global/Colours`} />
 
@@ -10,7 +11,7 @@ Swatches greater than 50 are accessible when overlayed with white text
 and when used as the text colour against a white background. 
 Swatches less than 50 are accessible when overlayed with black text
 
-<ColourVariables />
+<ColourVariables tokens={colourTokens} />
 
 
 ## Usage
