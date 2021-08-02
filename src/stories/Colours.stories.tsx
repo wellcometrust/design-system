@@ -11,7 +11,12 @@ type ColourVarsProps = {
   tokens?: MappedTokensProps;
 };
 
-export const ColourVariables = ({ tokens }: ColourVarsProps) => {
+const defaultTokens = { Example: '#000000' };
+
+// MDX rendering of tokens appears to be temperamental without a default prop
+export const ColourVariables = ({
+  tokens = defaultTokens
+}: ColourVarsProps) => {
   return tokens ? (
     <ul className="sb-swatch-grid">
       {Object.entries(tokens).map(([key, value]) => {

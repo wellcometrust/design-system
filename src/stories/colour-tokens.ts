@@ -1,4 +1,6 @@
-export default {
+const tokens: {
+  [key: string]: string;
+} = {
   ColourGrey90: '#000',
   ColourGrey80: '#292929',
   ColourGrey70: '#5c5c5c',
@@ -80,3 +82,5 @@ export default {
   ColourRed10: '#f9cdca',
   ColourRed05: '#fff0f2'
 };
+
+export default tokens;
