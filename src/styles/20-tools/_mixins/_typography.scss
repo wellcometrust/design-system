@@ -9,26 +9,26 @@
 // ----------------------------------
 
 @mixin anchor-base {
-  color: var(--link-colour);
+  color: var(--link-color);
   text-decoration: underline;
 
   &:hover {
-    color: var(--link-colour-hover);
+    color: var(--link-color-hover);
   }
 
   &:active {
-    color: var(--link-colour-active);
+    color: var(--link-color-active);
   }
 
   &:focus {
-    color: var(--link-colour-active);
-    outline-color: var(--link-colour-focus-outline);
+    color: var(--link-color-active);
+    outline-color: var(--link-color-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 
   [disabled],
   &:not([href]) {
-    color: var(--link-colour-disabled);
+    color: var(--link-color-disabled);
   }
 }
 
@@ -53,23 +53,23 @@
   text-decoration: none;
 
   &:hover {
-    color: var(--link-colour-hover);
+    color: var(--link-color-hover);
     text-decoration: underline;
   }
 
   &:focus,
   &:active {
-    color: var(--link-colour-active);
+    color: var(--link-color-active);
     text-decoration: underline;
   }
 
   &:focus {
-    outline-color: var(--link-colour-focus-outline);
+    outline-color: var(--link-color-focus-outline);
   }
 
   [disabled],
   &:not([href]) {
-    color: var(--link-colour-disabled);
+    color: var(--link-color-disabled);
   }
 }
 
