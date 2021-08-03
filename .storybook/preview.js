@@ -14,15 +14,15 @@ export const parameters = {
     values: [
       {
         name: 'page header',
-        value: 'var(--colour-amber-05)',
+        value: 'var(--color-amber-05)',
       },
       {
         name: 'infobox',
-        value: 'var(--colour-cyan-05)',
+        value: 'var(--color-cyan-05)',
       },
       {
         name: 'grey',
-        value: 'var(--colour-grey-20)',
+        value: 'var(--color-grey-20)',
       },
     ],
   },

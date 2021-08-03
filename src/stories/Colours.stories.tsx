@@ -7,16 +7,14 @@ type MappedTokensProps = {
   [key: string]: string;
 };
 
-type ColourVarsProps = {
+type ColorVarsProps = {
   tokens?: MappedTokensProps;
 };
 
 const defaultTokens = { Example: '#000000' };
 
 // MDX rendering of tokens appears to be temperamental without a default prop
-export const ColourVariables = ({
-  tokens = defaultTokens
-}: ColourVarsProps) => {
+export const ColorVariables = ({ tokens = defaultTokens }: ColorVarsProps) => {
   return tokens ? (
     <ul className="sb-swatch-grid">
       {Object.entries(tokens).map(([key, value]) => {
@@ -25,7 +23,7 @@ export const ColourVariables = ({
           <li key={key}>
             <figure className="sb-swatch">
               <div
-                className="sb-swatch__colour"
+                className="sb-swatch__color"
                 style={{ backgroundColor: value }}
               />
               <figcaption className="sb-swatch__name">
@@ -46,17 +44,17 @@ export const ColourVariables = ({
   );
 };
 
-export const ColoursPaletteStatus = () => (
+export const ColorPaletteStatus = () => (
   <ColorPalette>
     <ColorItem
       title="Error"
-      subtitle="--colour-red-60"
-      colors={['var(--colour-red-60)']}
+      subtitle="--color-red-60"
+      colors={['var(--color-red-60)']}
     />
     <ColorItem
       title="Success"
-      subtitle="--colour-green-60"
-      colors={['var(--colour-green-60)']}
+      subtitle="--color-green-60"
+      colors={['var(--color-green-60)']}
     />
   </ColorPalette>
 );

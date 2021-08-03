@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-import { ColourVariables } from './Colours.stories';
-import colourTokens from './colour-tokens';
+import { ColorVariables } from './Colours.stories';
+import tokens from './tokens-color';
 
 <Meta title={`Global/Colours`} />
 
@@ -9,9 +9,11 @@ import colourTokens from './colour-tokens';
 
 Swatches greater than 50 are accessible when overlayed with white text and when used as the text colour against a white background. Swatches less than 50 are accessible when overlayed with black text.
 
-<ColourVariables tokens={colourTokens} />
+Please note, colour variables use US English spelling to be consistent with CSS style property names.
 
-## Usage
+<ColorVariables tokens={tokens} />
+
+## Installation
 
 Colour CSS variables are included in the **core.css** stylesheet.
 

@@ -1,41 +1,41 @@
 @import '../../styles/common';
 
 :root {
-  --button-bgcolour-primary: var(--colour-amber-30);
-  --button-bgcolour-primary-active: var(--colour-amber-30);
-  --button-bgcolour-primary-focus: var(--colour-amber-30);
-  --button-bgcolour-primary-hover: var(--colour-amber-20);
-  --button-bgcolour-primary-disabled: var(--colour-grey-20);
+  --button-bgcolor-primary: var(--color-amber-30);
+  --button-bgcolor-primary-active: var(--color-amber-30);
+  --button-bgcolor-primary-focus: var(--color-amber-30);
+  --button-bgcolor-primary-hover: var(--color-amber-20);
+  --button-bgcolor-primary-disabled: var(--color-grey-20);
 
-  --button-bgcolour-secondary: var(--colour-amber-20);
-  --button-bgcolour-secondary-active: var(--colour-amber-20);
-  --button-bgcolour-secondary-focus: var(--colour-amber-20);
-  --button-bgcolour-secondary-hover: var(--colour-amber-10);
-  --button-bgcolour-secondary-disabled: var(--colour-grey-10);
+  --button-bgcolor-secondary: var(--color-amber-20);
+  --button-bgcolor-secondary-active: var(--color-amber-20);
+  --button-bgcolor-secondary-focus: var(--color-amber-20);
+  --button-bgcolor-secondary-hover: var(--color-amber-10);
+  --button-bgcolor-secondary-disabled: var(--color-grey-10);
 
-  --button-bgcolour-tertiary: transparent;
-  --button-bgcolour-tertiary-active: var(--colour-amber-10);
-  --button-bgcolour-tertiary-focus: transparent;
-  --button-bgcolour-tertiary-hover: var(--colour-amber-05);
-  --button-bgcolour-tertiary-disabled: transparent;
+  --button-bgcolor-tertiary: transparent;
+  --button-bgcolor-tertiary-active: var(--color-amber-10);
+  --button-bgcolor-tertiary-focus: transparent;
+  --button-bgcolor-tertiary-hover: var(--color-amber-05);
+  --button-bgcolor-tertiary-disabled: transparent;
 
-  --button-colour-primary: var(--colour-grey-80);
-  --button-colour-primary-active: var(--colour-grey-80);
-  --button-colour-primary-focus: var(--colour-grey-80);
-  --button-colour-primary-hover: var(--colour-grey-80);
-  --button-colour-primary-disabled: var(--colour-grey-40);
+  --button-color-primary: var(--color-grey-80);
+  --button-color-primary-active: var(--color-grey-80);
+  --button-color-primary-focus: var(--color-grey-80);
+  --button-color-primary-hover: var(--color-grey-80);
+  --button-color-primary-disabled: var(--color-grey-40);
 
-  --button-colour-secondary: var(--colour-grey-80);
-  --button-colour-secondary-active: var(--colour-grey-80);
-  --button-colour-secondary-focus: var(--colour-grey-80);
-  --button-colour-secondary-hover: var(--colour-grey-80);
-  --button-colour-secondary-disabled: var(--colour-grey-40);
+  --button-color-secondary: var(--color-grey-80);
+  --button-color-secondary-active: var(--color-grey-80);
+  --button-color-secondary-focus: var(--color-grey-80);
+  --button-color-secondary-hover: var(--color-grey-80);
+  --button-color-secondary-disabled: var(--color-grey-40);
 
-  --button-colour-tertiary: var(--colour-grey-80);
-  --button-colour-tertiary-active: var(--colour-grey-80);
-  --button-colour-tertiary-focus: var(--colour-grey-80);
-  --button-colour-tertiary-hover: var(--colour-grey-80);
-  --button-colour-tertiary-disabled: var(--colour-grey-40);
+  --button-color-tertiary: var(--color-grey-80);
+  --button-color-tertiary-active: var(--color-grey-80);
+  --button-color-tertiary-focus: var(--color-grey-80);
+  --button-color-tertiary-hover: var(--color-grey-80);
+  --button-color-tertiary-disabled: var(--color-grey-40);
 }
 
 .ds-btn {
@@ -48,7 +48,7 @@
   transition-property: background-color;
 
   &:focus {
-    outline-color: var(--link-colour-focus-outline);
+    outline-color: var(--link-color-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 }
@@ -65,82 +65,82 @@
 }
 
 .ds-btn--primary {
-  background-color: var(--button-bgcolour-primary);
-  color: var(--button-colour-primary);
+  background-color: var(--button-bgcolor-primary);
+  color: var(--button-color-primary);
 
   &:hover {
-    background-color: var(--button-bgcolour-primary-hover);
-    color: var(--button-colour-primary-hover);
+    background-color: var(--button-bgcolor-primary-hover);
+    color: var(--button-color-primary-hover);
   }
 
   &:focus {
-    background-color: var(--button-bgcolour-primary-focus);
-    color: var(--button-colour-primary-focus);
+    background-color: var(--button-bgcolor-primary-focus);
+    color: var(--button-color-primary-focus);
   }
 
   &:active {
-    background-color: var(--button-bgcolour-primary-active);
-    color: var(--button-colour-primary-active);
+    background-color: var(--button-bgcolor-primary-active);
+    color: var(--button-color-primary-active);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-primary-disabled);
-    color: var(--button-colour-primary-disabled);
+    background-color: var(--button-bgcolor-primary-disabled);
+    color: var(--button-color-primary-disabled);
   }
 }
 
 .ds-btn--secondary {
-  background-color: var(--button-bgcolour-secondary);
-  color: var(--button-colour-secondary);
+  background-color: var(--button-bgcolor-secondary);
+  color: var(--button-color-secondary);
 
   &:hover {
-    background-color: var(--button-bgcolour-secondary-hover);
-    color: var(--button-colour-secondary-hover);
+    background-color: var(--button-bgcolor-secondary-hover);
+    color: var(--button-color-secondary-hover);
   }
 
   &:focus {
-    background-color: var(--button-bgcolour-secondary-focus);
-    color: var(--button-colour-secondary-focus);
+    background-color: var(--button-bgcolor-secondary-focus);
+    color: var(--button-color-secondary-focus);
   }
 
   &:active {
-    background-color: var(--button-bgcolour-secondary-active);
-    color: var(--button-colour-secondary-active);
+    background-color: var(--button-bgcolor-secondary-active);
+    color: var(--button-color-secondary-active);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-secondary-disabled);
-    color: var(--button-colour-secondary-disabled);
+    background-color: var(--button-bgcolor-secondary-disabled);
+    color: var(--button-color-secondary-disabled);
   }
 }
 
 .ds-btn--tertiary {
-  background-color: var(--button-bgcolour-tertiary);
-  color: var(--button-colour-tertiary);
+  background-color: var(--button-bgcolor-tertiary);
+  color: var(--button-color-tertiary);
 
   &:hover {
-    background-color: var(--button-bgcolour-tertiary-hover);
-    color: var(--button-colour-tertiary-hover);
+    background-color: var(--button-bgcolor-tertiary-hover);
+    color: var(--button-color-tertiary-hover);
   }
 
   &:focus {
-    background-color: var(--button-bgcolour-tertiary-focus);
-    color: var(--button-colour-tertiary-focus);
+    background-color: var(--button-bgcolor-tertiary-focus);
+    color: var(--button-color-tertiary-focus);
   }
 
   &:active {
-    background-color: var(--button-bgcolour-tertiary-active);
-    color: var(--button-colour-tertiary-active);
+    background-color: var(--button-bgcolor-tertiary-active);
+    color: var(--button-color-tertiary-active);
   }
 
   &[disabled] {
-    background-color: var(--button-bgcolour-tertiary-disabled);
-    color: var(--button-colour-tertiary-disabled);
+    background-color: var(--button-bgcolor-tertiary-disabled);
+    color: var(--button-color-tertiary-disabled);
   }
 }
 
 .ds-btn--tertiary .ds-btn__text {
-  border-bottom: 1px solid var(--button-colour-tertiary);
+  border-bottom: 1px solid var(--button-color-tertiary);
   transition: ease var(--transition-duration);
   transition-property: border-bottom-color;
 }
@@ -148,7 +148,7 @@
 .ds-btn--tertiary:hover .ds-btn__text,
 .ds-btn--tertiary:active .ds-btn__text,
 .ds-btn--tertiary[disabled] .ds-btn__text {
-  border-bottom-color: var(--button-bgcolour-tertiary-focus);
+  border-bottom-color: var(--button-bgcolor-tertiary-focus);
 }
 
 .ds-btn--link {
