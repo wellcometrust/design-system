@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import { SpacingBlocks } from './Spacing.stories'
+
+<Meta title={`Global/Spacing`} />
+
+# Responsive spacing units
+
+Spacing metrics are used to ensure that individual elements on a page and across a site are consistently spaced. We provide spacing rules for large, medium and small screen sizes and these should be used to build consistency across responsive sites.
+
+<SpacingBlocks />
+
+## Usage
+The default space unit or `--space-unit` is 0.5rem (8 pixels) and this is the basis for each of the standard spacing metrics above.
+
+In the vast majority of case, the default space unit should be used as the base for any dimensional size (e.g. height, padding, margin, width) which needs to alter in proportion to text zoom. Pixels should only be specified as the unit in instances where a dimension doesn't alter, for example borders and keylines.
+
+To set a CSS property using multiples of the space unit you will need to use `calc`.
+
+```css
+.selector {
+  width: calc(10 * var(--space-unit)); // 80px
+}
+
+```
+
+## Installation
+
+Spacing CSS variables are included in the **core.css** stylesheet.
+
+Import into SASS
+
+```scss
+import '@wellcometrust/design-system';
+
+// or 
+import '@wellcometrust/design-system/dist/core.css'
+```
+
