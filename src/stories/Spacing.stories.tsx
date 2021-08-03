@@ -9,31 +9,31 @@ type SizeProps = {
 export const SpacingBlocks = () => {
   const sizes: SizeProps = {
     xl: {
-      color: '--colour-green-50',
+      color: '--color-green-50',
       mqBase: '32',
       mqSmall: '48',
       mqMedium: '64'
     },
     lg: {
-      color: '--colour-blue-50',
+      color: '--color-blue-50',
       mqBase: '16',
       mqSmall: '24',
       mqMedium: '32'
     },
     md: {
-      color: '--colour-orange-50',
+      color: '--color-orange-50',
       mqBase: '8',
       mqSmall: '12',
       mqMedium: '16'
     },
     sm: {
-      color: '--colour-red-50',
+      color: '--color-red-50',
       mqBase: '6',
       mqSmall: '8',
       mqMedium: '8'
     },
     xs: {
-      color: '--colour-amber-40',
+      color: '--color-amber-40',
       mqBase: '4',
       mqSmall: '4',
       mqMedium: '4'

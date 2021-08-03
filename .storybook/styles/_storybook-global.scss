@@ -69,7 +69,7 @@ table {
 }
 
 caption {
-  border-left: 1px solid var(--colour-grey-70);
+  border-left: 1px solid var(--color-grey-70);
   font-family: var(--font-tertiary);
   font-size: var(--font-size-body-xs);
   font-weight: bold;
@@ -79,7 +79,7 @@ caption {
 }
 
 tr {
-  border: solid var(--colour-grey-10);
+  border: solid var(--color-grey-10);
   border-width: 1px 0;
 }
 
@@ -88,7 +88,7 @@ thead tr {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: var(--colour-cyan-05);
+  background-color: var(--color-cyan-05);
 }
 
 th,
