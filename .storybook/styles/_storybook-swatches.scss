@@ -9,15 +9,14 @@
 }
 
 .sb-swatch {
-  align-items: center;
-  display: flex;
   margin: 0;
 }
 
-.sb-swatch__colour {
-  border: 1px solid var(--colour-grey-20);
+.sb-swatch__color {
   flex-shrink: 0;
   height: calc(6 * var(--space-unit));
+  margin-bottom: var(--space-md);
+  margin-right: var(--space-md);
   width: calc(6 * var(--space-unit));
 }
 
@@ -26,10 +25,10 @@
 }
 
 .sb-swatch__name {
-  color: var(--colour-grey-70);
+  color: var(--color-grey-70);
   display: block;
+  font-family: var(--font-tertiary);
   font-size: var(--font-size-body-xs);
-  margin-left: var(--space-md);
   margin-right: var(--space-md);
 }
 

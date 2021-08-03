@@ -1,0 +1,20 @@
+// ----------------------------------
+// UI Theme
+// Colours
+// ----------------------------------
+// Design System 1.0 Alpha
+// 2021-05-01
+// ----------------------------------
+
+:root {
+  --color-link: var(--color-grey-80);
+  --color-link-active: var(--color-grey-80);
+  --color-link-focus: var(--color-grey-80);
+  --color-link-hover: var(--color-grey-80);
+  --color-link-disabled: var(--color-grey-40);
+
+  --color-link-focus-outline: var(--color-blue-50);
+
+  --color-text-body: var(--color-grey-80);
+  --color-text-meta: var(--color-grey-60);
+}
