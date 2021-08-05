@@ -2,73 +2,93 @@ import React from 'react';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
-type SizeProps = {
+type NestedTokenProps = {
   [key: string]: MappedTokensProps;
 };
 
-export const fontSizesHeadings: SizeProps = {
+export const tokensFontFamilies: NestedTokenProps = {
+  FontPrimary: {
+    value: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
+    comment: 'Standard body text, headings and links'
+  },
+  FontPrimaryAlt: {
+    value: 'Helvetica, Arial, sans-serif',
+    comment:
+      'Alternative for FontPrimary, this font stack removes odd line-height issue encountered with Helvetica Neue'
+  },
+  FontSecondary: {
+    value: `'Wellcome-Bold', sans-serif`,
+    comment: 'Main page headings and quote text (to be used sparingly)'
+  },
+  FontTertiary: {
+    value: `'Courier New', Courier, monospace`,
+    comment: 'Image and video captions, licensing info'
+  }
+};
+
+export const tokensFontSizeHeadings: NestedTokenProps = {
   FontSizeHeadingXxl: {
-    sampleText: 'H0 Heading XXL',
+    comment: 'H0 Heading XXL',
     mqBase: '32',
     mqSmall: '34',
     mqMedium: '40'
   },
   FontSizeHeadingXl: {
-    sampleText: 'H1 Heading XL',
+    comment: 'H1 Heading XL',
     mqBase: '24',
     mqSmall: '28',
     mqMedium: '32'
   },
   FontSizeHeadingLg: {
-    sampleText: 'H2 Heading LG',
+    comment: 'H2 Heading LG',
     mqBase: '22',
     mqSmall: '22',
     mqMedium: '24'
   },
   FontSizeHeadingMd: {
-    sampleText: 'H3 Heading MD',
+    comment: 'H3 Heading MD',
     mqBase: '18',
     mqSmall: '18',
     mqMedium: '20'
   },
   FontSizeHeadingSm: {
-    sampleText: 'H4 Heading SM',
+    comment: 'H4 Heading SM',
     mqBase: '16',
     mqSmall: '16',
     mqMedium: '16'
   },
   FontSizeHeadingXs: {
-    sampleText: 'H5 Heading XS',
+    comment: 'H5 Heading XS',
     mqBase: '14',
     mqSmall: '14',
     mqMedium: '14'
   }
 };
 
-export const fontSizesBody: SizeProps = {
+export const tokensFontSizeBody: NestedTokenProps = {
   FontSizeBodyXl: {
-    sampleText: 'Body XL',
+    comment: 'Body XL',
     mqBase: '24'
   },
   FontSizeBodyLg: {
-    sampleText: 'Body LG',
+    comment: 'Body LG',
     mqBase: '20'
   },
   FontSizeBodyMd: {
-    sampleText: 'Body MD',
+    comment: 'Body MD',
     mqBase: '16'
   },
   FontSizeBodySm: {
-    sampleText: 'Body SM',
+    comment: 'Body SM',
     mqBase: '14'
   },
   FontSizeBodyXs: {
-    sampleText: 'Body XS',
+    comment: 'Body XS',
     mqBase: '12'
   }
 };
 
-export const typographyTokens: MappedTokensProps = {
+export const tokensTypography: MappedTokensProps = {
   FontSizeBase: '1rem',
   FontSizeBasePx: '16',
   FontWeightHeading: '500',
@@ -109,7 +129,7 @@ export const TypographySizes = ({
   sizes
 }: {
   isResponsive?: boolean;
-  sizes: SizeProps;
+  sizes: NestedTokenProps;
 }) => (
   <table>
     <thead>
@@ -131,13 +151,13 @@ export const TypographySizes = ({
     <tbody>
       {Object.entries(sizes).map(([key, value]) => {
         const size = `--${kebabCase(key)}`;
-        const { sampleText, ...rest } = value;
+        const { comment, ...rest } = value;
 
         return (
           <tr key={size}>
             <td>{key}</td>
             <td className="sb-variable">{size}</td>
-            <td style={{ fontSize: `var(${size})` }}>{sampleText}</td>
+            <td style={{ fontSize: `var(${size})` }}>{comment}</td>
             {Object.entries(rest).map(([sizeKey, sizeValue]) => (
               <td key={sizeKey}>{sizeValue} pixels</td>
             ))}
@@ -148,41 +168,30 @@ export const TypographySizes = ({
   </table>
 );
 
-export const FontFamilies = () => (
+export const FontFamilies = ({ tokens }: { tokens: NestedTokenProps }) => (
   <table>
     <thead>
       <tr>
         <th scope="col">Token</th>
         <th scope="col">CSS variable</th>
-        <th scope="col">Preview</th>
+        <th scope="col">Preview / value</th>
         <th scope="col">Application</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>FontPrimary</td>
-        <td className="sb-variable">--font-primary</td>
-        <td style={{ fontFamily: `var(--font-primary)` }}>
-          Font primary preview
-        </td>
-        <td>Standard body text, headings and links</td>
-      </tr>
-      <tr>
-        <td>FontSecondary</td>
-        <td className="sb-variable">--font-secondary</td>
-        <td style={{ fontFamily: `var(--font-secondary)` }}>
-          Font secondary preview
-        </td>
-        <td>Main page headings and quote text (to be used sparingly)</td>
-      </tr>
-      <tr>
-        <td>FontTertiary</td>
-        <td className="sb-variable">--font-tertiary</td>
-        <td style={{ fontFamily: `var(--font-tertiary)` }}>
-          Font tertiary preview
-        </td>
-        <td>Image and video captions, licensing info</td>
-      </tr>
+      {Object.entries(tokens).map(([key, value]) => {
+        const cssVariable = `--${kebabCase(key)}`;
+        const { comment, value: nestedValue } = value;
+
+        return (
+          <tr key={key}>
+            <td>{key}</td>
+            <td className="sb-variable">{cssVariable}</td>
+            <td style={{ fontFamily: `var(${cssVariable})` }}>{nestedValue}</td>
+            <td>{comment}</td>
+          </tr>
+        );
+      })}
     </tbody>
   </table>
 );

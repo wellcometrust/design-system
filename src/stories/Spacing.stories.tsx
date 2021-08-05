@@ -73,7 +73,9 @@ export const SpacingBlocks = () => {
                       width: `var(${size})`
                     }}
                   />
-                  <figcaption className="u-visually-hidden">Coloured square indicating the size of {size}</figcaption>
+                  <figcaption className="u-visually-hidden">
+                    Coloured square indicating the size of {size}
+                  </figcaption>
                 </figure>
               </td>
               <td>{value.mqBase} pixels</td>
