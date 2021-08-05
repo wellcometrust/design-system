@@ -1,0 +1,64 @@
+import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+
+import {
+  FontFamilies,
+  fontSizesBody,
+  fontSizesHeadings,
+  TokensTable,
+  TypographySizes,
+  typographyTokens,
+} from './Typography.stories'
+
+<Meta title={`Global/Typography`} />
+
+# Typography
+
+## Font families
+
+<FontFamilies />
+
+
+## Responsive heading sizes
+
+Change viewport width to preview size changes across breakpoints.
+
+<TypographySizes isResponsive sizes={fontSizesHeadings} />
+
+
+## Body text sizes
+
+Body text is static and will be a consistent size regardless of viewport width.
+
+<TypographySizes sizes={fontSizesBody} />
+
+## Other tokens
+
+<TokensTable tokens={typographyTokens} />
+
+
+## Usage
+
+```css
+.selector {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body-xl);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: var(--letter-spacing-body);
+  line-height: var(--line-height-body);
+}
+
+```
+
+## Installation
+
+Spacing CSS variables are included in the **core.css** stylesheet.
+
+Import into SASS
+
+```scss
+import '@wellcometrust/design-system';
+
+// or 
+import '@wellcometrust/design-system/dist/core.css'
+```
+
