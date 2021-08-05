@@ -4,23 +4,25 @@ import { SpacingBlocks } from './Spacing.stories'
 
 <Meta title={`Global/Spacing`} />
 
+# Spacing
+
+Spacing metrics are used to ensure that individual elements on a page and across a site are consistently spaced. They are based on `rem` units which adapt their size to browser zoom.
+
+Pixels should only be specified as the unit in instances where a dimension doesn't alter, for example borders and keylines.
+
+
 # Responsive spacing units
 
-Spacing metrics are used to ensure that individual elements on a page and across a site are consistently spaced. We provide spacing rules for large, medium and small screen sizes and these should be used to build consistency across responsive sites.
+ We provide spacing rules for large, medium and small screen sizes and these should be used to build consistency across responsive sites.
 
 <SpacingBlocks />
 
-## Usage
-The default space unit or `--space-unit` is 0.5rem (8 pixels) and this is the basis for each of the standard spacing metrics above.
 
-In the vast majority of case, the default space unit should be used as the base for any dimensional size (e.g. height, padding, margin, width) which needs to alter in proportion to text zoom. Pixels should only be specified as the unit in instances where a dimension doesn't alter, for example borders and keylines.
+## Static spacing
 
-To set a CSS property using multiples of the space unit you will need to use `calc`.
+The default space unit or `--space-unit` is 0.5rem (equivalent to 8 pixels at 100% zoom) and this is the basis for each of the responsive spacing metrics above.
 
-```css
-.selector {
-  width: calc(10 * var(--space-unit)); // 80px
-}
+Static spacings which remain consistent across breakpoints are currently in development. 
 
 ```
 
