@@ -88,5 +88,3 @@ export const SpacingBlocks = () => {
     </table>
   );
 };
-
-/* eslint-disable import/prefer-default-export */

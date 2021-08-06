@@ -201,5 +201,3 @@ export const FontFamilies = ({ tokens }: { tokens: NestedTokenProps }) => (
     </tbody>
   </table>
 );
-
-/* eslint-disable import/prefer-default-export */

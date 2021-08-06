@@ -56,5 +56,3 @@ export const ColorPaletteStatus = () => (
     />
   </ColorPalette>
 );
-
-/* eslint-disable import/prefer-default-export */
