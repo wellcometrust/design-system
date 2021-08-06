@@ -1,3 +1,12 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Wellcome-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/wellcome-bold-webfont.woff2') format('woff2'),
+    url('./fonts/wellcome-bold-webfont.woff') format('woff');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -110,4 +119,10 @@ thead th {
 
 td {
   font-size: var(--font-size-body-sm);
+}
+
+.sb-variable {
+  font-family: var(--font-tertiary);
+  font-size: var(--font-size-body-xs);
+  white-space: nowrap;
 }

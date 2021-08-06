@@ -10,20 +10,16 @@
 
 .sb-swatch__color {
   flex-shrink: 0;
-  height: calc(6 * var(--space-unit));
+  height: calc(8 * var(--space-unit));
   margin-bottom: var(--space-md);
   margin-right: var(--space-md);
-  width: calc(6 * var(--space-unit));
+  width: calc(8 * var(--space-unit));
 }
 
-.sb-variable {
-  white-space: nowrap;
-}
 
 .sb-swatch__name {
   color: var(--color-grey-70);
   display: block;
-  font-family: var(--font-tertiary);
   font-size: var(--font-size-body-xs);
   margin-right: var(--space-md);
 }

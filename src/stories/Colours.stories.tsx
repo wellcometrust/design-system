@@ -3,10 +3,6 @@ import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
-type MappedTokensProps = {
-  [key: string]: string;
-};
-
 type ColorVarsProps = {
   tokens?: MappedTokensProps;
 };
@@ -30,6 +26,8 @@ export const ColorVariables = ({ tokens = defaultTokens }: ColorVarsProps) => {
                 <dl>
                   <dt className="u-visually-hidden">Token</dt>
                   <dd>{key}</dd>
+                  <dt className="u-visually-hidden">Hex colour</dt>
+                  <dd>{value}</dd>
                   <dt className="u-visually-hidden">CSS variable</dt>
                   <dd className="sb-variable">{cssVariable}</dd>
                 </dl>
