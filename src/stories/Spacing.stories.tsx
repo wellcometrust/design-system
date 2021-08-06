@@ -6,6 +6,18 @@ type SizeProps = {
   };
 };
 
+/*
+ * TODO: #8709 - Automate documentation of styling fundamentals
+ *
+ * The token objects and React component tables are a stop-gap. The token
+ * objects will be supplanted by files generated from design tokens using Style
+ * Dictionary and React components will be refactored to handle them so that
+ * table values automatically update. This discovery work is underway but not
+ * yet completed.
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8709}
+ */
+
 export const SpacingBlocks = () => {
   const sizes: SizeProps = {
     xl: {
