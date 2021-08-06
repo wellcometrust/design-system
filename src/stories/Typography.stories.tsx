@@ -2,6 +2,16 @@ import React from 'react';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
+/*
+ * TODO: #8709 - Automate documentation of styling fundamentals
+ *
+ * The token objects and React component tables are a pre-cursor to fully
+ * automating the process of documenting the design system. This will go hand
+ * in hand with design token discovery work into using Style Dictionary, which
+ * is underway but not yet completed.
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8709}
+ */
 export const tokensFontFamilies: NestedTokenProps = {
   FontPrimary: {
     value: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
