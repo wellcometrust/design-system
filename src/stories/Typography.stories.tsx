@@ -2,10 +2,6 @@ import React from 'react';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
-type NestedTokenProps = {
-  [key: string]: MappedTokensProps;
-};
-
 export const tokensFontFamilies: NestedTokenProps = {
   FontPrimary: {
     value: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
