@@ -1,24 +1,24 @@
 @mixin link-base {
-  color: var(--colour-link);
+  color: var(--color-link);
   text-decoration: underline;
 
   &:hover {
-    color: var(--colour-link-hover);
+    color: var(--color-link-hover);
   }
 
   &:active {
-    color: var(--colour-link-active);
+    color: var(--color-link-active);
   }
 
   &:focus {
-    color: var(--colour-link-focus);
-    outline-color: var(--colour-link-focus-outline);
+    color: var(--color-link-focus);
+    outline-color: var(--color-link-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 
   [disabled],
   &:not([href]) {
-    color: var(--colour-link-disabled);
+    color: var(--color-link-disabled);
   }
 }
 
@@ -35,11 +35,11 @@
  *
  * i.e. hover-underline adds styles to a title after the image was hovered
  */
-@mixin default-underline($height: 3px, $underline-colour: var(--colour-grey-80)) {
+@mixin default-underline($height: 3px, $underline-color: var(--color-grey-80)) {
   --transition-duration-link: 0.3s;
   --transition-timing-function: ease-in-out;
 
-  background-image: linear-gradient($underline-colour, $underline-colour), linear-gradient(transparent, transparent);
+  background-image: linear-gradient($underline-color, $underline-color), linear-gradient(transparent, transparent);
   background-position: left calc(100% - #{$height});
   background-repeat: no-repeat;
   background-size: 100% 1px, 0 $height;
@@ -49,8 +49,8 @@
   transition-property: background-size;
 }
 
-@mixin hover-underline($height: 3px, $hover-colour: var(--colour-amber-30)) {
-  background-image: linear-gradient(transparent, transparent), linear-gradient($hover-colour, $hover-colour);
+@mixin hover-underline($height: 3px, $hover-color: var(--color-amber-30)) {
+  background-image: linear-gradient(transparent, transparent), linear-gradient($hover-color, $hover-color);
   background-position: left calc(100% - 1px);
   background-size: 0 1px, 100% $height;
 }
@@ -71,14 +71,14 @@
  * }
  *
  * @param {Int} $height - height of the "underline" on hover
- * @param {string} $hover-colour - colour of the "underline" on hover
- * @param {string} $underline-colour - colour of the "underline" (default state)
+ * @param {string} $hover-color - colour of the "underline" on hover
+ * @param {string} $underline-color - colour of the "underline" (default state)
  * @param {string} $child-selector - selector to apply anchor styles
  */
 @mixin animated-link(
   $height: 3px,
-  $hover-colour: var(--colour-amber-30),
-  $underline-colour: var(--colour-grey-80),
+  $hover-color: var(--color-amber-30),
+  $underline-color: var(--color-grey-80),
   $child-selector: null
 ) {
   @include link-base;
@@ -92,19 +92,19 @@
 
   @if ($child-selector) {
     #{$child-selector} {
-      @include default-underline($height, $underline-colour);
+      @include default-underline($height, $underline-color);
     }
 
     &:hover #{$child-selector} {
-      @include hover-underline($height, $hover-colour);
+      @include hover-underline($height, $hover-color);
     }
   }
 
   @else {
-    @include default-underline($height, $underline-colour);
+    @include default-underline($height, $underline-color);
 
     &:hover {
-      @include hover-underline($height, $hover-colour);
+      @include hover-underline($height, $hover-color);
     }
   }
 }

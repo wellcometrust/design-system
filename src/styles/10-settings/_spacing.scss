@@ -35,7 +35,7 @@
   // --space-lg: 24px
   // --space-xl: 48px
   @include mq(sm) {
-    --space-sm: calc(1 * var(--space-unit));
+    --space-sm: var(--space-unit);
     --space-md: calc(1.5 * var(--space-unit));
     --space-lg: calc(3 * var(--space-unit));
     --space-xl: calc(6 * var(--space-unit));
