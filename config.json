@@ -6,23 +6,23 @@
       "buildPath": "src/build/js/",
       "files": [
         {
-          "destination": "colours.js",
+          "destination": "colors.js",
           "format": "javascript/module-flat",
           "options": {
             "outputReferences": true
           },
           "filter": {
             "attributes": {
-              "category": "colour"
+              "category": "color"
             }
           }
         },
         {
-          "destination": "colours.d.ts",
+          "destination": "colors.d.ts",
           "format": "typescript/es6-declarations",
           "filter": {
             "attributes": {
-              "category": "colour"
+              "category": "color"
             }
           }
         }
@@ -33,14 +33,14 @@
       "buildPath": "src/build/css/",
       "files": [
         {
-          "destination": "colours.css",
+          "destination": "colors.css",
           "format": "css/variables",
           "options": {
             "outputReferences": true
           },
           "filter": {
             "attributes": {
-              "category": "colour"
+              "category": "color"
             }
           }
         }
