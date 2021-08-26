@@ -5,11 +5,18 @@ const {
 } = StyleDictionary.formatHelpers;
 
 /**
- * Custom Format: Custom Media
- * This converts our viewport tokens to the very specific `@custom-media`
- * variable definition format.
+ * Custom format for outputting tokens as CSS variables with media queries
+ *
+ * e.g.
  * 
- * 1. Some of our tokens are named using underscores. Convert to hyphens.
+ * :root {
+ *   --space-sm: calc(0.75 * var(--space-unit));
+ *
+ *   @include mq(sm) {
+ *     --space-sm: calc(1 * var(--space-unit));
+ *   }
+ * }
+ *
  */
 StyleDictionary.registerFormat({
   name: "custom/format/css-variables-with-media-queries",
