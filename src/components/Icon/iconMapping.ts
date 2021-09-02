@@ -3,6 +3,7 @@ import IconActionCross from './components/IconActionCross';
 import IconActionDelete from './components/IconActionDelete';
 import IconActionDownload from './components/IconActionDownload';
 import IconActionEdit from './components/IconActionEdit';
+import IconActionEmptyCircle from './components/IconActionEmptyCircle';
 import IconActionExclamation from './components/IconActionExclamation';
 import IconActionFlag from './components/IconActionFlag';
 import IconActionInformation from './components/IconActionInformation';
@@ -103,6 +104,7 @@ export default {
   iconActionDelete: IconActionDelete,
   iconActionDownload: IconActionDownload,
   iconActionEdit: IconActionEdit,
+  iconActionEmptyCircle: IconActionEmptyCircle,
   iconActionExclamation: IconActionExclamation,
   iconActionFlag: IconActionFlag,
   iconActionInformation: IconActionInformation,
