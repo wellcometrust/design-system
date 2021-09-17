@@ -1,0 +1,50 @@
+{
+  "source": ["src/tokens/**/*.json"],
+  "platforms": {
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "src/build/js/",
+      "files": [
+        {
+          "destination": "colors.js",
+          "format": "javascript/module-flat",
+          "options": {
+            "outputReferences": true
+          },
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "colors.d.ts",
+          "format": "typescript/es6-declarations",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        }
+      ]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "src/build/css/",
+      "files": [
+        {
+          "destination": "colors.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          },
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

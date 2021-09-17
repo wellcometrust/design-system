@@ -6,7 +6,8 @@
 // ----------------------------------
 
 @import 'mq'; // must be first import
-@import 'colors';
+// @import 'colors';
+@import '../../build/css/colors';
 @import 'grid';
 @import 'spacing';
 @import 'typography';
