@@ -109,6 +109,6 @@ export const Button = forwardRef(
   }
 );
 
-Button.displayName = 'Button (Wellcome DS)';
+Button.displayName = 'Button';
 
 export default Button;
