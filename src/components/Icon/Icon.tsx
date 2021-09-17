@@ -37,4 +37,6 @@ export const Icon = ({
   );
 };
 
+Icon.displayName = 'Icon (Wellcome DS)';
+
 export default Icon;
