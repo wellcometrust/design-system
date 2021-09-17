@@ -5,7 +5,7 @@ import React from 'react';
  * massively accessible and icon names overlap
  */
 
-// import { IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+// import { IconGallery, IconItem } from '@storybook/addon-docs';
 
 import { Icon } from './Icon';
 import iconMapping from './iconMapping';

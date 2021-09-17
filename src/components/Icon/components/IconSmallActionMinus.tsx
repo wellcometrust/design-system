@@ -1,7 +1,11 @@
 import React from 'react';
 
-const IconSmallActionMinus = (props: React.SVGAttributes<SVGSVGElement>) => (
-  <svg viewBox="0 0 16 16" {...props}>
+const IconSmallActionMinus = ({
+  viewBox = '0 0 16 16'
+}: {
+  viewBox?: string;
+}) => (
+  <svg viewBox={viewBox}>
     <rect
       x="2"
       y="7"

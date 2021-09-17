@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { Icon, IconProps } from './Icon';
 
@@ -36,4 +36,15 @@ The SVG has no explicit dimensions but it has a viewBox attribute so each icon w
 Height and width styles are automatically set in CSS depending on the icon name used e.g. `name="iconActionEdit"` will render at the standard size (24px by 24px), `name="iconSmallActionEdit"` will render at the smaller size (16px by 16px).
 
 Overrides can be made through CSS or may be provided as props. Props should include the unit as they will be rendered in a **style** attribute.
+
+## Overriding default scale
+The icons have been designed so that when presented as a group they each appear to be appropriately sized in comparison to each other. The upshot of that is that some icons, like `iconActionCrossCircle`, take up all of their alloted space whereas others, like `iconActionCross`, have some clearance around them.
+
+To override the default scaling a custom viewBox may be specified as a prop which will be passed down to the SVG element.
+
+```jsx
+<Icon name="iconActionCross" viewBox="6 6 12 12" />
+```
+
+For further information and explanation see the [SVG viewBox attribute reference on MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox).
 

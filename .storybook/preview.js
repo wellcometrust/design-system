@@ -1,4 +1,4 @@
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 import './styles/storybook-app.scss';
 
 export const parameters = {
