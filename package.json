@@ -2,7 +2,6 @@
   "name": "@wellcometrust/design-system",
   "version": "0.2.2",
   "description": "Design system for Wellcome Trust digital products",
-  "main": "dist/index.js",
   "module": "dist/index.js",
   "style": "dist/core.css",
   "types": "dist/index.d.ts",
