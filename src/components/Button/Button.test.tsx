@@ -21,5 +21,5 @@ test('Disabled Button component is not accessible', () => {
   });
 
   expect(button).toBeInTheDocument();
-  expect(button).toHaveAttribute('disabled');
+  expect(button).toBeDisabled();
 });
