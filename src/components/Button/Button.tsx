@@ -1,4 +1,6 @@
 import React, {
+  FocusEvent,
+  FocusEventHandler,
   forwardRef,
   MouseEvent,
   MouseEventHandler,
@@ -26,6 +28,9 @@ export type ButtonProps = {
   iconPlacementSwitch?: boolean;
   id?: string;
   onClick?: MouseEventHandler;
+  onFocus?: FocusEventHandler;
+  onMouseEnter?: MouseEventHandler;
+  onMouseLeave?: MouseEventHandler;
   role?: string;
   tabIndex?: number;
   textClassName?: string;
@@ -49,6 +54,9 @@ export const Button = forwardRef(
       iconPlacementSwitch,
       id,
       onClick,
+      onFocus,
+      onMouseEnter,
+      onMouseLeave,
       role,
       tabIndex,
       textClassName,
@@ -89,6 +97,21 @@ export const Button = forwardRef(
         onClick={(e: MouseEvent) => {
           if (onClick && !disabled) {
             onClick(e);
+          }
+        }}
+        onFocus={(e: FocusEvent) => {
+          if (onFocus && !disabled) {
+            onFocus(e);
+          }
+        }}
+        onMouseEnter={(e: MouseEvent) => {
+          if (onMouseEnter && !disabled) {
+            onMouseEnter(e);
+          }
+        }}
+        onMouseLeave={(e: MouseEvent) => {
+          if (onMouseLeave && !disabled) {
+            onMouseLeave(e);
           }
         }}
         ref={ref}
