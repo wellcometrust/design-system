@@ -27,6 +27,7 @@ export type ButtonProps = {
   iconClassName?: string;
   iconPlacementSwitch?: boolean;
   id?: string;
+  onBlur?: FocusEventHandler;
   onClick?: MouseEventHandler;
   onFocus?: FocusEventHandler;
   onMouseEnter?: MouseEventHandler;
@@ -53,6 +54,7 @@ export const Button = forwardRef(
       iconClassName,
       iconPlacementSwitch,
       id,
+      onBlur,
       onClick,
       onFocus,
       onMouseEnter,
@@ -94,6 +96,11 @@ export const Button = forwardRef(
         disabled={disabled}
         href={href}
         id={id}
+        onBlur={(e: FocusEvent) => {
+          if (onBlur && !disabled) {
+            onBlur(e);
+          }
+        }}
         onClick={(e: MouseEvent) => {
           if (onClick && !disabled) {
             onClick(e);
