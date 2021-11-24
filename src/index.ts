@@ -1,5 +1,8 @@
 /**
- * @file An array listing paths to the standard components
+ * @file Mapping of standard component names to modules
  * which are to be exported by the design system
  */
-export default ['Button/Button.tsx', 'Icon/Icon.tsx'];
+export default {
+  Button: 'Button/Button',
+  Icon: 'Icon/Icon'
+};

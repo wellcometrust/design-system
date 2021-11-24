@@ -23,6 +23,9 @@ module.exports = {
       path.resolve('./src/components')
     ];
 
+    // Ensure stories can import TypeScript files
+    config.resolve.extensions.push('.ts');
+
     // SASS
     config.module.rules.push({
       test: /\.scss$/,

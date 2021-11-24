@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 
 import iconMapping from './iconMapping';
-import './icon.scss';
 
 export type IconProps = {
   className?: string;
   height?: string;
   name: keyof typeof iconMapping;
+  viewBox?: string;
   width?: string;
 };
 
@@ -15,8 +15,8 @@ export const Icon = ({
   className,
   height,
   name,
-  width,
-  ...props
+  viewBox,
+  width
 }: IconProps) => {
   const isIcon = Object.prototype.hasOwnProperty.call(iconMapping, name);
 
@@ -33,9 +33,11 @@ export const Icon = ({
 
   return (
     <span className={classNames} style={{ height, width }} aria-hidden="true">
-      <IconElement {...props} />
+      <IconElement viewBox={viewBox} />
     </span>
   );
 };
+
+Icon.displayName = 'Icon';
 
 export default Icon;

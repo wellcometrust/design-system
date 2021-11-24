@@ -9,13 +9,12 @@
 
 @mixin btn-base {
   align-items: center;
-  background: transparent;
   border: 0;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
   letter-spacing: var(--letter-spacing-body);
-  line-height: 1;
+  line-height: var(--line-height-body);
   padding: 0;
   text-decoration: none;
   

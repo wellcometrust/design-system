@@ -1,7 +1,7 @@
 import React from 'react';
 
-const IconActionMinus = (props: React.SVGAttributes<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" {...props}>
+const IconActionMinus = ({ viewBox = '0 0 24 24' }: { viewBox?: string }) => (
+  <svg viewBox={viewBox}>
     <rect
       width="14"
       height="2"
