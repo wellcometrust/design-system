@@ -16,8 +16,7 @@
     outline-offset: calc(0.5 * var(--space-unit));
   }
 
-  [disabled],
-  &:not([href]) {
+  [disabled] {
     color: var(--color-link-disabled);
   }
 }
