@@ -1,3 +1,4 @@
+import IconActionCloseNav from './components/IconActionCloseNav';
 import IconActionCrossCircle from './components/IconActionCrossCircle';
 import IconActionCross from './components/IconActionCross';
 import IconActionDelete from './components/IconActionDelete';
@@ -26,6 +27,7 @@ import IconActionSubmit from './components/IconActionSubmit';
 import IconActionTickCircle from './components/IconActionTickCircle';
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
+import IconContentApplications from './components/IconContentApplications';
 import IconContentCalendarAdd from './components/IconContentCalendarAdd';
 import IconContentCalendarDone from './components/IconContentCalendarDone';
 import IconContentCalendarSchedule from './components/IconContentCalendarSchedule';
@@ -36,6 +38,8 @@ import IconContentCredits from './components/IconContentCredits';
 import IconContentFile from './components/IconContentFile';
 import IconContentFlask from './components/IconContentFlask';
 import IconContentForm from './components/IconContentForm';
+import IconContentFunding from './components/IconContentFunding';
+import IconContentHome from './components/IconContentHome';
 import IconContentImage from './components/IconContentImage';
 import IconContentLink from './components/IconContentLink';
 import IconContentLocation from './components/IconContentLocation';
@@ -99,6 +103,7 @@ import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
 
 export default {
+  iconActionCloseNav: IconActionCloseNav,
   iconActionCrossCircle: IconActionCrossCircle,
   iconActionCross: IconActionCross,
   iconActionDelete: IconActionDelete,
@@ -127,6 +132,7 @@ export default {
   iconActionTickCircle: IconActionTickCircle,
   iconActionUpdate: IconActionUpdate,
   iconActionUpload: IconActionUpload,
+  iconContentApplications: IconContentApplications,
   iconContentCalendarAdd: IconContentCalendarAdd,
   iconContentCalendarDone: IconContentCalendarDone,
   iconContentCalendarSchedule: IconContentCalendarSchedule,
@@ -137,6 +143,8 @@ export default {
   iconContentFile: IconContentFile,
   iconContentFlask: IconContentFlask,
   iconContentForm: IconContentForm,
+  iconContentFunding: IconContentFunding,
+  iconContentHome: IconContentHome,
   iconContentImage: IconContentImage,
   iconContentLink: IconContentLink,
   iconContentLocation: IconContentLocation,
