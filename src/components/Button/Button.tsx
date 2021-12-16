@@ -7,6 +7,7 @@ import React, {
   ReactNode,
   Ref
 } from 'react';
+
 import cx from 'classnames';
 
 import Icon from 'Icon/Icon';
@@ -17,8 +18,9 @@ import iconMapping from 'Icon/iconMapping';
  *
  * @see {@link https://github.com/wellcometrust/corporate/issues/8629}
  */
-export type ButtonProps = {
-  autoFocus?: boolean;
+export type ButtonOwnProps<E extends React.ElementType = React.ElementType> = {
+  as?: E;
+  // autoFocus?: boolean;
   className?: string;
   children: ReactNode;
   disabled?: boolean;
@@ -26,25 +28,32 @@ export type ButtonProps = {
   icon?: keyof typeof iconMapping;
   iconClassName?: string;
   iconPlacementSwitch?: boolean;
-  id?: string;
-  onBlur?: FocusEventHandler;
-  onClick?: MouseEventHandler;
-  onFocus?: FocusEventHandler;
-  onMouseEnter?: MouseEventHandler;
-  onMouseLeave?: MouseEventHandler;
-  role?: string;
-  tabIndex?: number;
+  // id?: string;
+  // onBlur?: FocusEventHandler;
+  // onClick?: MouseEventHandler;
+  // onFocus?: FocusEventHandler;
+  // onMouseEnter?: MouseEventHandler;
+  // onMouseLeave?: MouseEventHandler;
+  // role?: string;
+  // tabIndex?: number;
   textClassName?: string;
-  type?: 'button' | 'submit' | 'reset' | undefined;
+  // type?: 'button' | 'submit' | 'reset' | undefined;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'unstyled';
 };
+
+export type ButtonProps<
+  E extends React.ElementType = React.ElementType
+> = ButtonOwnProps & Omit<React.ComponentProps<E>, keyof ButtonOwnProps>;
+
+const defaultElement = 'button';
 
 /**
  * Functional call to action
  */
 export const Button = forwardRef(
-  (
+  <E extends React.ElementType = typeof defaultElement>(
     {
+      as,
       autoFocus = false,
       children,
       className,
@@ -63,14 +72,14 @@ export const Button = forwardRef(
       tabIndex,
       textClassName,
       type = 'button',
-      variant = 'primary',
-      ...props
-    }: ButtonProps,
-    // TODO - use type generics to dynamically set the ref type
-    ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
+      variant = 'primary'
+    }: ButtonProps<E>,
+    ref: Ref<React.ComponentProps<E>>
   ) => {
-    const isAnchor = !!href;
-    const Element: React.ElementType = isAnchor ? 'a' : 'button';
+    // const isAnchor = !!href;
+    // const Element: React.ElementType = isAnchor ? 'a' : defaultElement;
+    const Element = as || defaultElement;
+    const isAnchor = Element === 'a';
     const hasStyles = variant !== 'unstyled';
 
     const classNames = cx({
@@ -93,7 +102,7 @@ export const Button = forwardRef(
       <Element
         autoFocus={autoFocus}
         className={classNames}
-        disabled={disabled}
+        disabled={!isAnchor && disabled}
         href={href}
         id={id}
         onBlur={(e: FocusEvent) => {
@@ -125,7 +134,6 @@ export const Button = forwardRef(
         role={role}
         tabIndex={tabIndex}
         type={!isAnchor ? type : undefined}
-        {...props}
       >
         {icon && !iconPlacementSwitch && (
           <Icon name={icon} className={iconClassNames} />
