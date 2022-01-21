@@ -5,6 +5,7 @@ import IconActionDelete from './components/IconActionDelete';
 import IconActionDownload from './components/IconActionDownload';
 import IconActionEdit from './components/IconActionEdit';
 import IconActionEmptyCircle from './components/IconActionEmptyCircle';
+import IconActionEmptyCircleSplit from './components/IconActionEmptyCircleSplit';
 import IconActionExclamation from './components/IconActionExclamation';
 import IconActionFlag from './components/IconActionFlag';
 import IconActionInformation from './components/IconActionInformation';
@@ -25,6 +26,7 @@ import IconActionSearch from './components/IconActionSearch';
 import IconActionSettings from './components/IconActionSettings';
 import IconActionSubmit from './components/IconActionSubmit';
 import IconActionTickCircle from './components/IconActionTickCircle';
+import IconActionTickCircleFilled from './components/IconActionTickCircleFilled';
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
 import IconContentApplications from './components/IconContentApplications';
@@ -110,6 +112,7 @@ export default {
   iconActionDownload: IconActionDownload,
   iconActionEdit: IconActionEdit,
   iconActionEmptyCircle: IconActionEmptyCircle,
+  iconActionEmptyCircleSplit: IconActionEmptyCircleSplit,
   iconActionExclamation: IconActionExclamation,
   iconActionFlag: IconActionFlag,
   iconActionInformation: IconActionInformation,
@@ -130,6 +133,7 @@ export default {
   iconActionSettings: IconActionSettings,
   iconActionSubmit: IconActionSubmit,
   iconActionTickCircle: IconActionTickCircle,
+  iconActionTickCircleFilled: IconActionTickCircleFilled,
   iconActionUpdate: IconActionUpdate,
   iconActionUpload: IconActionUpload,
   iconContentApplications: IconContentApplications,
