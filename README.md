@@ -1,54 +1,64 @@
 # Wellcome Design System - Alpha
 
-Work in progress.
-
-## Table of contents
-
-- [Wellcome Design System - Alpha](#wellcome-design-system---alpha)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-    - [Clone this repo](#clone-this-repo)
-    - [Node version and NVM](#node-version-and-nvm)
-    - [Installation](#installation)
-    - [Development](#development)
-    - [Build all files](#build-all-files)
-    - [...](#)
-
 ## Introduction
 
-(Introduction content)
+The Wellcome Design System provides **foundations** for use across Wellcome's digital products. This comprises global styling variables and generic components, built using React and TypeScript.
 
-## Usage
 
-### Clone this repo
-
-(TODO: add npm package location)
-
-`git clone git@github.com:wellcometrust/design-system.git`
-
-### Node version and NVM
-
-The Wellcome Design System repo uses Node v15.0.1. It is strongly recommended that you install [NVM](http://nvm.sh/) on your local machine to easily manage multiple versions of Node.
-
-To help in setting the correct node version, an .nvmrc file is contained in the root folder. Running `nvm use` from the command line will automatically pick up the version named in the .nvmrc file and set this as the node version for the current terminal window.
+## Consuming the Design System
 
 ### Installation
 
+```npm install @wellcometrust/design-system --save```
+
+
+### Import components
+
+```js
+import { ComponentName } from '@wellcometrust/design-system
 ```
-npm install
+
+### Import styles
+
+```css
+/* core styles */
+@import '~@wellcometrust/design-system/dist/core';
+
+/* theme styles */
+@import '~@wellcometrust/design-system/dist/theme';
 ```
+
+### Storybook
+
+https://designsystem.wellcome.org/
+
+
+## Contributing to Design System development
+
+### Clone this repo
+
+```git clone git@github.com:wellcometrust/design-system.git```
+
+
+### Node version and NVM
+
+This repo supports a specific version of Node.js which is specified in [.nvmrc](.nvmrc). It is strongly recommended that you install [NVM](http://nvm.sh/) on your local machine to easily manage multiple versions of Node.
+
+Running `nvm use` from the command line will automatically pick up the version named in the `.nvmrc` file and set this as the node version for the current terminal window.
+
+
+### Installation
+
+```npm install```
 
 ### Development
 
-```
-npm run storybook
-```
+```npm run storybook```
+
 ### Build all files
 
-```
-npm run build
-```
+```npm run build```
 
-### ...
+### Publishing for consumption
 
+New releases are published to NPM. Please speak to a member of the project dev team about this.
