@@ -71,6 +71,8 @@ import IconDirectionalSortDescending from './components/IconDirectionalSortDesce
 import IconMiscCallout from './components/IconMiscCallout';
 import IconMiscCookies from './components/IconMiscCookies';
 import IconMiscJob from './components/IconMiscJob';
+import IconMiscStarCircle from './components/IconMiscStarCircle';
+import IconMiscStarCircleFilled from './components/IconMiscStarCircleFilled';
 import IconMiscTicket from './components/IconMiscTicket';
 import IconMiscVegetarian from './components/IconMiscVegetarian';
 import IconSmallActionCross from './components/IconSmallActionCross';
@@ -178,6 +180,8 @@ export default {
   iconMiscCallout: IconMiscCallout,
   iconMiscCookies: IconMiscCookies,
   iconMiscJob: IconMiscJob,
+  iconMiscStarCircle: IconMiscStarCircle,
+  iconMiscStarCircleFilled: IconMiscStarCircleFilled,
   iconMiscTicket: IconMiscTicket,
   iconMiscVegetarian: IconMiscVegetarian,
   iconSmallActionCross: IconSmallActionCross,
