@@ -15,4 +15,4 @@ $mq-breakpoints: (
   xxl: 1500px
 ) !default;
 
-@import '~sass-mq';
+@use '~sass-mq' as mq;

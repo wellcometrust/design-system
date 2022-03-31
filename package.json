@@ -34,7 +34,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch"
+    "type-check:watch": "npm run type-check -- --watch",
+    "esb": "rm -rf dist-esb && node config/esbuild.js --environment NODE_ENV:production"
   },
   "repository": {
     "type": "git",
@@ -90,6 +91,8 @@
     "browserslist": "^4.8.2",
     "create-react-component-folder": "^0.1.30",
     "css-loader": "^5.2.6",
+    "esbuild": "^0.14.28",
+    "esbuild-plugin-sass": "^1.0.1",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.9.0",

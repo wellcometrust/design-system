@@ -6,6 +6,7 @@ node_modules/
 .dist/
 *.sass-cache*
 dist
+dist-esb
 /ssr
 coverage
 storybook-static

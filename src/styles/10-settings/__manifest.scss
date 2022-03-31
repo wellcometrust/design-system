@@ -5,10 +5,10 @@
 // 2021-05-01
 // ----------------------------------
 
-@import 'mq'; // must be first import
-@import 'colors';
-@import 'grid';
-@import 'spacing';
-@import 'typography';
-@import 'transition';
-@import 'z-index';
+@use 'mq'; // must be first import
+@use 'colors';
+@use 'grid';
+@use 'spacing';
+@use 'typography';
+@use 'transition';
+@use 'z-index';
