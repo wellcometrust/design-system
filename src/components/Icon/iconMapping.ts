@@ -32,6 +32,7 @@ import IconActionTickCircle from './components/IconActionTickCircle';
 import IconActionTickCircleFilled from './components/IconActionTickCircleFilled';
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
+import IconActionVolume from './components/IconActionVolume';
 import IconContentApplications from './components/IconContentApplications';
 import IconContentCalendarAdd from './components/IconContentCalendarAdd';
 import IconContentCalendarDone from './components/IconContentCalendarDone';
@@ -108,7 +109,6 @@ import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
-import IconActionVolume from './components/IconActionVolume';
 
 export default {
   iconActionCloseNav: IconActionCloseNav,
