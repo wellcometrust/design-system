@@ -13,6 +13,7 @@ import IconActionLockClosed from './components/IconActionLockClosed';
 import IconActionLockOpen from './components/IconActionLockOpen';
 import IconActionMinus from './components/IconActionMinus';
 import IconActionMore from './components/IconActionMore';
+import IconActionMute from './components/IconActionMute';
 import IconActionNav from './components/IconActionNav';
 import IconActionOpenExternal from './components/IconActionOpenExternal';
 import IconActionPause from './components/IconActionPause';
@@ -29,10 +30,8 @@ import IconActionSettings from './components/IconActionSettings';
 import IconActionSubmit from './components/IconActionSubmit';
 import IconActionTickCircle from './components/IconActionTickCircle';
 import IconActionTickCircleFilled from './components/IconActionTickCircleFilled';
-import IconActionVolume from './components/IconActionUnmute';
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
-import IconActionUnmute1 from './components/IconActionVolume';
 import IconContentApplications from './components/IconContentApplications';
 import IconContentCalendarAdd from './components/IconContentCalendarAdd';
 import IconContentCalendarDone from './components/IconContentCalendarDone';
@@ -109,6 +108,7 @@ import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
+import IconActionVolume from './components/IconActionVolume';
 
 export default {
   iconActionCloseNav: IconActionCloseNav,
@@ -126,6 +126,7 @@ export default {
   iconActionLockOpen: IconActionLockOpen,
   iconActionMinus: IconActionMinus,
   iconActionMore: IconActionMore,
+  iconActionMute: IconActionMute,
   iconActionNav: IconActionNav,
   iconActionOpenExternal: IconActionOpenExternal,
   iconActionPause: IconActionPause,
@@ -142,10 +143,9 @@ export default {
   iconActionSubmit: IconActionSubmit,
   iconActionTickCircle: IconActionTickCircle,
   iconActionTickCircleFilled: IconActionTickCircleFilled,
-  iconActionUnmute: IconActionVolume,
   iconActionUpdate: IconActionUpdate,
   iconActionUpload: IconActionUpload,
-  iconActionVolume: IconActionUnmute1,
+  iconActionVolume: IconActionVolume,
   iconContentApplications: IconContentApplications,
   iconContentCalendarAdd: IconContentCalendarAdd,
   iconContentCalendarDone: IconContentCalendarDone,

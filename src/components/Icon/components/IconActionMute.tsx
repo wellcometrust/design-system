@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconActionUnmute = ({ viewBox = '0 0 24 24' }: { viewBox?: string }) => (
+const IconActionMute = ({ viewBox = '0 0 24 24' }: { viewBox?: string }) => (
   <svg viewBox={viewBox}>
     <g fill="none" fillRule="evenodd">
       <g transform="translate(-1 4)" fill="currentColor">
@@ -24,4 +24,4 @@ const IconActionUnmute = ({ viewBox = '0 0 24 24' }: { viewBox?: string }) => (
   </svg>
 );
 
-export default IconActionUnmute;
+export default IconActionMute;
