@@ -13,9 +13,12 @@ import IconActionLockClosed from './components/IconActionLockClosed';
 import IconActionLockOpen from './components/IconActionLockOpen';
 import IconActionMinus from './components/IconActionMinus';
 import IconActionMore from './components/IconActionMore';
+import IconActionMute from './components/IconActionMute';
 import IconActionNav from './components/IconActionNav';
 import IconActionOpenExternal from './components/IconActionOpenExternal';
+import IconActionPause from './components/IconActionPause';
 import IconActionPlay from './components/IconActionPlay';
+import IconActionPlayCircle from './components/IconActionPlayCircle';
 import IconActionPlusCircle from './components/IconActionPlusCircle';
 import IconActionPlus from './components/IconActionPlus';
 import IconActionPower from './components/IconActionPower';
@@ -29,6 +32,7 @@ import IconActionTickCircle from './components/IconActionTickCircle';
 import IconActionTickCircleFilled from './components/IconActionTickCircleFilled';
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
+import IconActionVolume from './components/IconActionVolume';
 import IconContentApplications from './components/IconContentApplications';
 import IconContentCalendarAdd from './components/IconContentCalendarAdd';
 import IconContentCalendarDone from './components/IconContentCalendarDone';
@@ -122,9 +126,12 @@ export default {
   iconActionLockOpen: IconActionLockOpen,
   iconActionMinus: IconActionMinus,
   iconActionMore: IconActionMore,
+  iconActionMute: IconActionMute,
   iconActionNav: IconActionNav,
   iconActionOpenExternal: IconActionOpenExternal,
+  iconActionPause: IconActionPause,
   iconActionPlay: IconActionPlay,
+  iconActionPlayCircle: IconActionPlayCircle,
   iconActionPlusCircle: IconActionPlusCircle,
   iconActionPlus: IconActionPlus,
   iconActionPower: IconActionPower,
@@ -138,6 +145,7 @@ export default {
   iconActionTickCircleFilled: IconActionTickCircleFilled,
   iconActionUpdate: IconActionUpdate,
   iconActionUpload: IconActionUpload,
+  iconActionVolume: IconActionVolume,
   iconContentApplications: IconContentApplications,
   iconContentCalendarAdd: IconContentCalendarAdd,
   iconContentCalendarDone: IconContentCalendarDone,
