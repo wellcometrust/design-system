@@ -57,9 +57,10 @@
 
 
   // DEPRECATED SPACE VALUES
-  // New "Lg" set of values introduced for --space-responsive variables,
-  // hence --space-lg equates to --space-responsive-md and not --space-responsive-lg
   --space-xl: var(--space-responsive-xl);
+
+  // A new responsive "Lg" token has been introduced, hence --space-lg
+  // equates to --space-responsive-md and NOT --space-responsive-lg
   --space-lg: var(--space-responsive-md);
   --space-md: var(--space-responsive-sm);
   --space-sm: var(--space-unit);
