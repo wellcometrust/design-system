@@ -20,34 +20,134 @@ type SizeProps = {
  * @see {@link https://github.com/wellcometrust/corporate/issues/8709}
  */
 
-export const SpacingBlocks = () => {
+const TokenTableRows = ({ sizes }: { sizes: SizeProps }) => (
+  <>
+    {Object.entries(sizes).map(([key, value]) => {
+      const size = `--${kebabCase(key)}`;
+      const { color, mqBase, mqSmall, mqMedium } = value;
+
+      return (
+        <tr key={size}>
+          <td>{key}</td>
+          <td className="sb-variable">{size}</td>
+          <td>
+            <figure>
+              <div
+                className="sb-space"
+                style={{
+                  backgroundColor: `var(${color})`,
+                  height: `var(${size})`,
+                  width: `var(${size})`
+                }}
+              />
+              <figcaption className="u-visually-hidden">
+                Coloured square indicating the size of {size}
+              </figcaption>
+            </figure>
+          </td>
+          {mqBase && <td>{mqBase} pixels</td>}
+          {mqSmall && <td>{mqSmall} pixels</td>}
+          {mqMedium && <td>{mqMedium} pixels</td>}
+        </tr>
+      );
+    })}
+  </>
+);
+
+export const StaticSpacingBlocks = () => {
   const sizes: SizeProps = {
-    SpaceXl: {
-      color: '--color-green-50',
+    SpaceStaticXxxl: {
+      color: '--color-amber-60',
+      mqBase: '64'
+    },
+    SpaceStaticXxl: {
+      color: '--color-grey-60',
+      mqBase: '48'
+    },
+    SpaceStaticXl: {
+      color: '--color-cyan-60',
+      mqBase: '32'
+    },
+    SpaceStaticLg: {
+      color: '--color-green-60',
+      mqBase: '24'
+    },
+    SpaceStaticMd: {
+      color: '--color-blue-60',
+      mqBase: '16'
+    },
+    SpaceStaticSm: {
+      color: '--color-orange-60',
+      mqBase: '12'
+    },
+    SpaceStaticXs: {
+      color: '--color-red-60',
+      mqBase: '8'
+    },
+    SpaceStaticXxs: {
+      color: '--color-yellow-60',
+      mqBase: '4'
+    }
+  };
+
+  return (
+    <table>
+      <caption>Static spacing units</caption>
+      <thead>
+        <tr>
+          <th scope="col">Token</th>
+          <th scope="col">CSS variable</th>
+          <th scope="col">Preview</th>
+          <th scope="col">Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <TokenTableRows sizes={sizes} />
+      </tbody>
+    </table>
+  );
+};
+
+export const ResponsiveSpacingBlocks = () => {
+  const sizes: SizeProps = {
+    SpaceResponsiveXxl: {
+      color: '--color-grey-60',
+      mqBase: '48',
+      mqSmall: '72',
+      mqMedium: '96'
+    },
+    SpaceResponsiveXl: {
+      color: '--color-cyan-60',
       mqBase: '32',
       mqSmall: '48',
       mqMedium: '64'
     },
-    SpaceLg: {
-      color: '--color-blue-50',
+    SpaceResponsiveLg: {
+      color: '--color-green-60',
+      mqBase: '24',
+      mqSmall: '32',
+      mqMedium: '48'
+    },
+    SpaceResponsiveMd: {
+      color: '--color-blue-60',
       mqBase: '16',
       mqSmall: '24',
       mqMedium: '32'
     },
-    SpaceMd: {
-      color: '--color-orange-50',
-      mqBase: '8',
-      mqSmall: '12',
+    SpaceResponsiveSm: {
+      color: '--color-orange-60',
+      mqBase: '12',
+      mqSmall: '16',
       mqMedium: '16'
     },
-    SpaceSm: {
-      color: '--color-red-50',
-      mqBase: '6',
+    SpaceResponsiveXs: {
+      color: '--color-red-60',
+      mqBase: '8',
       mqSmall: '8',
       mqMedium: '8'
     },
-    SpaceXs: {
-      color: '--color-amber-40',
+    SpaceResponsiveXxs: {
+      color: '--color-yellow-60',
       mqBase: '4',
       mqSmall: '4',
       mqMedium: '4'
@@ -56,7 +156,9 @@ export const SpacingBlocks = () => {
 
   return (
     <table>
-      <caption>Standard space units and their sizes across breakpoints</caption>
+      <caption>
+        Responsive spacing units and their sizes across breakpoints
+      </caption>
       <thead>
         <tr>
           <th scope="col">Token</th>
@@ -68,34 +170,7 @@ export const SpacingBlocks = () => {
         </tr>
       </thead>
       <tbody>
-        {Object.entries(sizes).map(([key, value]) => {
-          const size = `--${kebabCase(key)}`;
-
-          return (
-            <tr key={size}>
-              <td>{key}</td>
-              <td className="sb-variable">{size}</td>
-              <td>
-                <figure>
-                  <div
-                    className="sb-space"
-                    style={{
-                      backgroundColor: `var(${value.color})`,
-                      height: `var(${size})`,
-                      width: `var(${size})`
-                    }}
-                  />
-                  <figcaption className="u-visually-hidden">
-                    Coloured square indicating the size of {size}
-                  </figcaption>
-                </figure>
-              </td>
-              <td>{value.mqBase} pixels</td>
-              <td>{value.mqSmall} pixels</td>
-              <td>{value.mqMedium} pixels</td>
-            </tr>
-          );
-        })}
+        <TokenTableRows sizes={sizes} />
       </tbody>
     </table>
   );

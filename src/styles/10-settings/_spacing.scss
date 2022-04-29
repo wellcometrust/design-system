@@ -1,52 +1,83 @@
 // ----------------------------------
 // UI Settings
 // Spacing
-// https://zpl.io/bJWJNgW
+// https://www.figma.com/file/6bg5Y3Y4gLXgSdVa8Da8Vy/Wellcome-design-system?node-id=316%3A9
 // ----------------------------------
 // Design System 1.0 Alpha
-// 2021-05-01
+// 2022-04-29
 // ----------------------------------
 
 /**
  * Usage
  *
  * .component {
- *   margin: var(--space-md);
- *   padding: calc(2 * var(--space-unit));
+ *   margin: var(--space-responsive-md);
+ *   padding: var(--space-static-md);
  * }
  */
 
 :root {
   --space-unit: 0.5rem;
 
-  // --space-xs: 4px
-  // --space-sm: 6px
-  // --space-md: 8px
-  // --space-lg: 16px
-  // --space-xl: 32px
-  --space-xs: calc(0.5 * var(--space-unit));
-  --space-sm: calc(0.75 * var(--space-unit));
-  --space-md: var(--space-unit);
-  --space-lg: calc(2 * var(--space-unit));
-  --space-xl: calc(4 * var(--space-unit));
+  // | Token           | CSS variable        | Size |
+  // | ----------------| ------------------- | ---- |
+  // | SpaceStaticXxxl | --space-static-xxxl |   64 |
+  // | SpaceStaticXxl  | --space-static-xxl  |   48 |
+  // | SpaceStaticXl   | --space-static-xl   |   32 |
+  // | SpaceStaticLg   | --space-static-lg   |   24 |
+  // | SpaceStaticMd   | --space-static-md   |   16 |
+  // | SpaceStaticSm   | --space-static-sm   |   12 |
+  // | SpaceStaticXs   | --space-static-xs   |    8 |
+  // | SpaceStaticXxs  | --space-static-xxs  |    4 |
+  --space-static-xxxl: calc(8 * var(--space-unit));
+  --space-static-xxl: calc(6 * var(--space-unit));
+  --space-static-xl: calc(4 * var(--space-unit));
+  --space-static-lg: calc(3 * var(--space-unit));
+  --space-static-md: calc(2 * var(--space-unit));
+  --space-static-sm: calc(1.5 * var(--space-unit));
+  --space-static-xs: var(--space-unit);
+  --space-static-xxs: calc(0.5 * var(--space-unit));
 
-  // --space-sm: 8px
-  // --space-md: 12px
-  // --space-lg: 24px
-  // --space-xl: 48px
+  // | Token              | CSS variable           |   Base | Medium |  Large |
+  // | ------------------ | ---------------------- | ------ | ------ | ------ |
+  // | SpaceResponsiveXxl | --space-responsive-xxl |     48 |     72 |     96 |
+  // | SpaceResponsiveXl  | --space-responsive-xl  |     32 |     48 |     64 |
+  // | SpaceResponsiveLg  | --space-responsive-lg  |     24 |     32 |     48 |
+  // | SpaceResponsiveMd  | --space-responsive-md  |     16 |     24 |     32 |
+  // | SpaceResponsiveSm  | --space-responsive-sm  |     12 |     16 |     16 |
+  // | SpaceResponsiveXs  | --space-responsive-xs  |      8 |      8 |      8 |
+  // | SpaceResponsiveXxs | --space-responsive-xxs |      4 |      4 |      4 |
+  --space-responsive-xxl: var(--space-static-xxl);
+  --space-responsive-xl: var(--space-static-xl);
+  --space-responsive-lg: var(--space-static-lg);
+  --space-responsive-md: var(--space-static-md);
+  --space-responsive-sm: var(--space-static-sm);
+  --space-responsive-xs: var(--space-unit);
+  --space-responsive-xxs: var(--space-static-xxs);
+
+
+  // DEPRECATED SPACE VALUES
+  --space-xl: var(--space-responsive-xl);
+
+  // A new responsive "Lg" token has been introduced, hence --space-lg
+  // equates to --space-responsive-md and NOT --space-responsive-lg
+  --space-lg: var(--space-responsive-md);
+  --space-md: var(--space-responsive-sm);
+  --space-sm: var(--space-unit);
+  --space-xs: var(--space-static-xxs);
+
   @include mq(sm) {
-    --space-sm: var(--space-unit);
-    --space-md: calc(1.5 * var(--space-unit));
-    --space-lg: calc(3 * var(--space-unit));
-    --space-xl: calc(6 * var(--space-unit));
+    --space-responsive-xxl: calc(9 * var(--space-unit));
+    --space-responsive-xl: var(--space-static-xxl);
+    --space-responsive-lg: var(--space-static-xl);
+    --space-responsive-md: var(--space-static-lg);
+    --space-responsive-sm: var(--space-static-md);
   }
 
-  // --space-md: 16px
-  // --space-lg: 32px
-  // --space-xl: 64px
   @include mq(md) {
-    --space-md: calc(2 * var(--space-unit));
-    --space-lg: calc(4 * var(--space-unit));
-    --space-xl: calc(8 * var(--space-unit));
+    --space-responsive-xxl: calc(12 * var(--space-unit));
+    --space-responsive-xl: var(--space-static-xxxl);
+    --space-responsive-lg: var(--space-static-xxl);
+    --space-responsive-md: var(--space-static-xl);
   }
 }
