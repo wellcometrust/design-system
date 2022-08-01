@@ -33,7 +33,7 @@ import IconActionTickCircleFilled from './components/IconActionTickCircleFilled'
 import IconActionUpdate from './components/IconActionUpdate';
 import IconActionUpload from './components/IconActionUpload';
 import IconActionVolume from './components/IconActionVolume';
-import IconArrowLong from './components/IconArrowLong';
+import IconDirectionalLongArrowRight from './components/IconDirectionalLongArrowRight';
 import IconContentApplications from './components/IconContentApplications';
 import IconContentCalendarAdd from './components/IconContentCalendarAdd';
 import IconContentCalendarDone from './components/IconContentCalendarDone';
@@ -147,7 +147,7 @@ export default {
   iconActionUpdate: IconActionUpdate,
   iconActionUpload: IconActionUpload,
   iconActionVolume: IconActionVolume,
-  iconArrowLong: IconArrowLong,
+  iconDirectionalLongArrowRight: IconDirectionalLongArrowRight,
   iconContentApplications: IconContentApplications,
   iconContentCalendarAdd: IconContentCalendarAdd,
   iconContentCalendarDone: IconContentCalendarDone,
