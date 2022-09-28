@@ -21,19 +21,19 @@
   --font-size-base-px: 16; // required for sass calculations
 
   // font size - non-responsive body text
-  --font-size-body-xl: calc(24/16 * var(--font-size-base));
-  --font-size-body-lg: calc(20/16 * var(--font-size-base));
+  --font-size-body-xl: calc(24 / 16 * var(--font-size-base));
+  --font-size-body-lg: calc(20 / 16 * var(--font-size-base));
   --font-size-body-md: var(--font-size-base);
-  --font-size-body-sm: calc(14/16 * var(--font-size-base));
-  --font-size-body-xs: calc(12/16 * var(--font-size-base));
+  --font-size-body-sm: calc(14 / 16 * var(--font-size-base));
+  --font-size-body-xs: calc(12 / 16 * var(--font-size-base));
 
   // font size responsive headings
-  --font-size-heading-xxl: calc(32/16 * var(--font-size-base));
-  --font-size-heading-xl: calc(24/16 * var(--font-size-base));
-  --font-size-heading-lg: calc(22/16 * var(--font-size-base));
-  --font-size-heading-md: calc(18/16 * var(--font-size-base));
+  --font-size-heading-xxl: calc(32 / 16 * var(--font-size-base));
+  --font-size-heading-xl: calc(24 / 16 * var(--font-size-base));
+  --font-size-heading-lg: calc(22 / 16 * var(--font-size-base));
+  --font-size-heading-md: calc(18 / 16 * var(--font-size-base));
   --font-size-heading-sm: var(--font-size-base);
-  --font-size-heading-xs: calc(14/16 * var(--font-size-base));
+  --font-size-heading-xs: calc(14 / 16 * var(--font-size-base));
 
   // font weight
   --font-weight-heading: 500;
@@ -48,12 +48,13 @@
   --line-height-heading: var(--line-height-body);
 
   @include mq(sm) {
-    --font-size-heading-xl: calc(32/16 * var(--font-size-base));
-    --font-size-heading-lg: calc(24/16 * var(--font-size-base));
-    --font-size-heading-md: calc(20/16 * var(--font-size-base));
+    --font-size-heading-xxl: calc(34 / 16 * var(--font-size-base));
+    --font-size-heading-xl: calc(32 / 16 * var(--font-size-base));
+    --font-size-heading-lg: calc(24 / 16 * var(--font-size-base));
+    --font-size-heading-md: calc(20 / 16 * var(--font-size-base));
   }
 
   @include mq(md) {
-    --font-size-heading-xxl: calc(40/16 * var(--font-size-base));
+    --font-size-heading-xxl: calc(40 / 16 * var(--font-size-base));
   }
 }
