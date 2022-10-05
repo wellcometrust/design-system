@@ -165,7 +165,9 @@ export const TypographySizes = ({
           <tr key={size}>
             <td>{key}</td>
             <td className="sb-variable">{size}</td>
-            <td style={{ fontSize: `var(${size})` }}>{comment}</td>
+            <td style={{ fontSize: `var(${size})`, transition: 'all ease 1s' }}>
+              {comment}
+            </td>
             {Object.entries(rest).map(([sizeKey, sizeValue]) => (
               <td key={sizeKey}>{sizeValue} pixels</td>
             ))}
