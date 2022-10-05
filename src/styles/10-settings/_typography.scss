@@ -47,14 +47,17 @@
   --line-height-body: 1.6;
   --line-height-heading: var(--line-height-body);
 
+  // values for medium viewports from 768px and above
   @include mq(sm) {
     --font-size-heading-xxl: calc(34 / 16 * var(--font-size-base));
+    --font-size-heading-xl: calc(28 / 16 * var(--font-size-base));
+  }
+
+  // values for large viewports 1024px wide and above
+  @include mq(md) {
+    --font-size-heading-xxl: calc(40 / 16 * var(--font-size-base));
     --font-size-heading-xl: calc(32 / 16 * var(--font-size-base));
     --font-size-heading-lg: calc(24 / 16 * var(--font-size-base));
     --font-size-heading-md: calc(20 / 16 * var(--font-size-base));
-  }
-
-  @include mq(md) {
-    --font-size-heading-xxl: calc(40 / 16 * var(--font-size-base));
   }
 }
