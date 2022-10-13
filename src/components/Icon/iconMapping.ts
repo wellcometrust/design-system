@@ -111,6 +111,7 @@ import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
+import IconSocialYoutube from './components/IconSocialYoutube';
 
 export default {
   iconActionCloseNav: IconActionCloseNav,
@@ -225,5 +226,6 @@ export default {
   iconSocialPhone: IconSocialPhone,
   iconSocialReply: IconSocialReply,
   iconSocialStarFill: IconSocialStarFill,
-  iconSocialStarLine: IconSocialStarLine
+  iconSocialStarLine: IconSocialStarLine,
+  iconSocialYoutube: IconSocialYoutube
 };
