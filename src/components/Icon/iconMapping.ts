@@ -104,6 +104,7 @@ import IconSocialKudosLine from './components/IconSocialKudosLine';
 import IconSocialLikeFill from './components/IconSocialLikeFill';
 import IconSocialLikeLine from './components/IconSocialLikeLine';
 import IconSocialNetworkFacebook from './components/IconSocialNetworkFacebook';
+import IconSocialNetworkInstagram from './components/IconSocialNetworkInstagram';
 import IconSocialNetworkLinkedin from './components/IconSocialNetworkLinkedin';
 import IconSocialNetworkTwitter from './components/IconSocialNetworkTwitter';
 import IconSocialPerson from './components/IconSocialPerson';
@@ -220,6 +221,7 @@ export default {
   iconSocialLikeFill: IconSocialLikeFill,
   iconSocialLikeLine: IconSocialLikeLine,
   iconSocialNetworkFacebook: IconSocialNetworkFacebook,
+  iconSocialNetworkInstagram: IconSocialNetworkInstagram,
   iconSocialNetworkLinkedin: IconSocialNetworkLinkedin,
   iconSocialNetworkTwitter: IconSocialNetworkTwitter,
   iconSocialPerson: IconSocialPerson,
