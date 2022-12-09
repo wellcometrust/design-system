@@ -8,6 +8,7 @@ import IconActionEmptyCircle from './components/IconActionEmptyCircle';
 import IconActionEmptyCircleSplit from './components/IconActionEmptyCircleSplit';
 import IconActionExclamation from './components/IconActionExclamation';
 import IconActionExclamationTriangle from './components/IconActionExclamationTriangle';
+import IconActionExpand from './components/IconActionExpand';
 import IconActionFlag from './components/IconActionFlag';
 import IconActionInformation from './components/IconActionInformation';
 import IconActionLockClosed from './components/IconActionLockClosed';
@@ -127,6 +128,7 @@ export default {
   iconActionEmptyCircleSplit: IconActionEmptyCircleSplit,
   iconActionExclamation: IconActionExclamation,
   iconActionExclamationTriangle: IconActionExclamationTriangle,
+  iconActionExpand: IconActionExpand,
   iconActionFlag: IconActionFlag,
   iconActionInformation: IconActionInformation,
   iconActionLockClosed: IconActionLockClosed,
