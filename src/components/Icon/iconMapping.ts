@@ -90,6 +90,7 @@ import IconSmallActionPlus from './components/IconSmallActionPlus';
 import IconSmallActionSearch from './components/IconSmallActionSearch';
 import IconSmallActionUpdate from './components/IconSmallActionUpdate';
 import IconSmallActionUpload from './components/IconSmallActionUpload';
+import IconSmallContentImageGallery from './components/IconSmallContentImageGallery';
 import IconSmallContentPrivate from './components/IconSmallContentPrivate';
 import IconSmallDirectionalArrowDown from './components/IconSmallDirectionalArrowDown';
 import IconSmallDirectionalArrowLeft from './components/IconSmallDirectionalArrowLeft';
@@ -208,6 +209,7 @@ export default {
   iconSmallActionSearch: IconSmallActionSearch,
   iconSmallActionUpdate: IconSmallActionUpdate,
   iconSmallActionUpload: IconSmallActionUpload,
+  iconSmallContentImageGallery: IconSmallContentImageGallery,
   iconSmallContentPrivate: IconSmallContentPrivate,
   iconSmallDirectionalArrowDown: IconSmallDirectionalArrowDown,
   iconSmallDirectionalArrowLeft: IconSmallDirectionalArrowLeft,
