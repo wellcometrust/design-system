@@ -12,6 +12,7 @@ import IconActionEye from './components/IconActionEye';
 import IconActionEyeDash from './components/IconActionEyeDash';
 import IconActionFlag from './components/IconActionFlag';
 import IconActionInformation from './components/IconActionInformation';
+import IconActionInformationFilled from './components/IconActionInformationFilled';
 import IconActionLockClosed from './components/IconActionLockClosed';
 import IconActionLockOpen from './components/IconActionLockOpen';
 import IconActionMinus from './components/IconActionMinus';
@@ -133,6 +134,7 @@ export default {
   iconActionEyeDash: IconActionEyeDash,
   iconActionFlag: IconActionFlag,
   iconActionInformation: IconActionInformation,
+  iconActionInformationFilled: IconActionInformationFilled,
   iconActionLockClosed: IconActionLockClosed,
   iconActionLockOpen: IconActionLockOpen,
   iconActionMinus: IconActionMinus,
