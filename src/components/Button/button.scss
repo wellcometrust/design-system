@@ -48,7 +48,7 @@
   transition-property: background-color;
 
   &:focus {
-    outline-color: var(--link-color-focus-outline);
+    outline-color: var(--color-link-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 }
