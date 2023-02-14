@@ -18,7 +18,7 @@
   --grid-columns: 6;
   --grid-gutter: calc(1.5 * var(--space-unit)); // 12px
   --grid-margin: 5%;
-  --grid-max-width: rem(1344);
+  --grid-max-width: #{rem(1344)};
 
   @include mq(sm) {
     --grid-gutter: calc(2.5 * var(--space-unit)); // 20px
