@@ -7,6 +7,10 @@
 // 2021-05-01
 // ----------------------------------
 
+@use 'sass:math';
+
+$font-size-base-px: 16;
+
 /**
  * Convert a pixel value to rem units.
  *
@@ -27,7 +31,7 @@
  */
 
 @function rem($size) {
-  $rems: calc(#{$size}rem / var(--font-size-base-px));
+  $rems: math.div($size, $font-size-base-px) * 1rem;
 
-  @return #{$rems};
+  @return $rems;
 }
