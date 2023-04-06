@@ -58,7 +58,9 @@ import IconContentMail from './components/IconContentMail';
 import IconContentNews from './components/IconContentNews';
 import IconContentOrgArrow from './components/IconContentOrgArrow';
 import IconContentOrgChart from './components/IconContentOrgChart';
+import IconContentPersonStar from './components/IconContentPersonStar';
 import IconContentPin from './components/IconContentPin';
+import IconContentReporting from './components/IconContentReporting';
 import IconContentTag from './components/IconContentTag';
 import IconContentText from './components/IconContentText';
 import IconContentTopic from './components/IconContentTopic';
@@ -180,7 +182,9 @@ export default {
   iconContentNews: IconContentNews,
   iconContentOrgArrow: IconContentOrgArrow,
   iconContentOrgChart: IconContentOrgChart,
+  iconContentPersonStar: IconContentPersonStar,
   iconContentPin: IconContentPin,
+  iconContentReporting: IconContentReporting,
   iconContentTag: IconContentTag,
   iconContentText: IconContentText,
   iconContentTopic: IconContentTopic,
