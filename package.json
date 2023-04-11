@@ -72,7 +72,7 @@
     "@storybook/addon-docs": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
-    "@storybook/react": "^6.3.8",
+    "@storybook/react": "^7.0.2",
     "@storybook/storybook-deployer": "^2.8.10",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -121,10 +121,10 @@
     "sass-loader": "^8.0.0",
     "sass-mq": "^6.0.0-beta.1",
     "style-loader": "^1.1.2",
-    "stylelint": "^12.0.1",
-    "stylelint-config-sass-guidelines": "^6.2.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
     "typescript": "^4.2.2",
-    "webpack": "^4.46.0"
+    "webpack": "^5.78.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
