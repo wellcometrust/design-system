@@ -101,6 +101,8 @@ import IconSmallDirectionalArrowDown from './components/IconSmallDirectionalArro
 import IconSmallDirectionalArrowLeft from './components/IconSmallDirectionalArrowLeft';
 import IconSmallDirectionalArrowRight from './components/IconSmallDirectionalArrowRight';
 import IconSmallDirectionalArrowUp from './components/IconSmallDirectionalArrowUp';
+import IconSmallSocialGaana from './components/IconSmallSocialGaana';
+import IconSmallSocialSpotify from './components/IconSmallSocialSpotify';
 import IconSocialBellActive from './components/IconSocialBellActive';
 import IconSocialBellDefault from './components/IconSocialBellDefault';
 import IconSocialCommentFill from './components/IconSocialCommentFill';
@@ -225,6 +227,8 @@ export default {
   iconSmallDirectionalArrowLeft: IconSmallDirectionalArrowLeft,
   iconSmallDirectionalArrowRight: IconSmallDirectionalArrowRight,
   iconSmallDirectionalArrowUp: IconSmallDirectionalArrowUp,
+  iconSmallSocialGaana: IconSmallSocialGaana,
+  iconSmallSocialSpotify: IconSmallSocialSpotify,
   iconSocialBellActive: IconSocialBellActive,
   iconSocialBellDefault: IconSocialBellDefault,
   iconSocialCommentFill: IconSocialCommentFill,
