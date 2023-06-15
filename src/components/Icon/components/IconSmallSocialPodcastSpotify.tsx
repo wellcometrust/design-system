@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconSmallSocialSpotify = ({
+const IconSmallSocialPodcastSpotify = ({
   viewBox = '0 0 16 16'
 }: {
   viewBox?: string;
@@ -14,4 +14,4 @@ const IconSmallSocialSpotify = ({
   </svg>
 );
 
-export default IconSmallSocialSpotify;
+export default IconSmallSocialPodcastSpotify;

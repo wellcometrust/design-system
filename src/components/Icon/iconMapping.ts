@@ -95,14 +95,15 @@ import IconSmallActionPlus from './components/IconSmallActionPlus';
 import IconSmallActionSearch from './components/IconSmallActionSearch';
 import IconSmallActionUpdate from './components/IconSmallActionUpdate';
 import IconSmallActionUpload from './components/IconSmallActionUpload';
+import IconSmallContentHeadphones from './components/IconSmallContentHeadphones';
 import IconSmallContentImageGallery from './components/IconSmallContentImageGallery';
 import IconSmallContentPrivate from './components/IconSmallContentPrivate';
 import IconSmallDirectionalArrowDown from './components/IconSmallDirectionalArrowDown';
 import IconSmallDirectionalArrowLeft from './components/IconSmallDirectionalArrowLeft';
 import IconSmallDirectionalArrowRight from './components/IconSmallDirectionalArrowRight';
 import IconSmallDirectionalArrowUp from './components/IconSmallDirectionalArrowUp';
-import IconSmallSocialGaana from './components/IconSmallSocialGaana';
-import IconSmallSocialSpotify from './components/IconSmallSocialSpotify';
+import IconSmallSocialPodcastGaana from './components/IconSmallSocialPodcastGaana';
+import IconSmallSocialPodcastSpotify from './components/IconSmallSocialPodcastSpotify';
 import IconSocialBellActive from './components/IconSocialBellActive';
 import IconSocialBellDefault from './components/IconSocialBellDefault';
 import IconSocialCommentFill from './components/IconSocialCommentFill';
@@ -119,6 +120,9 @@ import IconSocialNetworkTwitter from './components/IconSocialNetworkTwitter';
 import IconSocialPerson from './components/IconSocialPerson';
 import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
+import IconSocialPodcastApple from './components/IconSocialPodcastApple';
+import IconSocialPodcastGoogle from './components/IconSocialPodcastGoogle';
+import IconSocialPodcastSoundcloud from './components/IconSocialPodcastSoundcloud';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
 import IconSocialYoutube from './components/IconSocialYoutube';
@@ -221,14 +225,15 @@ export default {
   iconSmallActionSearch: IconSmallActionSearch,
   iconSmallActionUpdate: IconSmallActionUpdate,
   iconSmallActionUpload: IconSmallActionUpload,
+  iconSmallContentHeadphones: IconSmallContentHeadphones,
   iconSmallContentImageGallery: IconSmallContentImageGallery,
   iconSmallContentPrivate: IconSmallContentPrivate,
   iconSmallDirectionalArrowDown: IconSmallDirectionalArrowDown,
   iconSmallDirectionalArrowLeft: IconSmallDirectionalArrowLeft,
   iconSmallDirectionalArrowRight: IconSmallDirectionalArrowRight,
   iconSmallDirectionalArrowUp: IconSmallDirectionalArrowUp,
-  iconSmallSocialGaana: IconSmallSocialGaana,
-  iconSmallSocialSpotify: IconSmallSocialSpotify,
+  iconSmallSocialPodcastGaana: IconSmallSocialPodcastGaana,
+  iconSmallSocialPodcastSpotify: IconSmallSocialPodcastSpotify,
   iconSocialBellActive: IconSocialBellActive,
   iconSocialBellDefault: IconSocialBellDefault,
   iconSocialCommentFill: IconSocialCommentFill,
@@ -245,6 +250,9 @@ export default {
   iconSocialPerson: IconSocialPerson,
   iconSocialPhone: IconSocialPhone,
   iconSocialReply: IconSocialReply,
+  iconSocialPodcastApple: IconSocialPodcastApple,
+  iconSocialPodcastGoogle: IconSocialPodcastGoogle,
+  iconSocialPodcastSoundcloud: IconSocialPodcastSoundcloud,
   iconSocialStarFill: IconSocialStarFill,
   iconSocialStarLine: IconSocialStarLine,
   iconSocialYoutube: IconSocialYoutube

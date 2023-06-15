@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconSmallSocialGaana = ({
+const IconSmallSocialPodcastGaana = ({
   viewBox = '0 0 11 16'
 }: {
   viewBox?: string;
@@ -15,4 +15,4 @@ const IconSmallSocialGaana = ({
   </svg>
 );
 
-export default IconSmallSocialGaana;
+export default IconSmallSocialPodcastGaana;
