@@ -50,6 +50,7 @@ import IconContentFile from './components/IconContentFile';
 import IconContentFlask from './components/IconContentFlask';
 import IconContentForm from './components/IconContentForm';
 import IconContentFunding from './components/IconContentFunding';
+import IconContentHeadphones from './components/IconContentHeadphones';
 import IconContentHome from './components/IconContentHome';
 import IconContentImage from './components/IconContentImage';
 import IconContentLink from './components/IconContentLink';
@@ -95,15 +96,12 @@ import IconSmallActionPlus from './components/IconSmallActionPlus';
 import IconSmallActionSearch from './components/IconSmallActionSearch';
 import IconSmallActionUpdate from './components/IconSmallActionUpdate';
 import IconSmallActionUpload from './components/IconSmallActionUpload';
-import IconSmallContentHeadphones from './components/IconSmallContentHeadphones';
 import IconSmallContentImageGallery from './components/IconSmallContentImageGallery';
 import IconSmallContentPrivate from './components/IconSmallContentPrivate';
 import IconSmallDirectionalArrowDown from './components/IconSmallDirectionalArrowDown';
 import IconSmallDirectionalArrowLeft from './components/IconSmallDirectionalArrowLeft';
 import IconSmallDirectionalArrowRight from './components/IconSmallDirectionalArrowRight';
 import IconSmallDirectionalArrowUp from './components/IconSmallDirectionalArrowUp';
-import IconSmallSocialPodcastGaana from './components/IconSmallSocialPodcastGaana';
-import IconSmallSocialPodcastSpotify from './components/IconSmallSocialPodcastSpotify';
 import IconSocialBellActive from './components/IconSocialBellActive';
 import IconSocialBellDefault from './components/IconSocialBellDefault';
 import IconSocialCommentFill from './components/IconSocialCommentFill';
@@ -121,8 +119,10 @@ import IconSocialPerson from './components/IconSocialPerson';
 import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
 import IconSocialPodcastApple from './components/IconSocialPodcastApple';
+import IconSocialPodcastGaana from './components/IconSocialPodcastGaana';
 import IconSocialPodcastGoogle from './components/IconSocialPodcastGoogle';
 import IconSocialPodcastSoundcloud from './components/IconSocialPodcastSoundcloud';
+import IconSocialPodcastSpotify from './components/IconSocialPodcastSpotify';
 import IconSocialStarFill from './components/IconSocialStarFill';
 import IconSocialStarLine from './components/IconSocialStarLine';
 import IconSocialYoutube from './components/IconSocialYoutube';
@@ -180,6 +180,7 @@ export default {
   iconContentFlask: IconContentFlask,
   iconContentForm: IconContentForm,
   iconContentFunding: IconContentFunding,
+  iconContentHeadphones: IconContentHeadphones,
   iconContentHome: IconContentHome,
   iconContentImage: IconContentImage,
   iconContentLink: IconContentLink,
@@ -225,15 +226,12 @@ export default {
   iconSmallActionSearch: IconSmallActionSearch,
   iconSmallActionUpdate: IconSmallActionUpdate,
   iconSmallActionUpload: IconSmallActionUpload,
-  iconSmallContentHeadphones: IconSmallContentHeadphones,
   iconSmallContentImageGallery: IconSmallContentImageGallery,
   iconSmallContentPrivate: IconSmallContentPrivate,
   iconSmallDirectionalArrowDown: IconSmallDirectionalArrowDown,
   iconSmallDirectionalArrowLeft: IconSmallDirectionalArrowLeft,
   iconSmallDirectionalArrowRight: IconSmallDirectionalArrowRight,
   iconSmallDirectionalArrowUp: IconSmallDirectionalArrowUp,
-  iconSmallSocialPodcastGaana: IconSmallSocialPodcastGaana,
-  iconSmallSocialPodcastSpotify: IconSmallSocialPodcastSpotify,
   iconSocialBellActive: IconSocialBellActive,
   iconSocialBellDefault: IconSocialBellDefault,
   iconSocialCommentFill: IconSocialCommentFill,
@@ -251,8 +249,10 @@ export default {
   iconSocialPhone: IconSocialPhone,
   iconSocialReply: IconSocialReply,
   iconSocialPodcastApple: IconSocialPodcastApple,
+  iconSocialPodcastGaana: IconSocialPodcastGaana,
   iconSocialPodcastGoogle: IconSocialPodcastGoogle,
   iconSocialPodcastSoundcloud: IconSocialPodcastSoundcloud,
+  iconSocialPodcastSpotify: IconSocialPodcastSpotify,
   iconSocialStarFill: IconSocialStarFill,
   iconSocialStarLine: IconSocialStarLine,
   iconSocialYoutube: IconSocialYoutube
