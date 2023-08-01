@@ -68,3 +68,30 @@
     @content;
   }
 }
+/**
+ * Fallback for :focus
+ *
+ * Usage:
+ *
+ * .selector {
+ *   @include outline;
+ * }
+ *
+ */
+
+@mixin outline {
+  &:focus {
+    outline: 2px solid var(--color-link-focus-outline);
+    outline-offset: rem(4);
+  }
+
+  /* Remove focus indication when a mouse is used */
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-link-focus-outline);
+    outline-offset: rem(4);
+  }
+}

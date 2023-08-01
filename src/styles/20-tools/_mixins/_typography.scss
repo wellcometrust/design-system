@@ -9,6 +9,8 @@
 // ----------------------------------
 
 @mixin anchor-base {
+  @include outline;
+
   color: var(--link-color);
   text-decoration: underline;
 
@@ -22,8 +24,6 @@
 
   &:focus {
     color: var(--link-color-active);
-    outline: 2px solid var(--color-link-focus-outline);
-    outline-offset: calc(0.5 * var(--space-unit));
   }
 
   [disabled],
@@ -49,6 +49,8 @@
 }
 
 @mixin list-item-link {
+  @include outline;
+
   color: inherit;
   text-decoration: none;
 
@@ -61,10 +63,6 @@
   &:active {
     color: var(--link-color-active);
     text-decoration: underline;
-  }
-
-  &:focus {
-    outline: 2px solid var(--color-link-focus-outline);
   }
 
   [disabled],
