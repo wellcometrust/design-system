@@ -22,7 +22,7 @@
 
   &:focus {
     color: var(--link-color-active);
-    outline-color: var(--color-link-focus-outline);
+    outline: 2px solid var(--color-link-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 
@@ -64,7 +64,7 @@
   }
 
   &:focus {
-    outline-color: var(--color-link-focus-outline);
+    outline: 2px solid var(--color-link-focus-outline);
   }
 
   [disabled],
