@@ -11,24 +11,24 @@
 @mixin anchor-base {
   @include outline;
 
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: underline;
 
   &:hover {
-    color: var(--link-color-hover);
+    color: var(--color-link-hover);
   }
 
   &:active {
-    color: var(--link-color-active);
+    color: var(--color-link-active);
   }
 
   &:focus {
-    color: var(--link-color-active);
+    color: var(--color-link-focus);
   }
 
   [disabled],
   &:not([href]) {
-    color: var(--link-color-disabled);
+    color: var(--color-link-disabled);
   }
 }
 
@@ -55,19 +55,19 @@
   text-decoration: none;
 
   &:hover {
-    color: var(--link-color-hover);
+    color: var(--color-link-hover);
     text-decoration: underline;
   }
 
   &:focus,
   &:active {
-    color: var(--link-color-active);
+    color: var(--color-link-active);
     text-decoration: underline;
   }
 
   [disabled],
   &:not([href]) {
-    color: var(--link-color-disabled);
+    color: var(--color-link-disabled);
   }
 }
 
