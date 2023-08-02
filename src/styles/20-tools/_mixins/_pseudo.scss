@@ -68,3 +68,31 @@
     @content;
   }
 }
+/**
+ * Fallback for :focus
+ * @see {@link https://www.dnbtech.no/2023/is-it-time-for--focus-visible-}
+ *
+ * Usage:
+ *
+ * .selector {
+ *   @include outline;
+ * }
+ *
+ */
+
+@mixin outline {
+  &:focus {
+    outline: 2px solid var(--color-link-focus-outline);
+    outline-offset: var(--space-static-xxs);
+  }
+
+  /* Remove focus indication when a mouse is used */
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-link-focus-outline);
+    outline-offset: var(--space-static-xxs);
+  }
+}

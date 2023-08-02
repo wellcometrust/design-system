@@ -40,17 +40,14 @@
 
 .ds-btn {
   @include btn-base;
+  @include outline;
+
   border-radius: calc(0.25 * var(--space-unit));
   display: inline-flex;
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   transition: ease var(--transition-duration);
   transition-property: background-color;
-
-  &:focus {
-    outline-color: var(--color-link-focus-outline);
-    outline-offset: calc(0.5 * var(--space-unit));
-  }
 }
 
 .ds-btn[disabled] {

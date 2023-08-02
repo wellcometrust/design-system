@@ -1,4 +1,6 @@
 @mixin link-base {
+  @include outline;
+
   color: var(--color-link);
   text-decoration: underline;
 
@@ -12,8 +14,6 @@
 
   &:focus {
     color: var(--color-link-focus);
-    outline-color: var(--color-link-focus-outline);
-    outline-offset: calc(0.5 * var(--space-unit));
   }
 
   [disabled] {
