@@ -70,6 +70,7 @@
 }
 /**
  * Fallback for :focus
+ * @see {@link https://www.dnbtech.no/2023/is-it-time-for--focus-visible-}
  *
  * Usage:
  *
@@ -82,7 +83,7 @@
 @mixin outline {
   &:focus {
     outline: 2px solid var(--color-link-focus-outline);
-    outline-offset: rem(4);
+    outline-offset: var(--space-static-xxs);
   }
 
   /* Remove focus indication when a mouse is used */
@@ -92,6 +93,6 @@
 
   &:focus-visible {
     outline: 2px solid var(--color-link-focus-outline);
-    outline-offset: rem(4);
+    outline-offset: var(--space-static-xxs);
   }
 }
