@@ -6,8 +6,8 @@
   "style": "dist/core.css",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=15.0.1",
-    "npm": ">=7.0.3"
+    "node": ">=16.13.1",
+    "npm": ">=8.1.2"
   },
   "files": [
     "package.json",
