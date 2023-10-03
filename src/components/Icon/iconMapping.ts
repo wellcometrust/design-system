@@ -115,6 +115,7 @@ import IconSocialNetworkFacebook from './components/IconSocialNetworkFacebook';
 import IconSocialNetworkInstagram from './components/IconSocialNetworkInstagram';
 import IconSocialNetworkLinkedin from './components/IconSocialNetworkLinkedin';
 import IconSocialNetworkTwitter from './components/IconSocialNetworkTwitter';
+import IconSocialNetworkX from './components/IconSocialNetworkX';
 import IconSocialPerson from './components/IconSocialPerson';
 import IconSocialPhone from './components/IconSocialPhone';
 import IconSocialReply from './components/IconSocialReply';
@@ -245,6 +246,7 @@ export default {
   iconSocialNetworkInstagram: IconSocialNetworkInstagram,
   iconSocialNetworkLinkedin: IconSocialNetworkLinkedin,
   iconSocialNetworkTwitter: IconSocialNetworkTwitter,
+  iconSocialNetworkX: IconSocialNetworkX,
   iconSocialPerson: IconSocialPerson,
   iconSocialPhone: IconSocialPhone,
   iconSocialReply: IconSocialReply,
