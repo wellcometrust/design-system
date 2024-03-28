@@ -121,8 +121,8 @@
     "sass-loader": "^8.0.0",
     "sass-mq": "^6.0.0-beta.1",
     "style-loader": "^1.1.2",
-    "stylelint": "^12.0.1",
-    "stylelint-config-sass-guidelines": "^6.2.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-sass-guidelines": "^11.1.0",
     "typescript": "^4.2.2",
     "webpack": "^4.46.0"
   },
