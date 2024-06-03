@@ -92,7 +92,7 @@ export const Button = forwardRef<HTMLElement, ButtonProps>(
       <Element
         autoFocus={autoFocus}
         className={classNames}
-        disabled={isAnchor ? undefined : disabled}
+        disabled={disabled}
         href={href}
         id={id}
         onBlur={(e: FocusEvent) => {
