@@ -5,7 +5,7 @@ import React, {
   MouseEvent,
   MouseEventHandler,
   ReactNode,
-  Ref
+  Ref,
 } from 'react';
 import cx from 'classnames';
 
@@ -42,7 +42,7 @@ export type ButtonProps = {
 /**
  * Functional call to action
  */
-export const Button = forwardRef(
+export const Button = forwardRef<HTMLElement, ButtonProps>(
   (
     {
       autoFocus = false,
@@ -66,8 +66,7 @@ export const Button = forwardRef(
       variant = 'primary',
       ...props
     }: ButtonProps,
-    // TODO - use type generics to dynamically set the ref type
-    ref: Ref<HTMLAnchorElement> & Ref<HTMLButtonElement>
+    ref
   ) => {
     const isAnchor = !!href;
     const Element: React.ElementType = isAnchor ? 'a' : 'button';
@@ -76,24 +75,24 @@ export const Button = forwardRef(
     const classNames = cx({
       'ds-btn': hasStyles,
       [`ds-btn--${variant}`]: hasStyles,
-      [className as string]: className
+      [className as string]: className,
     });
 
     const iconClassNames = cx('ds-btn__icon', {
       'ds-btn__icon--left': !iconPlacementSwitch,
       'ds-btn__icon--right': iconPlacementSwitch,
-      [iconClassName as string]: iconClassName
+      [iconClassName as string]: iconClassName,
     });
 
     const textClassNames = cx('ds-btn__text', {
-      [textClassName as string]: textClassName
+      [textClassName as string]: textClassName,
     });
 
     return (
       <Element
         autoFocus={autoFocus}
         className={classNames}
-        disabled={disabled}
+        disabled={isAnchor ? undefined : disabled}
         href={href}
         id={id}
         onBlur={(e: FocusEvent) => {
@@ -121,7 +120,7 @@ export const Button = forwardRef(
             onMouseLeave(e);
           }
         }}
-        ref={ref}
+        ref={ref as Ref<HTMLAnchorElement & HTMLButtonElement>}
         role={role}
         tabIndex={tabIndex}
         type={!isAnchor ? type : undefined}
