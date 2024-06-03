@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconContentOrgChart = ({
-  viewBox = '0 0 24 24'
+  viewBox = '0 0 24 24',
 }: {
   viewBox?: string;
 }) => (

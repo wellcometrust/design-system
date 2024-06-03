@@ -23,11 +23,11 @@ import iconMapping from './iconMapping';
 const iconNames = Object.keys(iconMapping) as Array<keyof typeof iconMapping>;
 
 export const IconGroupTemplate = ({ regex }: { regex: RegExp }) => {
-  const groupNames = iconNames.filter(name => regex.test(name));
+  const groupNames = iconNames.filter((name) => regex.test(name));
 
   return (
     <ul className="sb-grid">
-      {groupNames.map(name => (
+      {groupNames.map((name) => (
         <li key={name} className="sb-grid__item">
           <figure className="sb-icon-figure">
             <span className="sb-icon-container">

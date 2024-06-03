@@ -4,5 +4,5 @@
  */
 export default {
   Button: 'Button/Button',
-  Icon: 'Icon/Icon'
+  Icon: 'Icon/Icon',
 };

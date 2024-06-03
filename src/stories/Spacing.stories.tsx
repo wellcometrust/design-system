@@ -37,7 +37,7 @@ const TokenTableRows = ({ sizes }: { sizes: SizeProps }) => (
                 style={{
                   backgroundColor: `var(${color})`,
                   height: `var(${size})`,
-                  width: `var(${size})`
+                  width: `var(${size})`,
                 }}
               />
               <figcaption className="u-visually-hidden">
@@ -58,36 +58,36 @@ export const StaticSpacingBlocks = () => {
   const sizes: SizeProps = {
     SpaceStaticXxxl: {
       color: '--color-amber-60',
-      mqBase: '64'
+      mqBase: '64',
     },
     SpaceStaticXxl: {
       color: '--color-grey-60',
-      mqBase: '48'
+      mqBase: '48',
     },
     SpaceStaticXl: {
       color: '--color-cyan-60',
-      mqBase: '32'
+      mqBase: '32',
     },
     SpaceStaticLg: {
       color: '--color-green-60',
-      mqBase: '24'
+      mqBase: '24',
     },
     SpaceStaticMd: {
       color: '--color-blue-60',
-      mqBase: '16'
+      mqBase: '16',
     },
     SpaceStaticSm: {
       color: '--color-orange-60',
-      mqBase: '12'
+      mqBase: '12',
     },
     SpaceStaticXs: {
       color: '--color-red-60',
-      mqBase: '8'
+      mqBase: '8',
     },
     SpaceStaticXxs: {
       color: '--color-yellow-60',
-      mqBase: '4'
-    }
+      mqBase: '4',
+    },
   };
 
   return (
@@ -114,44 +114,44 @@ export const ResponsiveSpacingBlocks = () => {
       color: '--color-grey-60',
       mqBase: '48',
       mqSmall: '72',
-      mqMedium: '96'
+      mqMedium: '96',
     },
     SpaceResponsiveXl: {
       color: '--color-cyan-60',
       mqBase: '32',
       mqSmall: '48',
-      mqMedium: '64'
+      mqMedium: '64',
     },
     SpaceResponsiveLg: {
       color: '--color-green-60',
       mqBase: '24',
       mqSmall: '32',
-      mqMedium: '48'
+      mqMedium: '48',
     },
     SpaceResponsiveMd: {
       color: '--color-blue-60',
       mqBase: '16',
       mqSmall: '24',
-      mqMedium: '32'
+      mqMedium: '32',
     },
     SpaceResponsiveSm: {
       color: '--color-orange-60',
       mqBase: '12',
       mqSmall: '16',
-      mqMedium: '16'
+      mqMedium: '16',
     },
     SpaceResponsiveXs: {
       color: '--color-red-60',
       mqBase: '8',
       mqSmall: '8',
-      mqMedium: '8'
+      mqMedium: '8',
     },
     SpaceResponsiveXxs: {
       color: '--color-yellow-60',
       mqBase: '4',
       mqSmall: '4',
-      mqMedium: '4'
-    }
+      mqMedium: '4',
+    },
   };
 
   return (

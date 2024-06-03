@@ -80,7 +80,7 @@ const tokens: {
   ColorRed30: '#f2637b',
   ColorRed20: '#ed858e',
   ColorRed10: '#f9cdca',
-  ColorRed05: '#fff0f2'
+  ColorRed05: '#fff0f2',
 };
 
 export default tokens;

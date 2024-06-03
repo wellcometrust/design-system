@@ -7,7 +7,7 @@ test('Button has correct text', () => {
   render(<Button>Text button</Button>);
 
   const button = screen.getByRole('button', {
-    name: /text button/i
+    name: /text button/i,
   });
 
   expect(button).toBeInTheDocument();
@@ -17,7 +17,7 @@ test('Disabled Button component is not accessible', () => {
   render(<Button disabled>Text button</Button>);
 
   const button = screen.getByRole('button', {
-    name: /text button/i
+    name: /text button/i,
   });
 
   expect(button).toBeInTheDocument();

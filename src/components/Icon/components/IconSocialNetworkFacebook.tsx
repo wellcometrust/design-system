@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconSocialNetworkFacebook = ({
-  viewBox = '0 0 24 24'
+  viewBox = '0 0 24 24',
 }: {
   viewBox?: string;
 }) => (

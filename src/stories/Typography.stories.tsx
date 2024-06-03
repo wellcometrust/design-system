@@ -17,21 +17,21 @@ import kebabCase from 'lodash/fp/kebabCase';
 export const tokensFontFamilies: NestedTokenProps = {
   FontPrimary: {
     value: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
-    comment: 'Standard body text, headings and links'
+    comment: 'Standard body text, headings and links',
   },
   FontPrimaryAlt: {
     value: 'Helvetica, Arial, sans-serif',
     comment:
-      'Alternative for FontPrimary, this font stack removes odd line-height issue encountered with Helvetica Neue'
+      'Alternative for FontPrimary, this font stack removes odd line-height issue encountered with Helvetica Neue',
   },
   FontSecondary: {
     value: `'Wellcome-Bold', sans-serif`,
-    comment: 'Main page headings and quote text (to be used sparingly)'
+    comment: 'Main page headings and quote text (to be used sparingly)',
   },
   FontTertiary: {
     value: `'Courier New', Courier, monospace`,
-    comment: 'Image and video captions, licensing info'
-  }
+    comment: 'Image and video captions, licensing info',
+  },
 };
 
 export const tokensFontSizeHeadings: NestedTokenProps = {
@@ -39,61 +39,61 @@ export const tokensFontSizeHeadings: NestedTokenProps = {
     comment: 'H0 Heading XXL',
     mqBase: '32',
     mqSmall: '34',
-    mqMedium: '40'
+    mqMedium: '40',
   },
   FontSizeHeadingXl: {
     comment: 'H1 Heading XL',
     mqBase: '24',
     mqSmall: '28',
-    mqMedium: '32'
+    mqMedium: '32',
   },
   FontSizeHeadingLg: {
     comment: 'H2 Heading LG',
     mqBase: '22',
     mqSmall: '22',
-    mqMedium: '24'
+    mqMedium: '24',
   },
   FontSizeHeadingMd: {
     comment: 'H3 Heading MD',
     mqBase: '18',
     mqSmall: '18',
-    mqMedium: '20'
+    mqMedium: '20',
   },
   FontSizeHeadingSm: {
     comment: 'H4 Heading SM',
     mqBase: '16',
     mqSmall: '16',
-    mqMedium: '16'
+    mqMedium: '16',
   },
   FontSizeHeadingXs: {
     comment: 'H5 Heading XS',
     mqBase: '14',
     mqSmall: '14',
-    mqMedium: '14'
-  }
+    mqMedium: '14',
+  },
 };
 
 export const tokensFontSizeBody: NestedTokenProps = {
   FontSizeBodyXl: {
     comment: 'Body XL',
-    mqBase: '24'
+    mqBase: '24',
   },
   FontSizeBodyLg: {
     comment: 'Body LG',
-    mqBase: '20'
+    mqBase: '20',
   },
   FontSizeBodyMd: {
     comment: 'Body MD',
-    mqBase: '16'
+    mqBase: '16',
   },
   FontSizeBodySm: {
     comment: 'Body SM',
-    mqBase: '14'
+    mqBase: '14',
   },
   FontSizeBodyXs: {
     comment: 'Body XS',
-    mqBase: '12'
-  }
+    mqBase: '12',
+  },
 };
 
 export const tokensTypography: MappedTokensProps = {
@@ -104,7 +104,7 @@ export const tokensTypography: MappedTokensProps = {
   LetterSpacingHeadingMajor: '-0.5px',
   LetterSpacingHeadingMinor: '0.2px',
   LineHeightBody: '1.6',
-  LineHeightHeading: '1.6'
+  LineHeightHeading: '1.6',
 };
 
 export const TokensTable = ({ tokens }: { tokens: MappedTokensProps }) => (
@@ -134,7 +134,7 @@ export const TokensTable = ({ tokens }: { tokens: MappedTokensProps }) => (
 
 export const TypographySizes = ({
   isResponsive = false,
-  sizes
+  sizes,
 }: {
   isResponsive?: boolean;
   sizes: NestedTokenProps;

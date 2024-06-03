@@ -257,5 +257,5 @@ export default {
   iconSocialPodcastSpotify: IconSocialPodcastSpotify,
   iconSocialStarFill: IconSocialStarFill,
   iconSocialStarLine: IconSocialStarLine,
-  iconSocialYoutube: IconSocialYoutube
+  iconSocialYoutube: IconSocialYoutube,
 };
