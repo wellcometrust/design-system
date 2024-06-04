@@ -10,7 +10,7 @@ type TestProps = {
 
 export const Test = ({ children, className }: TestProps) => {
   const classNames = cx('ds-test', {
-    [className as string]: className
+    [className as string]: className,
   });
 
   return <div className={classNames}>{children}</div>;

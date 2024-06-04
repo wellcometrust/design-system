@@ -4,5 +4,5 @@
  */
 export default {
   Button: 'Button/button.scss',
-  Icon: 'Icon/icon.scss'
+  Icon: 'Icon/icon.scss',
 };

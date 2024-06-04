@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconSmallActionCross = ({
-  viewBox = '0 0 16 16'
+  viewBox = '0 0 16 16',
 }: {
   viewBox?: string;
 }) => (
