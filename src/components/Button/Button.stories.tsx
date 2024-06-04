@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from './Button';
 import iconMapping from '../Icon/iconMapping';
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = { children: 'Button', variant: 'primary' };
@@ -28,16 +28,16 @@ export default {
     onClick: { action: 'clicked' },
     variant: {
       options: ['primary', 'secondary', 'tertiary', 'link', 'unstyled'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
     },
     icon: {
       options: [null, ...Object.keys(iconMapping)],
       control: {
         type: 'select',
         labels: {
-          null: 'No icon'
-        }
-      }
-    }
-  }
+          null: 'No icon',
+        },
+      },
+    },
+  },
 } as Meta;

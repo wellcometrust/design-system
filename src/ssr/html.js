@@ -15,7 +15,7 @@ componentMap.forEach(({ name, component }) => {
   fs.writeFile(
     `./dist/components/${name}/${name}.html`,
     componentTemplate(name, renderedComponent),
-    err => {
+    (err) => {
       if (err) return console.log(err);
 
       return console.log(`Created ${name}`);

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconSocialNetworkInstagram = ({
-  viewBox = '-1 -1 24 24'
+  viewBox = '-1 -1 24 24',
 }: {
   viewBox?: string;
 }) => (

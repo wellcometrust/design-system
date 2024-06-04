@@ -16,7 +16,7 @@ export const Icon = ({
   height,
   name,
   viewBox,
-  width
+  width,
 }: IconProps) => {
   const isIcon = Object.prototype.hasOwnProperty.call(iconMapping, name);
 
@@ -28,7 +28,7 @@ export const Icon = ({
   const isSmall = /iconSmall/i.test(name);
   const classNames = cx('ds-icon', {
     [className as string]: className,
-    'ds-icon--sm': isSmall
+    'ds-icon--sm': isSmall,
   });
 
   return (
