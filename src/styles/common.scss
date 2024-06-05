@@ -12,7 +12,7 @@
  * Unused @imports have been commented out to give a reference point.
  */
 
-/* stylelint-disable scss/at-import-no-partial-leading-underscore */
+/* stylelint-disable scss/load-no-partial-leading-underscore */
 
 // Core variables e.g. base sizes and colours
 // @import '10-settings/__manifest';
@@ -26,4 +26,4 @@
 // Objects e/g grid or media object
 // @import '40-objects/__manifest';
 
-/* stylelint-enable scss/at-import-no-partial-leading-underscore */
+/* stylelint-enable scss/load-no-partial-leading-underscore */
