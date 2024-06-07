@@ -1,4 +1,5 @@
 import IconActionCloseNav from './components/IconActionCloseNav';
+import IconActionCopy from './components/IconActionCopy';
 import IconActionCrossCircle from './components/IconActionCrossCircle';
 import IconActionCross from './components/IconActionCross';
 import IconActionDelete from './components/IconActionDelete';
@@ -130,6 +131,7 @@ import IconSocialYoutube from './components/IconSocialYoutube';
 
 export default {
   iconActionCloseNav: IconActionCloseNav,
+  iconActionCopy: IconActionCopy,
   iconActionCrossCircle: IconActionCrossCircle,
   iconActionCross: IconActionCross,
   iconActionDelete: IconActionDelete,
