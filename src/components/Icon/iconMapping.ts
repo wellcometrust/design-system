@@ -21,6 +21,7 @@ import IconActionMore from './components/IconActionMore';
 import IconActionMute from './components/IconActionMute';
 import IconActionNav from './components/IconActionNav';
 import IconActionOpenExternal from './components/IconActionOpenExternal';
+import IconActionPaste from './components/IconActionPaste';
 import IconActionPause from './components/IconActionPause';
 import IconActionPlay from './components/IconActionPlay';
 import IconActionPlayCircle from './components/IconActionPlayCircle';
@@ -153,6 +154,7 @@ export default {
   iconActionMute: IconActionMute,
   iconActionNav: IconActionNav,
   iconActionOpenExternal: IconActionOpenExternal,
+  iconActionPaste: IconActionPaste,
   iconActionPause: IconActionPause,
   iconActionPlay: IconActionPlay,
   iconActionPlayCircle: IconActionPlayCircle,
