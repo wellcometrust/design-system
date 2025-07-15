@@ -4,13 +4,8 @@ module.exports = {
   stories: [
     '../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'
   ],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-
-    // additional addons
-    '@whitespace/storybook-addon-html'
-  ],
+  addons: [// additional addons
+  '@storybook/addon-links', '@storybook/addon-docs'],
   typescript: {
     reactDocgen: 'react-docgen-typescript'
   },

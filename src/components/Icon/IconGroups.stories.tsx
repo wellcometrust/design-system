@@ -20,9 +20,10 @@ import iconMapping from './iconMapping';
  * Miscellaneous:   iconMisc
  * 16px (small):    iconSmall
  */
+export default {};
 const iconNames = Object.keys(iconMapping) as Array<keyof typeof iconMapping>;
 
-export const IconGroupTemplate = ({ regex }: { regex: RegExp }) => {
+export function IconGroupTemplate({ regex }: { regex: RegExp }) {
   const groupNames = iconNames.filter((name) => regex.test(name));
 
   return (
@@ -44,20 +45,28 @@ export const IconGroupTemplate = ({ regex }: { regex: RegExp }) => {
       ))}
     </ul>
   );
-};
+}
 
-export const ActionIcons = () => <IconGroupTemplate regex={/iconAction/i} />;
+export function ActionIcons() {
+  return <IconGroupTemplate regex={/iconAction/i} />;
+}
 
-export const DirectionalIcons = () => (
-  <IconGroupTemplate regex={/iconDirectional/i} />
-);
+export function DirectionalIcons() {
+  return <IconGroupTemplate regex={/iconDirectional/i} />;
+}
 
-export const ContentIcons = () => <IconGroupTemplate regex={/iconContent/i} />;
+export function ContentIcons() {
+  return <IconGroupTemplate regex={/iconContent/i} />;
+}
 
-export const SocialIcons = () => <IconGroupTemplate regex={/iconSocial/i} />;
+export function SocialIcons() {
+  return <IconGroupTemplate regex={/iconSocial/i} />;
+}
 
-export const MiscellaneousIcons = () => (
-  <IconGroupTemplate regex={/iconMisc/i} />
-);
+export function MiscellaneousIcons() {
+  return <IconGroupTemplate regex={/iconMisc/i} />;
+}
 
-export const SmallIcons = () => <IconGroupTemplate regex={/iconSmall/i} />;
+export function SmallIcons() {
+  return <IconGroupTemplate regex={/iconSmall/i} />;
+}

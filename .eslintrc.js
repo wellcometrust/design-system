@@ -6,16 +6,7 @@ module.exports = {
     es2020: true,
     jest: true
   },
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/warnings',
-    'plugin:promise/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react',
-  ],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:import/warnings', 'plugin:promise/recommended', 'plugin:prettier/recommended', 'prettier', 'prettier/@typescript-eslint', 'prettier/react', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 2020,
     project: 'tsconfig.json',
@@ -80,7 +71,8 @@ module.exports = {
       'node': {
         'extensions': ['.js', '.jsx', '.ts', '.tsx'],
         'moduleDirectory': ['node_modules', './src', './src/components']
-      }
+      },
+      "typescript": {}
     }
   },
   overrides: [

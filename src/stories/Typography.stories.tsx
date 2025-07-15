@@ -14,7 +14,8 @@ import kebabCase from 'lodash/fp/kebabCase';
  * @see {@link https://github.com/wellcometrust/corporate/issues/8709}
  */
 
-export const tokensFontFamilies: NestedTokenProps = {
+export default {};
+export const TokensFontFamilies: NestedTokenProps = {
   FontPrimary: {
     value: `'Helvetica Neue', Helvetica, Arial, sans-serif`,
     comment: 'Standard body text, headings and links',
@@ -34,7 +35,7 @@ export const tokensFontFamilies: NestedTokenProps = {
   },
 };
 
-export const tokensFontSizeHeadings: NestedTokenProps = {
+export const TokensFontSizeHeadings: NestedTokenProps = {
   FontSizeHeadingXxl: {
     comment: 'H0 Heading XXL',
     mqBase: '32',
@@ -73,7 +74,7 @@ export const tokensFontSizeHeadings: NestedTokenProps = {
   },
 };
 
-export const tokensFontSizeBody: NestedTokenProps = {
+export const TokensFontSizeBody: NestedTokenProps = {
   FontSizeBodyXl: {
     comment: 'Body XL',
     mqBase: '24',
@@ -96,7 +97,7 @@ export const tokensFontSizeBody: NestedTokenProps = {
   },
 };
 
-export const tokensTypography: MappedTokensProps = {
+export const TokensTypography: MappedTokensProps = {
   FontSizeBase: '1rem',
   FontSizeBasePx: '16',
   FontWeightHeading: '500',
@@ -107,101 +108,111 @@ export const tokensTypography: MappedTokensProps = {
   LineHeightHeading: '1.6',
 };
 
-export const TokensTable = ({ tokens }: { tokens: MappedTokensProps }) => (
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Token</th>
-        <th scope="col">CSS variable</th>
-        <th scope="col">Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      {Object.entries(tokens).map(([key, value]) => {
-        const cssVariable = `--${kebabCase(key)}`;
+export function TokensTable({ tokens }: { tokens: MappedTokensProps }) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Token</th>
+          <th scope="col">CSS variable</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(tokens).map(([key, value]) => {
+          const cssVariable = `--${kebabCase(key)}`;
 
-        return (
-          <tr key={key}>
-            <td>{key}</td>
-            <td className="sb-variable">{cssVariable}</td>
-            <td>{value}</td>
-          </tr>
-        );
-      })}
-    </tbody>
-  </table>
-);
+          return (
+            <tr key={key}>
+              <td>{key}</td>
+              <td className="sb-variable">{cssVariable}</td>
+              <td>{value}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}
 
-export const TypographySizes = ({
+export function TypographySizes({
   isResponsive = false,
   sizes,
 }: {
   isResponsive?: boolean;
   sizes: NestedTokenProps;
-}) => (
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Token</th>
-        <th scope="col">CSS variable</th>
-        <th scope="col">Preview</th>
-        {isResponsive ? (
-          <>
-            <th scope="col">Default size, small screens up to 767 pixels</th>
-            <th scope="col">Medium screens from 768 up to 1023 pixels</th>
-            <th scope="col">Large screens 1024 pixels wide and above</th>
-          </>
-        ) : (
-          <th scope="col">Size</th>
-        )}
-      </tr>
-    </thead>
-    <tbody>
-      {Object.entries(sizes).map(([key, value]) => {
-        const size = `--${kebabCase(key)}`;
-        const { comment, ...rest } = value;
+}) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Token</th>
+          <th scope="col">CSS variable</th>
+          <th scope="col">Preview</th>
+          {isResponsive ? (
+            <>
+              <th scope="col">Default size, small screens up to 767 pixels</th>
+              <th scope="col">Medium screens from 768 up to 1023 pixels</th>
+              <th scope="col">Large screens 1024 pixels wide and above</th>
+            </>
+          ) : (
+            <th scope="col">Size</th>
+          )}
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(sizes).map(([key, value]) => {
+          const size = `--${kebabCase(key)}`;
+          const { comment, ...rest } = value;
 
-        return (
-          <tr key={size}>
-            <td>{key}</td>
-            <td className="sb-variable">{size}</td>
-            <td style={{ fontSize: `var(${size})`, transition: 'all ease 1s' }}>
-              {comment}
-            </td>
-            {Object.entries(rest).map(([sizeKey, sizeValue]) => (
-              <td key={sizeKey}>{sizeValue} pixels</td>
-            ))}
-          </tr>
-        );
-      })}
-    </tbody>
-  </table>
-);
+          return (
+            <tr key={size}>
+              <td>{key}</td>
+              <td className="sb-variable">{size}</td>
+              <td
+                style={{ fontSize: `var(${size})`, transition: 'all ease 1s' }}
+              >
+                {comment}
+              </td>
+              {Object.entries(rest).map(([sizeKey, sizeValue]) => (
+                <td key={sizeKey}>{sizeValue} pixels</td>
+              ))}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}
 
-export const FontFamilies = ({ tokens }: { tokens: NestedTokenProps }) => (
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Token</th>
-        <th scope="col">CSS variable</th>
-        <th scope="col">Preview / value</th>
-        <th scope="col">Application</th>
-      </tr>
-    </thead>
-    <tbody>
-      {Object.entries(tokens).map(([key, value]) => {
-        const cssVariable = `--${kebabCase(key)}`;
-        const { comment, value: nestedValue } = value;
+export function FontFamilies({ tokens }: { tokens: NestedTokenProps }) {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Token</th>
+          <th scope="col">CSS variable</th>
+          <th scope="col">Preview / value</th>
+          <th scope="col">Application</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.entries(tokens).map(([key, value]) => {
+          const cssVariable = `--${kebabCase(key)}`;
+          const { comment, value: nestedValue } = value;
 
-        return (
-          <tr key={key}>
-            <td>{key}</td>
-            <td className="sb-variable">{cssVariable}</td>
-            <td style={{ fontFamily: `var(${cssVariable})` }}>{nestedValue}</td>
-            <td>{comment}</td>
-          </tr>
-        );
-      })}
-    </tbody>
-  </table>
-);
+          return (
+            <tr key={key}>
+              <td>{key}</td>
+              <td className="sb-variable">{cssVariable}</td>
+              <td style={{ fontFamily: `var(${cssVariable})` }}>
+                {nestedValue}
+              </td>
+              <td>{comment}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+}

@@ -8,12 +8,12 @@ type TestProps = {
   className?: string;
 };
 
-export const Test = ({ children, className }: TestProps) => {
+export function Test({ children, className }: TestProps) {
   const classNames = cx('ds-test', {
     [className as string]: className,
   });
 
   return <div className={classNames}>{children}</div>;
-};
+}
 
 export default Test;

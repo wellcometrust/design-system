@@ -2,6 +2,7 @@ import React from 'react';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
+export default {};
 type SizeProps = {
   [key: string]: {
     [key: string]: string;
@@ -20,41 +21,43 @@ type SizeProps = {
  * @see {@link https://github.com/wellcometrust/corporate/issues/8709}
  */
 
-const TokenTableRows = ({ sizes }: { sizes: SizeProps }) => (
-  <>
-    {Object.entries(sizes).map(([key, value]) => {
-      const size = `--${kebabCase(key)}`;
-      const { color, mqBase, mqSmall, mqMedium } = value;
+function TokenTableRows({ sizes }: { sizes: SizeProps }) {
+  return (
+    <>
+      {Object.entries(sizes).map(([key, value]) => {
+        const size = `--${kebabCase(key)}`;
+        const { color, mqBase, mqSmall, mqMedium } = value;
 
-      return (
-        <tr key={size}>
-          <td>{key}</td>
-          <td className="sb-variable">{size}</td>
-          <td>
-            <figure>
-              <div
-                className="sb-space"
-                style={{
-                  backgroundColor: `var(${color})`,
-                  height: `var(${size})`,
-                  width: `var(${size})`,
-                }}
-              />
-              <figcaption className="u-visually-hidden">
-                Coloured square indicating the size of {size}
-              </figcaption>
-            </figure>
-          </td>
-          {mqBase && <td>{mqBase} pixels</td>}
-          {mqSmall && <td>{mqSmall} pixels</td>}
-          {mqMedium && <td>{mqMedium} pixels</td>}
-        </tr>
-      );
-    })}
-  </>
-);
+        return (
+          <tr key={size}>
+            <td>{key}</td>
+            <td className="sb-variable">{size}</td>
+            <td>
+              <figure>
+                <div
+                  className="sb-space"
+                  style={{
+                    backgroundColor: `var(${color})`,
+                    height: `var(${size})`,
+                    width: `var(${size})`,
+                  }}
+                />
+                <figcaption className="u-visually-hidden">
+                  Coloured square indicating the size of {size}
+                </figcaption>
+              </figure>
+            </td>
+            {mqBase && <td>{mqBase} pixels</td>}
+            {mqSmall && <td>{mqSmall} pixels</td>}
+            {mqMedium && <td>{mqMedium} pixels</td>}
+          </tr>
+        );
+      })}
+    </>
+  );
+}
 
-export const StaticSpacingBlocks = () => {
+export function StaticSpacingBlocks() {
   const sizes: SizeProps = {
     SpaceStaticXxxl: {
       color: '--color-amber-60',
@@ -106,9 +109,9 @@ export const StaticSpacingBlocks = () => {
       </tbody>
     </table>
   );
-};
+}
 
-export const ResponsiveSpacingBlocks = () => {
+export function ResponsiveSpacingBlocks() {
   const sizes: SizeProps = {
     SpaceResponsiveXxl: {
       color: '--color-grey-60',
@@ -174,4 +177,4 @@ export const ResponsiveSpacingBlocks = () => {
       </tbody>
     </table>
   );
-};
+}

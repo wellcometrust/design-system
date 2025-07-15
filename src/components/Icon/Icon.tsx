@@ -11,13 +11,7 @@ export type IconProps = {
   width?: string;
 };
 
-export const Icon = ({
-  className,
-  height,
-  name,
-  viewBox,
-  width,
-}: IconProps) => {
+export function Icon({ className, height, name, viewBox, width }: IconProps) {
   const isIcon = Object.prototype.hasOwnProperty.call(iconMapping, name);
 
   if (!isIcon) return null;
@@ -36,7 +30,7 @@ export const Icon = ({
       <IconElement viewBox={viewBox} />
     </span>
   );
-};
+}
 
 Icon.displayName = 'Icon';
 

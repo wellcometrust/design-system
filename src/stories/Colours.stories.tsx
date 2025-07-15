@@ -1,8 +1,9 @@
 import React from 'react';
-import { ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { ColorItem, ColorPalette } from '@storybook/addon-docs/blocks';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
+export default {};
 type ColorVarsProps = {
   tokens?: MappedTokensProps;
 };
@@ -10,7 +11,7 @@ type ColorVarsProps = {
 const defaultTokens = { Example: '#000000' };
 
 // MDX rendering of tokens appears to be temperamental without a default prop
-export const ColorVariables = ({ tokens = defaultTokens }: ColorVarsProps) => {
+export function ColorVariables({ tokens = defaultTokens }: ColorVarsProps) {
   return tokens ? (
     <ul className="sb-swatch-grid">
       {Object.entries(tokens).map(([key, value]) => {
@@ -40,19 +41,21 @@ export const ColorVariables = ({ tokens = defaultTokens }: ColorVarsProps) => {
   ) : (
     <>No tokens to render</>
   );
-};
+}
 
-export const ColorPaletteStatus = () => (
-  <ColorPalette>
-    <ColorItem
-      title="Error"
-      subtitle="--color-red-60"
-      colors={['var(--color-red-60)']}
-    />
-    <ColorItem
-      title="Success"
-      subtitle="--color-green-60"
-      colors={['var(--color-green-60)']}
-    />
-  </ColorPalette>
-);
+export function ColorPaletteStatus() {
+  return (
+    <ColorPalette>
+      <ColorItem
+        title="Error"
+        subtitle="--color-red-60"
+        colors={['var(--color-red-60)']}
+      />
+      <ColorItem
+        title="Success"
+        subtitle="--color-green-60"
+        colors={['var(--color-green-60)']}
+      />
+    </ColorPalette>
+  );
+}
