@@ -50,6 +50,7 @@
   "dependencies": {
     "@babel/runtime": "^7.8.4",
     "@babel/runtime-corejs3": "^7.8.4",
+    "@storybook/addon-postcss": "^2.0.0",
     "@types/domhandler": "^2.4.1",
     "classnames": "^2.2.6"
   },
