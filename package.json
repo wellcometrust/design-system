@@ -1,6 +1,6 @@
 {
   "name": "@wellcometrust/design-system",
-  "version": "1.4.23",
+  "version": "1.4.25",
   "description": "Design system for Wellcome Trust digital products",
   "module": "dist/index.js",
   "style": "dist/core.css",
