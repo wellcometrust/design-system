@@ -1,18 +1,23 @@
 import React from 'react';
+import cx from 'classnames';
 import { ColorPalette, ColorItem } from '@storybook/addon-docs';
 
 import kebabCase from 'lodash/fp/kebabCase';
 
 type ColorVarsProps = {
   tokens?: MappedTokensProps;
+  className?: string;
 };
 
 const defaultTokens = { Example: '#000000' };
 
 // MDX rendering of tokens appears to be temperamental without a default prop
-export const ColorVariables = ({ tokens = defaultTokens }: ColorVarsProps) => {
+export const ColorVariables = ({
+  tokens = defaultTokens,
+  className = '',
+}: ColorVarsProps) => {
   return tokens ? (
-    <ul className="sb-swatch-grid">
+    <ul className={cx('sb-swatch-grid', className)}>
       {Object.entries(tokens).map(([key, value]) => {
         const cssVariable = `--${kebabCase(key)}`;
         return (

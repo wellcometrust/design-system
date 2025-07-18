@@ -23,6 +23,7 @@ storybook-static
 .idea
 .DS_Store
 *.code-workspace
+.vscode
 
 # Audit files
 audit*.txt

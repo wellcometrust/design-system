@@ -8,6 +8,19 @@
   padding: 0;
 }
 
+.sb-swatch-grid--legacy {
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: var(--space-lg);
+}
+
+.sb-swatch-grid--ui {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.sb-swatch-grid--wds {
+  grid-template-rows: repeat(7, 1fr);
+}
+
 .sb-swatch__color {
   flex-shrink: 0;
   height: calc(8 * var(--space-unit));
@@ -22,6 +35,10 @@
   display: block;
   font-size: var(--font-size-body-xs);
   margin-right: var(--space-md);
+}
+
+.sb-swatch-grid--legacy .sb-variable  {
+  @include visually-hidden;
 }
 
 dl {

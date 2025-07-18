@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/addon-docs';
 
 import { ColorVariables } from './Colours.stories';
-import tokens from './tokens-color';
+import { legacyTokens, solidTokens, uiTokens, wdsTokens } from './tokens-color';
 
 <Meta title={`Global/Colours`} />
 
@@ -11,7 +11,17 @@ Swatches greater than 50 are accessible when overlayed with white text and when 
 
 Please note, colour variables use US English spelling to be consistent with CSS style property names.
 
-<ColorVariables tokens={tokens} />
+## Wellcome Design System colours
+
+<ColorVariables tokens={{...wdsTokens, ...solidTokens}} className={'sb-swatch-grid--wds'} />
+
+## UI colours
+
+<ColorVariables tokens={uiTokens} className={'sb-swatch-grid--ui'}/>
+
+## Legacy colours
+
+<ColorVariables tokens={legacyTokens} className={'sb-swatch-grid--legacy'}/>
 
 ## Installation
 

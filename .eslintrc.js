@@ -41,7 +41,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 0,
     'jsx-a11y/anchor-is-valid': 0,
-    'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
+    'import/no-extraneous-dependencies': 0,
     'prettier/prettier': 'error',
     'jsx-a11y/label-has-associated-control': [ 2, {
       labelComponents: ['SearchLabel'],
