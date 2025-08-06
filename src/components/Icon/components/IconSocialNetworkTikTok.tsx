@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconSocialNetworkTikTok = ({
+const IconSocialNetworkTiktok = ({
   viewBox = '0 0 24 24',
 }: {
   viewBox?: string;
@@ -14,4 +14,4 @@ const IconSocialNetworkTikTok = ({
   </svg>
 );
 
-export default IconSocialNetworkTikTok;
+export default IconSocialNetworkTiktok;
