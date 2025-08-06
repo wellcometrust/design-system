@@ -117,7 +117,7 @@ import IconSocialNetworkBluesky from './components/IconSocialNetworkBluesky';
 import IconSocialNetworkFacebook from './components/IconSocialNetworkFacebook';
 import IconSocialNetworkInstagram from './components/IconSocialNetworkInstagram';
 import IconSocialNetworkLinkedin from './components/IconSocialNetworkLinkedin';
-import IconSocialNetworkTikTok from './components/IconSocialNetworkTikTok';
+import IconSocialNetworkTiktok from './components/IconSocialNetworkTiktok';
 import IconSocialNetworkTwitter from './components/IconSocialNetworkTwitter';
 import IconSocialNetworkX from './components/IconSocialNetworkX';
 import IconSocialPerson from './components/IconSocialPerson';
@@ -252,7 +252,7 @@ export default {
   iconSocialNetworkFacebook: IconSocialNetworkFacebook,
   iconSocialNetworkInstagram: IconSocialNetworkInstagram,
   iconSocialNetworkLinkedin: IconSocialNetworkLinkedin,
-  iconSocialNetworkTikTok: IconSocialNetworkTikTok,
+  iconSocialNetworkTiktok: IconSocialNetworkTiktok,
   iconSocialNetworkTwitter: IconSocialNetworkTwitter,
   iconSocialNetworkX: IconSocialNetworkX,
   iconSocialPerson: IconSocialPerson,
